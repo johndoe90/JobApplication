@@ -1,0 +1,154 @@
+CREATE (phillip:Phillip {title: 'Phillip Friedrich', body: '', avatar: 'phillip.png', imageUrls: [], imageTexts: []})
+CREATE (hobbies:Hobbies {title: 'Hobbies', body: '', avatar: 'hobbies.png', imageUrls: [], imageTexts: []})
+CREATE (angeln:Hobbies {title: 'Angeln', body: '', avatar: 'angeln.png', imageUrls: [], imageTexts: []})
+CREATE (radfahren:Hobbies {title: 'Radfahren', body: '', avatar: 'radfahren.png', imageUrls: [], imageTexts: []})
+CREATE 
+	(phillip)-[:Hobbies]->(hobbies),
+	(hobbies)-[:Angeln]->(angeln),
+	(hobbies)-[:Radfahren]->(radfahren)
+
+CREATE (familie:Familie {title: 'Familie', body: '', avatar: 'familie.png', imageUrls: [], imageTexts: []})
+CREATE (andrea:Familie {title: 'Andrea Friedrich', body: '', avatar: 'andrea.png', imageUrls: [], imageTexts: []})
+CREATE (bruno:Familie {title: 'Bruno Friedrich', body: '', avatar: 'bruno.png', imageUrls: [], imageTexts: []})
+CREATE (stephy:Familie {title: 'Stephanie Friedrich', body: '', avatar: 'stephanie.png', imageUrls: [], imageTexts: []})
+CREATE 
+	(phillip)-[:Familie]->(familie),
+	(familie)-[:Mutter]->(andrea),
+	(familie)-[:Vater]->(bruno),
+	(familie)-[:Schwester]->(stephy)
+
+CREATE (ausbildung:Ausbildung {title: 'Ausbildung', body: '', avatar: 'ausbildung.png', imageUrls: [], imageTexts: []})
+CREATE (volksschule:Ausbildung {title: 'Volksschule', body: '', avatar: 'volksschule.png', imageUrls: [], imageTexts: []})
+CREATE (gymnasium:Ausbildung {title: 'Gymnasium', body: '', avatar: 'gymnasium.png', imageUrls: [], imageTexts: []})
+CREATE (htl:Ausbildung {title: 'HTL Hollabrunn', body: '', avatar: 'htl.png', imageUrls: [], imageTexts: []})
+CREATE (studium:Ausbildung {title: 'TU - Wien', body: '', avatar: 'tuwien.png', imageUrls: [], imageTexts: []})
+CREATE (austrian:Ausbildung {title: 'Austrian Airlines AG', body: '', avatar: 'austrian.png', imageUrls: [], imageTexts: []})
+CREATE (siemens:Ausbildung {title: 'Siemens Business GmbH', body: '', avatar: 'siemens.png', imageUrls: [], imageTexts: []})
+CREATE (zivildienst:Ausbildung {title: 'Caritas', body: '', avatar: 'caritas.png', imageUrls: [], imageTexts: []})
+CREATE
+	(phillip)-[:Ausbildung]->(ausbildung),
+	(ausbildung)-[:Volksschule]->(volksschule),
+	(ausbildung)-[:Gymnasium]->(gymnasium),
+	(ausbildung)-[:HTL]->(htl),
+	(ausbildung)-[:Studium]->(studium),
+	(ausbildung)-[:Praktikum]->(austrian),
+	(ausbildung)-[:Praktikum]->(siemens)
+
+CREATE (kenntnisse:Kenntnisse {title: 'Kenntnisse', body: '', avatar: 'kenntnisse.png', imageUrls: [], imageTexts: []}) 
+CREATE
+	(phillip)-[:Kenntnisse]->(kenntnisse)
+
+CREATE (programmieren:Kenntnisse {title: 'Programmieren', body: '', avatar: 'programmieren.png', imageUrls: [], imageTexts: []}) 
+CREATE (java:Kenntnisse {title: 'Java', body: '', avatar: 'java.png', imageUrls: [], imageTexts: []}) 
+CREATE (javascript:Kenntnisse {title: 'Javascript', body: '', avatar: 'javascript.png', imageUrls: [], imageTexts: []}) 
+CREATE (php:Kenntnisse {title: 'PHP', body: '', avatar: 'php.png', imageUrls: [], imageTexts: []}) 
+CREATE (c:Kenntnisse {title: 'C', body: '', avatar: 'c.png', imageUrls: [], imageTexts: []}) 
+CREATE (css3:Kenntnisse {title: 'CSS3', body: '', avatar: 'css3.png', imageUrls: [], imageTexts: []}) 
+CREATE (cpp:Kenntnisse {title: 'C++', body: '', avatar: 'cpp.png', imageUrls: [], imageTexts: []}) 
+CREATE (html5:Kenntnisse {title: 'HTML5', body: '', avatar: 'html5.png', imageUrls: [], imageTexts: []}) 
+CREATE (asm:Kenntnisse {title: 'Assembler', body: '', avatar: 'asm.png', imageUrls: [], imageTexts: []}) 
+CREATE
+	(kenntnisse)-[:Programmieren]->(programmieren),
+	(programmieren)-[:Java]->(java),
+	(programmieren)-[:Javascript]->(javascript),
+	(programmieren)-[:PHP]->(php),
+	(programmieren)-[:C]->(c),
+	(programmieren)-[:CSS3]->(css3),
+	(programmieren)-[:Cpp]->(cpp),
+	(programmieren)-[:HTML5]->(html5),
+	(programmieren)-[:Assembler]->(asm)
+
+CREATE (datenbank:Kenntnisse {title: 'Datenbank', body: '', avatar: 'datenbank.png', imageUrls: [], imageTexts: []}) 
+CREATE (mysql:Kenntnisse {title: 'MySQL', body: '', avatar: 'mysql.png', imageUrls: [], imageTexts: []}) 
+CREATE (postgresql:Kenntnisse {title: 'PostgreSQL', body: '', avatar: 'postgresql.png', imageUrls: [], imageTexts: []}) 
+CREATE (redis:Kenntnisse {title: 'Redis', body: '', avatar: 'redis.png', imageUrls: [], imageTexts: []})
+CREATE (mongodb:Kenntnisse {title: 'MongoDb', body: '', avatar: 'mongodb.png', imageUrls: [], imageTexts: []}) 
+CREATE (neo4j:Kenntnisse {title: 'Neo4j', body: '', avatar: 'neo4j.png', imageUrls: [], imageTexts: []}) 
+CREATE 
+	(kenntnisse)-[:Datenbank]->(datenbank),
+	(datenbank)-[:MySQL]->(mysql),
+	(datenbank)-[:PostgreSQL]->(postgresql),
+	(datenbank)-[:Redis]->(redis),
+	(datenbank)-[:MongoDb]->(mongodb),
+	(datenbank)-[:Neo4j]->(neo4j)
+
+CREATE (diverses:Kenntnisse {title: 'Diverses', body: '', avatar: 'diverses.png', imageUrls: [], imageTexts: []}) 
+CREATE (office:Kenntnisse {title: 'Office', body: '', avatar: 'office.png', imageUrls: [], imageTexts: []}) 
+CREATE (windows:Kenntnisse {title: 'Windows', body: '', avatar: 'windows.png', imageUrls: [], imageTexts: []})
+CREATE (android:Kenntnisse {title: 'Android', body: '', avatar: 'android.png', imageUrls: [], imageTexts: []})  
+CREATE (linux:Kenntnisse {title: 'Linux', body: '', avatar: 'linux.png', imageUrls: [], imageTexts: []}) 
+CREATE (gimp:Kenntnisse {title: 'Gimp', body: '', avatar: 'gimp.png', imageUrls: [], imageTexts: []}) 
+CREATE (autocad:Kenntnisse {title: 'AutoCAD', body: '', avatar: 'autocad.png', imageUrls: [], imageTexts: []}) 
+CREATE
+	(kenntnisse)-[:Diverses]->(diverses),
+	(diverses)-[:Office]->(office),
+	(diverses)-[:Windows]->(windows),
+	(diverses)-[:Android]->(android),
+	(diverses)-[:Linux]->(linux),
+	(diverses)-[:AutoCAD]->(autocad),
+	(diverses)-[:Gimp]->(gimp)
+
+CREATE (storagehosting:Kenntnisse {title: 'Hosting / Storage', body: '', avatar: 'hostingstorage.png', imageUrls: [], imageTexts: []}) 
+CREATE (heroku:Kenntnisse {title: 'Heroku', body: '', avatar: 'heroku.png', imageUrls: [], imageTexts: []}) 
+CREATE (amazon:Kenntnisse {title: 'Amazon Webservices', body: '', avatar: 'amazon.png', imageUrls: [], imageTexts: []}) 
+CREATE (googleappengine:Kenntnisse {title: 'Google App Engine', body: '', avatar: 'googleappengine.png', imageUrls: [], imageTexts: []}) 
+CREATE (github:Kenntnisse {title: 'Github', body: '', avatar: 'github.png', imageUrls: [], imageTexts: []}) 
+CREATE 
+	(kenntnisse)-[:Hosting_Storage]->(storagehosting),
+	(storagehosting)-[:Heroku]->(heroku),
+	(storagehosting)-[:Amazon]->(amazon),
+	(storagehosting)-[:Github]->(github),
+	(storagehosting)-[:Google]->(googleappengine)
+
+CREATE (dokumente:Dokumente {title: 'Dokumente', body: '', avatar: 'dokumente.png', imageUrls: [], imageTexts: []})
+CREATE (maturazeugnis:Dokumente {title: 'Maturazeugnis', body: '', avatar: 'maturazeugnis.png', imageUrls: [], imageTexts: []})
+CREATE (abschlusszeugnis:Dokumente {title: 'Abschlusszeugnis', body: '', avatar: 'abschlusszeugnis.png', imageUrls: [], imageTexts: []})
+CREATE (foto:Dokumente {title: 'Foto', body: '', avatar: 'foto.png', imageUrls: [], imageTexts: []})
+CREATE
+	(phillip)-[:Dokumente]->(dokumente),
+	(dokumente)-[:Maturazeugnis]->(maturazeugnis),
+	(dokumente)-[:Abschlusszeugnis]->(abschlusszeugnis),
+	(dokumente)-[:Foto]->(foto)
+
+CREATE (kontakt:Kontakt {title: 'Kontakt', body: '', avatar: 'kontakt.png', imageUrls: [], imageTexts: []})
+CREATE (email:Kontakt {title: 'E-Mail', body: '', avatar: 'email.png', imageUrls: [], imageTexts: []})
+CREATE (telefon:Kontakt {title: 'Telefon', body: '', avatar: 'telefon.png', imageUrls: [], imageTexts: []})
+CREATE 
+	(phillip)-[:Kontakt]->(kontakt),
+	(kontakt)-[:Email]->(email),
+	(kontakt)-[:Telefon]->(telefon)
+
+CREATE (staerken:Staerken {title: 'Stärken', body: '', avatar: 'staerken.png', imageUrls: [], imageTexts: []})
+CREATE (schwaechen:Schwaechen {title: 'Schwächen', body: '', avatar: 'schwächen.png', imageUrls: [], imageTexts: []})
+
+
+
+
+	
+		 
+
+MATCH (p:Phillip)
+CREATE (lebenslauf:Lebenslauf {title: 'Lebenslauf', imageUrls: [], imageTexts: [], body: '<h4>Lebenslauf</h4><p>Der Lauf meines Lebens</p>', avatar: '' }),
+ 			 (y1990 {title: '1990', imageUrls: [], imageTexts: [], body: '<h4>1990</h4><p>24. April: Das Hubble-Weltraumteleskop wird vom Space Shuttle Discovery im Rahmen der Mission STS-31 in den Orbit gebracht.</p>', avatar: ''}),
+			 (y1996 {title: '1996', imageUrls: [], imageTexts: [], body: '<h4>1996</h4><p>5. Juli: Das Schaf Dolly, erstes geklontes Säugetier der Welt, wird geboren.</p>', avatar: ''}),
+			 (y2000 {title: '2000', imageUrls: [], imageTexts: [], body: '<h4>2000</h4><p>25. Juli: Bei dem Absturz einer französischen Concorde am 25. Juli 2000 bei Paris kommen 113 Menschen ums Leben.</p>', avatar: ''}),
+			 (y2004 {title: '2004', imageUrls: [], imageTexts: [], body: '<h4>2004</h4><p>4. Juli: Griechenland unter Trainer Otto Rehhagel wird mit einem 1:0 gegen Portugal erstmals Europameister.</p>', avatar: ''}),
+			 (y2006 {title: '2006', imageUrls: [], imageTexts: [], body: '<h4>2006</h4><p>ist in Österreich Mozartjahr (anlässlich des 250. Geburtstages des Komponisten).</p>', avatar: ''}),
+			 (y2008 {title: '2008', imageUrls: [], imageTexts: [], body: '<h4>2008</h4><p>Der Large Hadron Collider am CERN wird fertiggestellt.</p>', avatar: ''}),
+			 (y2009 {title: '2009', imageUrls: [], imageTexts: [], body: '<h4>2009</h4><p>Der Blaue Rindenpilz (Terana caerulea) ist Pilz des Jahres</p>', avatar: ''}),
+			 (y2010 {title: '2010', imageUrls: [], imageTexts: [], body: '<h4>2010</h4><p>12. Januar: Bei einem Erdbeben in Haiti sterben etwa 220.000 Menschen, über eine Million Menschen werden obdachlos.</p>', avatar: ''}),
+			 (y2011 {title: '2011', imageUrls: [], imageTexts: [], body: '<h4>2011</h4><p>25. November:  Der bisher größte Mars-Rover "Curiosity" startet zum Mars, wo er ca. ein Jahr später landen wird.</p>', avatar: ''}),
+			 (y2014 {title: '2014', imageUrls: [], imageTexts: [], body: '<h4>2014</h4><p>8. März: Der Malaysia-Airlines-Flug 370 verschwindet gegen 01:30 Uhr Ortszeit aus der Überwachung der Flugverkehrskontrolle.</p>', avatar: ''})
+CREATE (p)-[r1:Lebenslauf]->(lebenslauf),
+			 (lebenslauf)-[r2:Anno-1990]->(y1990),
+			 (lebenslauf)-[r2:Anno-1996]->(y1990),
+			 (lebenslauf)-[r2:Anno-2000]->(y2000),
+			 (lebenslauf)-[r2:Anno-2004]->(y2004),
+			 (lebenslauf)-[r2:Anno-2006]->(y2006),
+			 (lebenslauf)-[r2:Anno-2008]->(y2008),
+			 (lebenslauf)-[r2:Anno-2009]->(y2009),
+			 (lebenslauf)-[r2:Anno-2010]->(y2010),
+			 (lebenslauf)-[r2:Anno-2011]->(y2011),
+			 (lebenslauf)-[r2:Anno-2014]->(y2014)
+
+

@@ -1,0 +1,20 @@
+<div style="flex: 1; display: flex; flex-direction: column;">
+	<div>
+		<a class="query" ui-sref="parent.child({q: 'MATCH (n:Phillip)-[r*]-(o) RETURN n,r,o'})">*</a>
+		<a class="query" ui-sref="parent.child({q: 'MATCH (n:Phillip)-[r1:Familie]->(f1)-[r2*]->(f2) RETURN n,r1,r2,f1,f2'})">Familie</a>
+		<a class="query" ui-sref="parent.child({q: 'MATCH (n:Phillip)-[r1:Hobbies]->(h1)-[r2*]->(h2) RETURN n,r1,r2,h1,h2'})">Hobbies</a>
+
+		<a class="query" ui-sref="parent.child({q: 'MATCH (n:Phillip)-[r1:Hobbies]->(h1)-[r2*]->(h2) RETURN n,r1,r2,h1,h2'})">St&auml;rken</a>
+		<a class="query" ui-sref="parent.child({q: 'MATCH (n:Phillip)-[r1:Hobbies]->(h1)-[r2*]->(h2) RETURN n,r1,r2,h1,h2'})">Schw&auml;chen</a>
+		<a class="query" ui-sref="parent.child({q: 'MATCH (n1:Phillip)-[r1:Ausbildung]->(n2)-[r2*]->(n3) RETURN n1,n2,n3,r1,r2'})">Ausbildung</a>
+		<a class="query" ui-sref="parent.child({q: 'MATCH (n1:Phillip)-[r1:Kenntnisse]->(n2), (n2)-[r2:Programmieren]->(n3), (n3)-[r3]->(n4), (n2)-[r4:Sonstige|Plattformen|Datenbanken]->(n5), (n5)-[r5]->(n6) RETURN n1,n2,n3,n4,n5,n6,r1,r2,r3,r4,r5'})">Kenntnisse</a>
+		<a class="query" ui-sref="parent.child({q: 'MATCH (n1:Phillip)-[r1:Kenntnisse]->(n2)-[r2:Programmieren]->(n3)-[r3:Javascript]->(n4)-[r4*]->(n5) RETURN n1,n2,n3,n4,n5,r1,r2,r3,r4'})">Projekte</a>
+		<a class="query" ui-sref="parent.child({q: 'MATCH (n:Phillip)-[r1:Hobbies]->(h1)-[r2*]->(h2) RETURN n,r1,r2,h1,h2'})">Zukunftspläne</a>
+		<a class="query" ui-sref="parent.child({q: 'MATCH (n:Phillip)-[r1:Hobbies]->(h1)-[r2*]->(h2) RETURN n,r1,r2,h1,h2'})">Dokumente</a>
+		<a class="query" ui-sref="parent.child({q: 'MATCH (n1:Phillip)-[r1:Kontakt]->(n2)-[r2*]->(n3) RETURN n1,n2,n3,r1,r2'})">Kontakt</a>
+
+	</div>
+	<div class="graph-container">
+		<div graph class="graph" ng-if="graph"></div>
+	</div>
+</div>
