@@ -155,7 +155,7 @@ CREATE (datenbanken_javascript {title: 'Datenbanken', body: '', avatar: 'datenba
 
 CREATE (jquery {title: 'jQuery', body: '', avatar: 'jquery.png', imageUrls: [], imageTexts: []}) 
 CREATE (angularjs {title: 'AngularJs', body: '', avatar: 'angularjs.png', imageUrls: [], imageTexts: []}) 
-CREATE (node {title: 'node.js', body: '', avatar: 'nodejs.png', imageUrls: [], imageTexts: []})
+CREATE (nodejs {title: 'node.js', body: '', avatar: 'nodejs.png', imageUrls: [], imageTexts: []})
 CREATE (ionicframework {title: 'Ionic Framework', body: '', avatar: 'ionicframework.png', imageUrls: [], imageTexts: []}) 
 CREATE (yeoman {title: 'Yeoman', body: '', avatar: 'yeoman.png', imageUrls: [], imageTexts: []}) 
 CREATE (bower {title: 'Bower', body: '', avatar: 'bower.png', imageUrls: [], imageTexts: []}) 

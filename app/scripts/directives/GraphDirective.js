@@ -9,15 +9,15 @@ angular
 			restrict: 'AE',
 			link: function(scope, element, attr) {
 				var width = element[0].clientWidth,
-						height = element[0].clientHeight - 10;
+						height = element[0].clientHeight;
 
 				var color = d3.scale.category20();
 
 				var force = d3.layout.force()
 					.charge(-2500)
-					//.gravity(0.1)
-					.distance(75)
-					.linkDistance(220)
+					.gravity(0.125)
+					.distance(70)
+					.linkDistance(180)
 					.size([width, height]);
 
 				var svg = d3.select(element[0])
@@ -104,18 +104,21 @@ angular
 					.attr('class', 'link-text')
 					.text(function(d) { return d.type; });
 
+
 				scope.$watch(function() {
 					return element[0].clientWidth * element[0].clientHeight;
 				}, function() {
+					console.log('resize');
 					width = element[0].clientWidth;
-					height = element[0].clientHeight - 10;
+					height = element[0].clientHeight;
 					
 					svg.attr({width: width, height: height});
 					force.size([width, height]);
-					force.drag();
+					force.resume();
 				});
 
 				force.on('tick', function(){
+					console.log('tick');
 					link
 						.attr('x1', function(d) { return d.source.x; })
 				    .attr('y1', function(d) { return d.source.y; })
@@ -137,7 +140,7 @@ angular
 							if (dr == 0) dr = 0.1;
 							var sinus = dy / dr;
 							var cosinus = dx / dr;
-							var l = d.type.length * 6;
+							var l = d.type.length * 8;
 							var offset = ( 1 - ( l / dr ) ) / 2;
 							var x = ( d.source.x + dx * offset );
 							var y = ( d.source.y + dy * offset );

@@ -189,7 +189,7 @@ CREATE
 	(tools_javascript)-[:Yeoman]->(yeoman),
 	(tools_javascript)-[:Bower]->(bower),
 	(tools_javascript)-[:Grunt]->(grunt),
-	(tools_javascript)-[:NPM]->(npm),
+	(tools_javascript)-[:npm]->(npm),
 
 	(datenbanken_javascript)-[:MongoDB]->(mongodb),
 	(datenbanken_javascript)-[:Neo4j]->(neo4j),
@@ -201,7 +201,6 @@ CREATE
 
 //Kenntnisse - Programmieren - Php
 CREATE (libraries_php {title: 'Libraries', body: '', avatar: 'libraries.png', imageUrls: [], imageTexts: []}) 
-CREATE (plattformen_php {title: 'Plattformen', body: '', avatar: 'plattform.png', imageUrls: [], imageTexts: []}) 
 CREATE (datenbanken_php {title: 'Datenbanken', body: '', avatar: 'datenbank.png', imageUrls: [], imageTexts: []})
 
 CREATE (doctrine {title: 'Doctrine ORM', body: '', avatar: 'doctrine.png', imageUrls: [], imageTexts: []}) 
@@ -210,8 +209,6 @@ CREATE (zendframework2 {title: 'Zend Framework 2', body: '', avatar: 'zendframew
 
 CREATE
 	(php)-[:Libraries]->(libraries_php),
-	(php)-[:Plattformen]->(plattformen_php),
-	(php)-[:Tools]->(tools_php),
 	(php)-[:Datenbanken]->(datenbanken_php),
 
 	(libraries_php)-[:Doctrine]->(doctrine),

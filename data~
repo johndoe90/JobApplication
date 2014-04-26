@@ -91,12 +91,14 @@ CREATE
 CREATE (storagehosting:Kenntnisse {title: 'Hosting / Storage', body: '', avatar: 'hostingstorage.png', imageUrls: [], imageTexts: []}) 
 CREATE (heroku:Kenntnisse {title: 'Heroku', body: '', avatar: 'heroku.png', imageUrls: [], imageTexts: []}) 
 CREATE (amazon:Kenntnisse {title: 'Amazon Webservices', body: '', avatar: 'amazon.png', imageUrls: [], imageTexts: []}) 
+CREATE (googleappengine:Kenntnisse {title: 'Google App Engine', body: '', avatar: 'googleappengine.png', imageUrls: [], imageTexts: []}) 
 CREATE (github:Kenntnisse {title: 'Github', body: '', avatar: 'github.png', imageUrls: [], imageTexts: []}) 
 CREATE 
 	(kenntnisse)-[:Hosting_Storage]->(storagehosting),
 	(storagehosting)-[:Heroku]->(heroku),
 	(storagehosting)-[:Amazon]->(amazon),
-	(storagehosting)-[:Github]->(github)
+	(storagehosting)-[:Github]->(github),
+	(storagehosting)-[:Google]->(googleappengine)
 
 CREATE (dokumente:Dokumente {title: 'Dokumente', body: '', avatar: 'dokumente.png', imageUrls: [], imageTexts: []})
 CREATE (maturazeugnis:Dokumente {title: 'Maturazeugnis', body: '', avatar: 'maturazeugnis.png', imageUrls: [], imageTexts: []})

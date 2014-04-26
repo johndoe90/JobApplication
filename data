@@ -58,6 +58,29 @@ CREATE
 	(programmieren)-[:HTML5]->(html5),
 	(programmieren)-[:Assembler]->(asm)
 
+CREATE (konsolenanwendungen:Kenntnisse {title: 'diverse Konsolenanwendungen', body: '', avatar: 'konsole.png', imageUrls: [], imageTexts: []}) 
+	(programmieren)-[:Konsolenanwendungen]->(konsolenanwendungen)
+
+CREATE (doctrine:Kenntnisse {title: 'Doctrine ORM', body: '', avatar: 'doctrine.png', imageUrls: [], imageTexts: []}) 
+CREATE (zendframework1:Kenntnisse {title: 'Zend Framework 1', body: '', avatar: 'zendframework1.png', imageUrls: [], imageTexts: []})
+CREATE (zendframework2:Kenntnisse {title: 'Zend Framework 2', body: '', avatar: 'zendframework2.png', imageUrls: [], imageTexts: []})
+CREATE 
+	(php)-[:Doctrine]->(doctrine),
+	(php)-[:ZendFramework_1]->(zendframework1),
+	(php)-[:ZendFramework_2]->(zendframework2)
+
+CREATE (z80:Kenntnisse {title: 'Zilog Z80', body: '', avatar: 'z80.png', imageUrls: [], imageTexts: []}) 
+CREATE
+	(asm)-[:Z80]->(z80)
+
+CREATE (visualstudio:Kenntnisse {title: 'Micosoft Visual Studio', body: '', avatar: 'visualstudio.png', imageUrls: [], imageTexts: []})  
+CREATE
+	(cpp)-[:VisualStudio]->(visualstudio)
+
+CREATE (eclipse:Kenntnisse {title: 'Eclipse', body: '', avatar: 'eclipse.png', imageUrls: [], imageTexts: []}) 
+CREATE (adt:Kenntnisse {title: 'Android Development Tools', body: '', avatar: 'adt.png', imageUrls: [], imageTexts: []}) 
+CREATE (doctrine:Kenntnisse {title: 'Doctrine ORM', body: '', avatar: 'doctrine.png', imageUrls: [], imageTexts: []}) 
+
 CREATE (datenbank:Kenntnisse {title: 'Datenbank', body: '', avatar: 'datenbank.png', imageUrls: [], imageTexts: []}) 
 CREATE (mysql:Kenntnisse {title: 'MySQL', body: '', avatar: 'mysql.png', imageUrls: [], imageTexts: []}) 
 CREATE (postgresql:Kenntnisse {title: 'PostgreSQL', body: '', avatar: 'postgresql.png', imageUrls: [], imageTexts: []}) 

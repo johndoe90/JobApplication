@@ -7,7 +7,7 @@ angular
 		$scope.query = $stateParams.q || 'MATCH (n:Phillip) RETURN n';
 
 		DataService.query({
-			q: $scope.query//'MATCH (p:Phillip)-[r*]->(h) RETURN p,r,h'//'START n=node(5) MATCH (n)<-[r]-(b) RETURN n,r,b'
+			q: $scope.query
 		}).then(function(graph){
 			$timeout(function(){
 				$scope.graph = graph;

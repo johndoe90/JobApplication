@@ -1,6 +1,7 @@
 CREATE (phillip:Phillip {title: 'Phillip Friedrich', body: '', avatar: 'phillip.png', imageUrls: [], imageTexts: []})
 
 
+
 CREATE (hobbies {title: 'Hobbies', body: '', avatar: 'hobbies.png', imageUrls: [], imageTexts: []})
 CREATE (angeln {title: 'Angeln', body: '', avatar: 'angeln.png', imageUrls: [], imageTexts: []})
 CREATE (radfahren {title: 'Radfahren', body: '', avatar: 'radfahren.png', imageUrls: [], imageTexts: []})
@@ -85,9 +86,9 @@ CREATE
 	(datenbanken)-[:MongoDB]->(mongodb)
 
 
-CREATE (java {title: 'Programmieren', body: '', avatar: 'java.png', imageUrls: [], imageTexts: []}) 
-CREATE (javascript {title: 'Javascript', body: '', avatar: 'javascript.png', imageUrls: [], imageTexts: []}) 
-CREATE (php {title: 'PHP', body: '', avatar: 'php.png', imageUrls: [], imageTexts: []}) 
+CREATE (java {title: 'Java', body: '<a href="http://10.0.0.38:9000/#/parent/child/MATCH%20(n1%3APhillip)-%5Br1%3AKenntnisse%5D-%3E(n2)-%5Br2%3AProgrammieren%5D-%3E(n3)-%5Br3%3AJava%5D-%3E(n4)-%5Br4*%5D-%3E(n5)%20RETURN%20n1%2Cn2%2Cn3%2Cn4%2Cn5%2Cr1%2Cr2%2Cr3%2Cr4">Details</a>', avatar: 'java.png', imageUrls: [], imageTexts: []}) 
+CREATE (javascript {title: 'Javascript', body: '<a href="http://10.0.0.38:9000/#/parent/child/MATCH%20(n1%3APhillip)-%5Br1%3AKenntnisse%5D-%3E(n2)-%5Br2%3AProgrammieren%5D-%3E(n3)-%5Br3%3AJavascript%5D-%3E(n4)-%5Br4*%5D-%3E(n5)%20RETURN%20n1%2Cn2%2Cn3%2Cn4%2Cn5%2Cr1%2Cr2%2Cr3%2Cr4">Details</a>', avatar: 'javascript.png', imageUrls: [], imageTexts: []}) 
+CREATE (php {title: 'PHP', body: '<a href="http://10.0.0.38:9000/#/parent/child/MATCH%20(n1%3APhillip)-%5Br1%3AKenntnisse%5D-%3E(n2)-%5Br2%3AProgrammieren%5D-%3E(n3)-%5Br3%3APHP%5D-%3E(n4)-%5Br4*%5D-%3E(n5)%20RETURN%20n1%2Cn2%2Cn3%2Cn4%2Cn5%2Cr1%2Cr2%2Cr3%2Cr4">Details</a>', avatar: 'php.png', imageUrls: [], imageTexts: []}) 
 CREATE (c {title: 'C', body: '', avatar: 'c.png', imageUrls: [], imageTexts: []}) 
 CREATE (css3 {title: 'CSS3', body: '', avatar: 'css3.png', imageUrls: [], imageTexts: []}) 
 CREATE (cpp {title: 'C++', body: '', avatar: 'cpp.png', imageUrls: [], imageTexts: []}) 
@@ -104,7 +105,7 @@ CREATE
 	(programmieren)-[:Assembler]->(asm)
 
 
-CREATE (frameworks_java {title: 'Frameworks', body: '', avatar: 'frameworks.png', imageUrls: [], imageTexts: []}) 
+CREATE (libraries_java {title: 'Libraries', body: '', avatar: 'libraries.png', imageUrls: [], imageTexts: []}) 
 CREATE (plattformen_java {title: 'Plattformen', body: '', avatar: 'plattform.png', imageUrls: [], imageTexts: []}) 
 CREATE (tools_java {title: 'Tools', body: '', avatar: 'tools.png', imageUrls: [], imageTexts: []}) 
 CREATE (datenbanken_java {title: 'Datenbanken', body: '', avatar: 'datenbank.png', imageUrls: [], imageTexts: []})
@@ -120,19 +121,19 @@ CREATE (junit {title: 'Junit', body: '', avatar: 'junit.png', imageUrls: [], ima
 CREATE (jstl {title: 'JSTL', body: '', avatar: 'jstl.png', imageUrls: [], imageTexts: []}) 
 CREATE (thymeleaf {title: 'Thymeleaf', body: '', avatar: 'thymeleaf.png', imageUrls: [], imageTexts: []})
 CREATE
-	(java)-[:Frameworks]->(frameworks_java),
+	(java)-[:Libraries]->(libraries_java),
 	(java)-[:Plattformen]->(plattformen_java),
 	(java)-[:Tools]->(tools_java),
 	(java)-[:Datenbanken]->(datenbanken_java),
 
-	(frameworks_java)-[:ADT]->(adt),
-	(frameworks_java)-[:Hibernate]->(hibernate),
-	(frameworks_java)-[:GWT]->(gwt),
-	(frameworks_java)-[:SpringFramework]->(springframework),
-	(frameworks_java)-[:Cordova]->(cordova),
-	(frameworks_java)-[:JSTL]->(jstl),
-	(frameworks_java)-[:Thymeleaf]->(thymeleaf),
-	(frameworks_java)-[:JUnit]->(junit),
+	(libraries_java)-[:ADT]->(adt),
+	(libraries_java)-[:Hibernate]->(hibernate),
+	(libraries_java)-[:GWT]->(gwt),
+	(libraries_java)-[:Spring]->(springframework),
+	(libraries_java)-[:Cordova]->(cordova),
+	(libraries_java)-[:JSTL]->(jstl),
+	(libraries_java)-[:Thymeleaf]->(thymeleaf),
+	(libraries_java)-[:JUnit]->(junit),
 
 	(tools_java)-[:Eclipse]->(eclipse),
 	(tools_java)-[:EclipseADT]->(eclipse_android),
@@ -148,7 +149,7 @@ CREATE
 
 
 
-CREATE (frameworks_javascript {title: 'Frameworks', body: '', avatar: 'frameworks.png', imageUrls: [], imageTexts: []}) 
+CREATE (libraries_javascript {title: 'Libraries', body: '', avatar: 'libraries.png', imageUrls: [], imageTexts: []}) 
 CREATE (plattformen_javascript {title: 'Plattformen', body: '', avatar: 'plattform.png', imageUrls: [], imageTexts: []}) 
 CREATE (tools_javascript {title: 'Tools', body: '', avatar: 'tools.png', imageUrls: [], imageTexts: []}) 
 CREATE (datenbanken_javascript {title: 'Datenbanken', body: '', avatar: 'datenbank.png', imageUrls: [], imageTexts: []})
@@ -161,7 +162,7 @@ CREATE (yeoman {title: 'Yeoman', body: '', avatar: 'yeoman.png', imageUrls: [], 
 CREATE (bower {title: 'Bower', body: '', avatar: 'bower.png', imageUrls: [], imageTexts: []}) 
 CREATE (grunt {title: 'Grunt', body: '', avatar: 'grunt.png', imageUrls: [], imageTexts: []}) 
 CREATE (d3 {title: 'd3.js', body: '', avatar: 'd3.png', imageUrls: [], imageTexts: []}) 
-CREATE (jasmin {title: 'Jasmin', body: '', avatar: 'jasmin.png', imageUrls: [], imageTexts: []}) 
+CREATE (jasmine {title: 'Jasmine', body: '', avatar: 'jasmine.png', imageUrls: [], imageTexts: []}) 
 CREATE (expressframework {title: 'express Framework', body: '', avatar: 'express.png', imageUrls: [], imageTexts: []}) 
 CREATE (passport {title: 'passport.js', body: '', avatar: 'passport.png', imageUrls: [], imageTexts: []}) 
 CREATE (sockjs {title: 'sock.js', body: '', avatar: 'sockjs.png', imageUrls: [], imageTexts: []}) 
@@ -169,21 +170,21 @@ CREATE (bluebird {title: 'bluebird', body: '', avatar: 'bluebird.png', imageUrls
 CREATE (npm {title: 'Node Packaged Modules', body: '', avatar: 'npm.png', imageUrls: [], imageTexts: []}) 
 
 CREATE
-	(javascript)-[:Frameworks]->(frameworks_javascript),
+	(javascript)-[:Libraries]->(libraries_javascript),
 	(javascript)-[:Plattformen]->(plattformen_javascript),
 	(javascript)-[:Tools]->(tools_javascript),
 	(javascript)-[:Datenbanken]->(datenbanken_javascript),
 
-	(frameworks_javascript)-[:jQuery]->(jquery),
-	(frameworks_javascript)-[:AngularJs]->(angularjs),
-	(frameworks_javascript)-[:NodeJs]->(nodejs),
-	(frameworks_javascript)-[:IonicFramework]->(ionicframework),
-	(frameworks_javascript)-[:d3]->(d3),
-	(frameworks_javascript)-[:Jasmin]->(jasmin),
-	(frameworks_javascript)-[:express]->(expressframework),
-	(frameworks_javascript)-[:passportJs]->(passport),
-	(frameworks_javascript)-[:sockJs]->(sockjs),
-	(frameworks_javascript)-[:bluebird]->(bluebird),
+	(libraries_javascript)-[:jQuery]->(jquery),
+	(libraries_javascript)-[:AngularJs]->(angularjs),
+	(libraries_javascript)-[:NodeJs]->(nodejs),
+	(libraries_javascript)-[:IonicFramework]->(ionicframework),
+	(libraries_javascript)-[:d3]->(d3),
+	(libraries_javascript)-[:Jasmine]->(jasmine),
+	(libraries_javascript)-[:express]->(expressframework),
+	(libraries_javascript)-[:passportJs]->(passport),
+	(libraries_javascript)-[:sockJs]->(sockjs),
+	(libraries_javascript)-[:bluebird]->(bluebird),
 
 	(tools_javascript)-[:Yeoman]->(yeoman),
 	(tools_javascript)-[:Bower]->(bower),
@@ -199,7 +200,7 @@ CREATE
 	(plattformen_javascript)-[:Facebook]->(facebook)
 
 
-CREATE (frameworks_php {title: 'Frameworks', body: '', avatar: 'frameworks.png', imageUrls: [], imageTexts: []}) 
+CREATE (libraries_php {title: 'Libraries', body: '', avatar: 'libraries.png', imageUrls: [], imageTexts: []}) 
 CREATE (plattformen_php {title: 'Plattformen', body: '', avatar: 'plattform.png', imageUrls: [], imageTexts: []}) 
 CREATE (datenbanken_php {title: 'Datenbanken', body: '', avatar: 'datenbank.png', imageUrls: [], imageTexts: []})
 
@@ -208,17 +209,16 @@ CREATE (zendframework1 {title: 'Zend Framework 1', body: '', avatar: 'zendframew
 CREATE (zendframework2 {title: 'Zend Framework 2', body: '', avatar: 'zendframework2.png', imageUrls: [], imageTexts: []}) 
 
 CREATE
-	(php)-[:Frameworks]->(frameworks_php),
+	(php)-[:Libraries]->(libraries_php),
 	(php)-[:Plattformen]->(plattformen_php),
 	(php)-[:Tools]->(tools_php),
 	(php)-[:Datenbanken]->(datenbanken_php),
 
-	(frameworks_php)-[:Doctrine]->(doctrine),
-	(frameworks_php)-[:ZendFramework_1]->(zendframework1),
-	(frameworks_php)-[:ZendFramework_2]->(zendframework2),
+	(libraries_php)-[:Doctrine]->(doctrine),
+	(libraries_php)-[:ZendFramework_1]->(zendframework1),
+	(libraries_php)-[:ZendFramework_2]->(zendframework2),
 
 	(datenbanken_php)-[:MySQL]->(mysql)
-
 
 
 CREATE (office {title: 'Office', body: '', avatar: 'office.png', imageUrls: [], imageTexts: []}) 
@@ -236,7 +236,6 @@ CREATE
 	(sonstige)-[:Gimp]->(gimp)
 
 
-
 CREATE (kontakt {title: 'Kontakt', body: '', avatar: 'kontakt.png', imageUrls: [], imageTexts: []})
 CREATE (email {title: 'E-Mail', body: '', avatar: 'email.png', imageUrls: [], imageTexts: []})
 CREATE (telefon {title: 'Telefon', body: '', avatar: 'telefon.png', imageUrls: [], imageTexts: []})
@@ -246,13 +245,10 @@ CREATE
 	(kontakt)-[:Telefon]->(telefon)
 
 
-
 CREATE (staerken {title: 'Stärken', body: '', avatar: 'staerken.png', imageUrls: [], imageTexts: []})
 
 
-
 CREATE (schwaechen {title: 'Schwächen', body: '', avatar: 'schwächen.png', imageUrls: [], imageTexts: []})
-
 
 
 CREATE (dokumente {title: 'Dokumente', body: '', avatar: 'dokumente.png', imageUrls: [], imageTexts: []})
