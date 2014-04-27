@@ -40,7 +40,9 @@ a:hover {
 }
 
 .wrapper {
-  padding: 10px;
+  padding: 10px 0 10px 10px;
+  min-width: 1366px;
+  min-height: 768px;
 }
 
 .fp {
@@ -65,6 +67,14 @@ a:hover {
 }
 
 .box {
+  display: -ms-flexbox;
+
+  display: -o-box;
+  display: -ms-box; 
+  display: -moz-box;
+  display: -webkit-box;
+  display: box;
+
   display: -o-flex;
   display: -ms-flex; 
   display: -moz-flex;
@@ -73,6 +83,12 @@ a:hover {
 }
 
 .box-flex-row {
+  -o-box-orient: horizontal;
+  -ms-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  box-orient: horizontal;
+
   -o-flex-direction: row;
   -ms-flex-direction: row;
   -moz-flex-direction: row;
@@ -81,6 +97,12 @@ a:hover {
 }
 
 .box-flex-column {
+  -o-box-orient: vertical;
+  -ms-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+
   -o-flex-direction: column;
   -ms-flex-direction: column;
   -moz-flex-direction: column;
@@ -89,6 +111,12 @@ a:hover {
 }
 
 .box-flex-1 {
+  -o-box-flex: 1;
+  -ms-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+
   -o-flex: 1;
   -ms-flex: 1;
   -moz-flex: 1;
@@ -125,5 +153,5 @@ a:hover {
 
 .animate.ng-enter.animate.ng-enter-active, 
 .animate.ng-leave {
-  width: 100%;
+  width: 449px;
 }

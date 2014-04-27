@@ -16,17 +16,17 @@ angular
 	.module('jobApplication', ['ui.router', 'ngAnimate', 'ngSanitize', 'jobApplication.controllers', 'jobApplication.services', 'jobApplication.directives'])
 	.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 		$stateProvider
-			.state('parent', {
+			.state('info', {
 				abstract: true,
-				url: '/parent',
-				controller: 'AppController',
-				templateUrl: 'views/partials/parent.html'
+				url: '/info',
+				controller: 'InfoController',
+				templateUrl: 'views/partials/info.html'
 			})
-			.state('parent.child', {
-				url: '/child/:q',
+			.state('info.graph', {
+				url: '/graph/:q',
 				controller: 'GraphController',
-				templateUrl: 'views/partials/child.html'
+				templateUrl: 'views/partials/graph.html'
 			});
 
-		$urlRouterProvider.otherwise('/parent/child/');
+		$urlRouterProvider.otherwise('/info/graph/');
 	}]);

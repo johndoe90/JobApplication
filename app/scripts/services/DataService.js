@@ -5,17 +5,18 @@ angular
 	.factory('DataService', ['$http', '$q', 'DataServiceConfig', 'GraphConverter', function($http, $q, DataServiceConfig, GraphConverter){
 		function query(params) {
 			var deferred = $q.defer(),
-					key = JSON.stringify(params);
+					key = JSON.stringify(params),
+					entry = query.cache[key];
 
-			if (!query.cache[key]) {
+			if (!entry) {
 				$http
 					.get(DataServiceConfig.url, {params: params})
 					.then(function(response) {
-						query.cache[key] = response.data;
-						deferred.resolve(GraphConverter.convert(response.data));
+						var graph = query.cache[key] = GraphConverter.convert(response.data);
+						deferred.resolve(graph);
 					});
 			} else {
-				deferred.resolve(GraphConverter.convert(query.cache[key]));
+				deferred.resolve(entry);
 			}
 
 			return deferred.promise;
