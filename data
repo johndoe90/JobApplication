@@ -1,30 +1,37 @@
 CREATE (phillip:Phillip {title: 'Phillip Friedrich', body: '', avatar: 'phillip.png', imageUrls: [], imageTexts: []})
-CREATE (hobbies:Hobbies {title: 'Hobbies', body: '', avatar: 'hobbies.png', imageUrls: [], imageTexts: []})
-CREATE (angeln:Hobbies {title: 'Angeln', body: '', avatar: 'angeln.png', imageUrls: [], imageTexts: []})
-CREATE (radfahren:Hobbies {title: 'Radfahren', body: '', avatar: 'radfahren.png', imageUrls: [], imageTexts: []})
+
+//Hobbies
+
+CREATE (hobbies {title: 'Hobbies', body: '', avatar: 'hobbies.png', imageUrls: [], imageTexts: []})
+CREATE (angeln {title: 'Angeln', body: '', avatar: 'angeln.png', imageUrls: [], imageTexts: []})
+CREATE (radfahren {title: 'Radfahren', body: '', avatar: 'radfahren.png', imageUrls: [], imageTexts: []})
 CREATE 
 	(phillip)-[:Hobbies]->(hobbies),
 	(hobbies)-[:Angeln]->(angeln),
 	(hobbies)-[:Radfahren]->(radfahren)
 
-CREATE (familie:Familie {title: 'Familie', body: '', avatar: 'familie.png', imageUrls: [], imageTexts: []})
-CREATE (andrea:Familie {title: 'Andrea Friedrich', body: '', avatar: 'andrea.png', imageUrls: [], imageTexts: []})
-CREATE (bruno:Familie {title: 'Bruno Friedrich', body: '', avatar: 'bruno.png', imageUrls: [], imageTexts: []})
-CREATE (stephy:Familie {title: 'Stephanie Friedrich', body: '', avatar: 'stephanie.png', imageUrls: [], imageTexts: []})
+//Familie
+
+CREATE (familie {title: 'Familie', body: '', avatar: 'familie.png', imageUrls: [], imageTexts: []})
+CREATE (andrea {title: 'Andrea Friedrich', body: '', avatar: 'andrea.png', imageUrls: [], imageTexts: []})
+CREATE (bruno {title: 'Bruno Friedrich', body: '', avatar: 'bruno.png', imageUrls: [], imageTexts: []})
+CREATE (stephy {title: 'Stephanie Friedrich', body: '', avatar: 'stephanie.png', imageUrls: [], imageTexts: []})
 CREATE 
 	(phillip)-[:Familie]->(familie),
 	(familie)-[:Mutter]->(andrea),
 	(familie)-[:Vater]->(bruno),
 	(familie)-[:Schwester]->(stephy)
 
-CREATE (ausbildung:Ausbildung {title: 'Ausbildung', body: '', avatar: 'ausbildung.png', imageUrls: [], imageTexts: []})
-CREATE (volksschule:Ausbildung {title: 'Volksschule', body: '', avatar: 'volksschule.png', imageUrls: [], imageTexts: []})
-CREATE (gymnasium:Ausbildung {title: 'Gymnasium', body: '', avatar: 'gymnasium.png', imageUrls: [], imageTexts: []})
-CREATE (htl:Ausbildung {title: 'HTL Hollabrunn', body: '', avatar: 'htl.png', imageUrls: [], imageTexts: []})
-CREATE (studium:Ausbildung {title: 'TU - Wien', body: '', avatar: 'tuwien.png', imageUrls: [], imageTexts: []})
-CREATE (austrian:Ausbildung {title: 'Austrian Airlines AG', body: '', avatar: 'austrian.png', imageUrls: [], imageTexts: []})
-CREATE (siemens:Ausbildung {title: 'Siemens Business GmbH', body: '', avatar: 'siemens.png', imageUrls: [], imageTexts: []})
-CREATE (zivildienst:Ausbildung {title: 'Caritas', body: '', avatar: 'caritas.png', imageUrls: [], imageTexts: []})
+//Ausbildung
+
+CREATE (ausbildung {title: 'Ausbildung', body: '', avatar: 'ausbildung.png', imageUrls: [], imageTexts: []})
+CREATE (volksschule {title: 'Volksschule', body: '', avatar: 'volksschule.png', imageUrls: [], imageTexts: []})
+CREATE (gymnasium {title: 'Gymnasium', body: '', avatar: 'gymnasium.png', imageUrls: [], imageTexts: []})
+CREATE (htl {title: 'HTL Hollabrunn', body: '', avatar: 'htl.png', imageUrls: [], imageTexts: []})
+CREATE (studium {title: 'TU - Wien', body: '', avatar: 'tuwien.png', imageUrls: [], imageTexts: []})
+CREATE (austrian {title: 'Austrian Airlines AG', body: '', avatar: 'austrian.png', imageUrls: [], imageTexts: []})
+CREATE (siemens {title: 'Siemens Business GmbH', body: '', avatar: 'siemens.png', imageUrls: [], imageTexts: []})
+CREATE (zivildienst {title: 'Caritas', body: '', avatar: 'caritas.png', imageUrls: [], imageTexts: []})
 CREATE
 	(phillip)-[:Ausbildung]->(ausbildung),
 	(ausbildung)-[:Volksschule]->(volksschule),
@@ -32,23 +39,72 @@ CREATE
 	(ausbildung)-[:HTL]->(htl),
 	(ausbildung)-[:Studium]->(studium),
 	(ausbildung)-[:Praktikum]->(austrian),
-	(ausbildung)-[:Praktikum]->(siemens)
+	(ausbildung)-[:Praktikum]->(siemens),
+	(ausbildung)-[:Zivildienst]->(zivildienst)
 
-CREATE (kenntnisse:Kenntnisse {title: 'Kenntnisse', body: '', avatar: 'kenntnisse.png', imageUrls: [], imageTexts: []}) 
+//Kenntnisse
+
+CREATE (kenntnisse {title: 'Kenntnisse', body: '', avatar: 'kenntnisse.png', imageUrls: [], imageTexts: []}) 
 CREATE
 	(phillip)-[:Kenntnisse]->(kenntnisse)
 
-CREATE (programmieren:Kenntnisse {title: 'Programmieren', body: '', avatar: 'programmieren.png', imageUrls: [], imageTexts: []}) 
-CREATE (java:Kenntnisse {title: 'Java', body: '', avatar: 'java.png', imageUrls: [], imageTexts: []}) 
-CREATE (javascript:Kenntnisse {title: 'Javascript', body: '', avatar: 'javascript.png', imageUrls: [], imageTexts: []}) 
-CREATE (php:Kenntnisse {title: 'PHP', body: '', avatar: 'php.png', imageUrls: [], imageTexts: []}) 
-CREATE (c:Kenntnisse {title: 'C', body: '', avatar: 'c.png', imageUrls: [], imageTexts: []}) 
-CREATE (css3:Kenntnisse {title: 'CSS3', body: '', avatar: 'css3.png', imageUrls: [], imageTexts: []}) 
-CREATE (cpp:Kenntnisse {title: 'C++', body: '', avatar: 'cpp.png', imageUrls: [], imageTexts: []}) 
-CREATE (html5:Kenntnisse {title: 'HTML5', body: '', avatar: 'html5.png', imageUrls: [], imageTexts: []}) 
-CREATE (asm:Kenntnisse {title: 'Assembler', body: '', avatar: 'asm.png', imageUrls: [], imageTexts: []}) 
+CREATE (programmieren {title: 'Programmieren', body: '', avatar: 'programmieren.png', imageUrls: [], imageTexts: []}) 
+CREATE (sonstige {title: 'Diverses', body: '', avatar: 'diverses.png', imageUrls: [], imageTexts: []}) 
+CREATE (plattformen {title: 'Plattformen', body: '', avatar: 'plattform.png', imageUrls: [], imageTexts: []}) 
+CREATE (datenbanken {title: 'Datenbank', body: '', avatar: 'datenbank.png', imageUrls: [], imageTexts: []}) 
+CREATE (sprachen {title: 'Sprachen', body: '', avatar: 'sprachen.png', imageUrls: [], imageTexts: []})
 CREATE
 	(kenntnisse)-[:Programmieren]->(programmieren),
+	(kenntnisse)-[:Sonstige]->(sonstige),
+	(kenntnisse)-[:Plattformen]->(plattformen),
+	(kenntnisse)-[:Datenbanken]->(datenbanken),
+	(kenntnisse)-[:Sprachen]->(sprachen)
+
+//Kenntnisse - Sprachen
+CREATE (deutsch {title: 'Deutsch', body: '', avatar: 'deutschland.png', imageUrls: [], imageTexts: []}) 
+CREATE (englisch {title: 'Englisch', body: '', avatar: 'england.png', imageUrls: [], imageTexts: []}) 
+CREATE
+	(sprachen)-[:Deutsch]->(deutsch),
+	(sprachen)-[:Englisch]->(englisch) 
+
+//Kenntnisse - Plattformen
+
+CREATE (github {title: 'Github', body: '', avatar: 'github.png', imageUrls: [], imageTexts: []}) 
+CREATE (facebook {title: 'Facebook', body: '', avatar: 'facebook.png', imageUrls: [], imageTexts: []})
+CREATE (heroku {title: 'Heroku', body: '', avatar: 'heroku.png', imageUrls: [], imageTexts: []}) 
+CREATE (amazon {title: 'Amazon Webservices', body: '', avatar: 'amazon.png', imageUrls: [], imageTexts: []}) 
+CREATE (googleappengine {title: 'Google App Engine', body: '', avatar: 'googleappengine.png', imageUrls: [], imageTexts: []}) 
+CREATE 
+	(plattformen)-[:Github]->(github),
+	(plattformen)-[:Heroku]->(heroku),
+	(plattformen)-[:Amazon]->(amazon),
+	(plattformen)-[:Facebook]->(facebook),
+	(plattformen)-[:Google]->(googleappengine)
+
+//Kenntnisse - Datenbanken
+
+CREATE (mysql {title: 'MySQL', body: '', avatar: 'mysql.png', imageUrls: [], imageTexts: []}) 
+CREATE (postgresql {title: 'PostgreSQL', body: '', avatar: 'postgresql.png', imageUrls: [], imageTexts: []}) 
+CREATE (redis {title: 'Redis', body: '', avatar: 'redis.png', imageUrls: [], imageTexts: []}) 
+CREATE (neo4j {title: 'Neo4j', body: '', avatar: 'neo4j.png', imageUrls: [], imageTexts: []}) 
+CREATE (mongodb {title: 'MongoDb', body: '', avatar: 'mongodb.png', imageUrls: [], imageTexts: []}) 
+CREATE
+	(datenbanken)-[:MySQL]->(mysql),
+	(datenbanken)-[:PostgreSQL]->(postgresql),
+	(datenbanken)-[:Redis]->(redis),
+	(datenbanken)-[:Neo4j]->(neo4j),
+	(datenbanken)-[:MongoDB]->(mongodb)
+
+//Kenntnisse - Programmieren 
+CREATE (java {title: 'Java', body: '<a href="http://10.0.0.38:9000/#/parent/child/MATCH%20(n1%3APhillip)-%5Br1%3AKenntnisse%5D-%3E(n2)-%5Br2%3AProgrammieren%5D-%3E(n3)-%5Br3%3AJava%5D-%3E(n4)-%5Br4*%5D-%3E(n5)%20RETURN%20n1%2Cn2%2Cn3%2Cn4%2Cn5%2Cr1%2Cr2%2Cr3%2Cr4">Details</a>', avatar: 'java.png', imageUrls: [], imageTexts: []}) 
+CREATE (javascript {title: 'Javascript', body: '<a href="http://10.0.0.38:9000/#/parent/child/MATCH%20(n1%3APhillip)-%5Br1%3AKenntnisse%5D-%3E(n2)-%5Br2%3AProgrammieren%5D-%3E(n3)-%5Br3%3AJavascript%5D-%3E(n4)-%5Br4*%5D-%3E(n5)%20RETURN%20n1%2Cn2%2Cn3%2Cn4%2Cn5%2Cr1%2Cr2%2Cr3%2Cr4">Details</a>', avatar: 'javascript.png', imageUrls: [], imageTexts: []}) 
+CREATE (php {title: 'PHP', body: '<a href="http://10.0.0.38:9000/#/parent/child/MATCH%20(n1%3APhillip)-%5Br1%3AKenntnisse%5D-%3E(n2)-%5Br2%3AProgrammieren%5D-%3E(n3)-%5Br3%3APHP%5D-%3E(n4)-%5Br4*%5D-%3E(n5)%20RETURN%20n1%2Cn2%2Cn3%2Cn4%2Cn5%2Cr1%2Cr2%2Cr3%2Cr4">Details</a>', avatar: 'php.png', imageUrls: [], imageTexts: []}) 
+CREATE (c {title: 'C', body: '', avatar: 'c.png', imageUrls: [], imageTexts: []}) 
+CREATE (css3 {title: 'CSS3', body: '', avatar: 'css3.png', imageUrls: [], imageTexts: []}) 
+CREATE (cpp {title: 'C++', body: '', avatar: 'cpp.png', imageUrls: [], imageTexts: []}) 
+CREATE (html5 {title: 'HTML5', body: '', avatar: 'html5.png', imageUrls: [], imageTexts: []}) 
+CREATE (asm {title: 'Assembler', body: '', avatar: 'asm.png', imageUrls: [], imageTexts: []}) 
+CREATE
 	(programmieren)-[:Java]->(java),
 	(programmieren)-[:Javascript]->(javascript),
 	(programmieren)-[:PHP]->(php),
@@ -58,120 +114,185 @@ CREATE
 	(programmieren)-[:HTML5]->(html5),
 	(programmieren)-[:Assembler]->(asm)
 
-CREATE (konsolenanwendungen:Kenntnisse {title: 'diverse Konsolenanwendungen', body: '', avatar: 'konsole.png', imageUrls: [], imageTexts: []}) 
-	(programmieren)-[:Konsolenanwendungen]->(konsolenanwendungen)
+//Kenntnisse - Programmieren - Java
+CREATE (libraries_java {title: 'Libraries', body: '', avatar: 'libraries.png', imageUrls: [], imageTexts: []}) 
+CREATE (plattformen_java {title: 'Plattformen', body: '', avatar: 'plattform.png', imageUrls: [], imageTexts: []}) 
+CREATE (tools_java {title: 'Tools', body: '', avatar: 'tools.png', imageUrls: [], imageTexts: []}) 
+CREATE (datenbanken_java {title: 'Datenbanken', body: '', avatar: 'datenbank.png', imageUrls: [], imageTexts: []})
 
-CREATE (doctrine:Kenntnisse {title: 'Doctrine ORM', body: '', avatar: 'doctrine.png', imageUrls: [], imageTexts: []}) 
-CREATE (zendframework1:Kenntnisse {title: 'Zend Framework 1', body: '', avatar: 'zendframework1.png', imageUrls: [], imageTexts: []})
-CREATE (zendframework2:Kenntnisse {title: 'Zend Framework 2', body: '', avatar: 'zendframework2.png', imageUrls: [], imageTexts: []})
-CREATE 
-	(php)-[:Doctrine]->(doctrine),
-	(php)-[:ZendFramework_1]->(zendframework1),
-	(php)-[:ZendFramework_2]->(zendframework2)
-
-CREATE (z80:Kenntnisse {title: 'Zilog Z80', body: '', avatar: 'z80.png', imageUrls: [], imageTexts: []}) 
+CREATE (eclipse {title: 'Eclipse', body: '', avatar: 'eclipse.png', imageUrls: [], imageTexts: []}) 
+CREATE (eclipse_android {title: 'Eclipse ADT Plugin', body: '', avatar: 'android.png', imageUrls: [], imageTexts: []})
+CREATE (adt {title: 'Android Development Tools', body: '', avatar: 'android.png', imageUrls: [], imageTexts: []})
+CREATE (hibernate {title: 'Hibernate', body: '', avatar: 'hibernate.png', imageUrls: [], imageTexts: []}) 
+CREATE (gwt {title: 'Google Web Toolkit', body: '', avatar: 'gwt.png', imageUrls: [], imageTexts: []}) 
+CREATE (springframework {title: 'Spring Framework', body: '', avatar: 'springframework.png', imageUrls: [], imageTexts: []}) 
+CREATE (cordova {title: 'Cordova', body: '', avatar: 'cordova.png', imageUrls: [], imageTexts: []}) 
+CREATE (junit {title: 'Junit', body: '', avatar: 'junit.png', imageUrls: [], imageTexts: []}) 
+CREATE (jstl {title: 'JSTL', body: '', avatar: 'jstl.png', imageUrls: [], imageTexts: []}) 
+CREATE (thymeleaf {title: 'Thymeleaf', body: '', avatar: 'thymeleaf.png', imageUrls: [], imageTexts: []})
 CREATE
-	(asm)-[:Z80]->(z80)
+	(java)-[:Libraries]->(libraries_java),
+	(java)-[:Plattformen]->(plattformen_java),
+	(java)-[:Tools]->(tools_java),
+	(java)-[:Datenbanken]->(datenbanken_java),
 
-CREATE (visualstudio:Kenntnisse {title: 'Micosoft Visual Studio', body: '', avatar: 'visualstudio.png', imageUrls: [], imageTexts: []})  
+	(libraries_java)-[:ADT]->(adt),
+	(libraries_java)-[:Hibernate]->(hibernate),
+	(libraries_java)-[:GWT]->(gwt),
+	(libraries_java)-[:Spring]->(springframework),
+	(libraries_java)-[:Cordova]->(cordova),
+	(libraries_java)-[:JSTL]->(jstl),
+	(libraries_java)-[:Thymeleaf]->(thymeleaf),
+	(libraries_java)-[:JUnit]->(junit),
+
+	(tools_java)-[:Eclipse]->(eclipse),
+	(tools_java)-[:EclipseADT]->(eclipse_android),
+
+	(datenbanken_java)-[:MySQL]->(mysql),
+	(datenbanken_java)-[:PostgreSQL]->(postgresql),
+	(datenbanken_java)-[:Neo4j]->(neo4j),
+
+	(plattformen_java)-[:Heroku]->(heroku),
+	(plattformen_java)-[:Google]->(googleappengine),
+	(plattformen_java)-[:Amazon]->(amazon),
+	(plattformen_java)-[:Facebook]->(facebook)
+
+
+//Kenntnisse - Programmieren - Javascript
+CREATE (libraries_javascript {title: 'Libraries', body: '', avatar: 'libraries.png', imageUrls: [], imageTexts: []}) 
+CREATE (plattformen_javascript {title: 'Plattformen', body: '', avatar: 'plattform.png', imageUrls: [], imageTexts: []}) 
+CREATE (tools_javascript {title: 'Tools', body: '', avatar: 'tools.png', imageUrls: [], imageTexts: []}) 
+CREATE (datenbanken_javascript {title: 'Datenbanken', body: '', avatar: 'datenbank.png', imageUrls: [], imageTexts: []})
+
+CREATE (jquery {title: 'jQuery', body: '', avatar: 'jquery.png', imageUrls: [], imageTexts: []}) 
+CREATE (angularjs {title: 'AngularJs', body: '', avatar: 'angularjs.png', imageUrls: [], imageTexts: []}) 
+CREATE (nodejs {title: 'node.js', body: '', avatar: 'nodejs.png', imageUrls: [], imageTexts: []})
+CREATE (ionicframework {title: 'Ionic Framework', body: '', avatar: 'ionicframework.png', imageUrls: [], imageTexts: []}) 
+CREATE (yeoman {title: 'Yeoman', body: '', avatar: 'yeoman.png', imageUrls: [], imageTexts: []}) 
+CREATE (bower {title: 'Bower', body: '', avatar: 'bower.png', imageUrls: [], imageTexts: []}) 
+CREATE (grunt {title: 'Grunt', body: '', avatar: 'grunt.png', imageUrls: [], imageTexts: []}) 
+CREATE (d3 {title: 'd3.js', body: '', avatar: 'd3.png', imageUrls: [], imageTexts: []}) 
+CREATE (jasmine {title: 'Jasmine', body: '', avatar: 'jasmine.png', imageUrls: [], imageTexts: []}) 
+CREATE (expressframework {title: 'express Framework', body: '', avatar: 'express.png', imageUrls: [], imageTexts: []}) 
+CREATE (passport {title: 'passport.js', body: '', avatar: 'passport.png', imageUrls: [], imageTexts: []}) 
+CREATE (sockjs {title: 'sock.js', body: '', avatar: 'sockjs.png', imageUrls: [], imageTexts: []}) 
+CREATE (bluebird {title: 'bluebird', body: '', avatar: 'bluebird.png', imageUrls: [], imageTexts: []}) 
+CREATE (npm {title: 'Node Packaged Modules', body: '', avatar: 'npm.png', imageUrls: [], imageTexts: []}) 
+
 CREATE
-	(cpp)-[:VisualStudio]->(visualstudio)
+	(javascript)-[:Libraries]->(libraries_javascript),
+	(javascript)-[:Plattformen]->(plattformen_javascript),
+	(javascript)-[:Tools]->(tools_javascript),
+	(javascript)-[:Datenbanken]->(datenbanken_javascript),
 
-CREATE (eclipse:Kenntnisse {title: 'Eclipse', body: '', avatar: 'eclipse.png', imageUrls: [], imageTexts: []}) 
-CREATE (adt:Kenntnisse {title: 'Android Development Tools', body: '', avatar: 'adt.png', imageUrls: [], imageTexts: []}) 
-CREATE (doctrine:Kenntnisse {title: 'Doctrine ORM', body: '', avatar: 'doctrine.png', imageUrls: [], imageTexts: []}) 
+	(libraries_javascript)-[:jQuery]->(jquery),
+	(libraries_javascript)-[:AngularJs]->(angularjs),
+	(libraries_javascript)-[:NodeJs]->(nodejs),
+	(libraries_javascript)-[:IonicFramework]->(ionicframework),
+	(libraries_javascript)-[:d3]->(d3),
+	(libraries_javascript)-[:Jasmine]->(jasmine),
+	(libraries_javascript)-[:express]->(expressframework),
+	(libraries_javascript)-[:passportJs]->(passport),
+	(libraries_javascript)-[:sockJs]->(sockjs),
+	(libraries_javascript)-[:bluebird]->(bluebird),
 
-CREATE (datenbank:Kenntnisse {title: 'Datenbank', body: '', avatar: 'datenbank.png', imageUrls: [], imageTexts: []}) 
-CREATE (mysql:Kenntnisse {title: 'MySQL', body: '', avatar: 'mysql.png', imageUrls: [], imageTexts: []}) 
-CREATE (postgresql:Kenntnisse {title: 'PostgreSQL', body: '', avatar: 'postgresql.png', imageUrls: [], imageTexts: []}) 
-CREATE (redis:Kenntnisse {title: 'Redis', body: '', avatar: 'redis.png', imageUrls: [], imageTexts: []})
-CREATE (mongodb:Kenntnisse {title: 'MongoDb', body: '', avatar: 'mongodb.png', imageUrls: [], imageTexts: []}) 
-CREATE (neo4j:Kenntnisse {title: 'Neo4j', body: '', avatar: 'neo4j.png', imageUrls: [], imageTexts: []}) 
-CREATE 
-	(kenntnisse)-[:Datenbank]->(datenbank),
-	(datenbank)-[:MySQL]->(mysql),
-	(datenbank)-[:PostgreSQL]->(postgresql),
-	(datenbank)-[:Redis]->(redis),
-	(datenbank)-[:MongoDb]->(mongodb),
-	(datenbank)-[:Neo4j]->(neo4j)
+	(tools_javascript)-[:Yeoman]->(yeoman),
+	(tools_javascript)-[:Bower]->(bower),
+	(tools_javascript)-[:Grunt]->(grunt),
+	(tools_javascript)-[:npm]->(npm),
 
-CREATE (diverses:Kenntnisse {title: 'Diverses', body: '', avatar: 'diverses.png', imageUrls: [], imageTexts: []}) 
-CREATE (office:Kenntnisse {title: 'Office', body: '', avatar: 'office.png', imageUrls: [], imageTexts: []}) 
-CREATE (windows:Kenntnisse {title: 'Windows', body: '', avatar: 'windows.png', imageUrls: [], imageTexts: []})
-CREATE (android:Kenntnisse {title: 'Android', body: '', avatar: 'android.png', imageUrls: [], imageTexts: []})  
-CREATE (linux:Kenntnisse {title: 'Linux', body: '', avatar: 'linux.png', imageUrls: [], imageTexts: []}) 
-CREATE (gimp:Kenntnisse {title: 'Gimp', body: '', avatar: 'gimp.png', imageUrls: [], imageTexts: []}) 
-CREATE (autocad:Kenntnisse {title: 'AutoCAD', body: '', avatar: 'autocad.png', imageUrls: [], imageTexts: []}) 
+	(datenbanken_javascript)-[:MongoDB]->(mongodb),
+	(datenbanken_javascript)-[:Neo4j]->(neo4j),
+	(datenbanken_javascript)-[:Redis]->(redis),
+
+	(plattformen_javascript)-[:Amazon]->(amazon),
+	(plattformen_javascript)-[:Google]->(googleappengine),
+	(plattformen_javascript)-[:Facebook]->(facebook)
+
+//Kenntnisse - Programmieren - Php
+CREATE (libraries_php {title: 'Libraries', body: '', avatar: 'libraries.png', imageUrls: [], imageTexts: []}) 
+CREATE (datenbanken_php {title: 'Datenbanken', body: '', avatar: 'datenbank.png', imageUrls: [], imageTexts: []})
+
+CREATE (doctrine {title: 'Doctrine ORM', body: '', avatar: 'doctrine.png', imageUrls: [], imageTexts: []}) 
+CREATE (zendframework1 {title: 'Zend Framework 1', body: '', avatar: 'zendframework1.png', imageUrls: [], imageTexts: []}) 
+CREATE (zendframework2 {title: 'Zend Framework 2', body: '', avatar: 'zendframework2.png', imageUrls: [], imageTexts: []}) 
+
 CREATE
-	(kenntnisse)-[:Diverses]->(diverses),
-	(diverses)-[:Office]->(office),
-	(diverses)-[:Windows]->(windows),
-	(diverses)-[:Android]->(android),
-	(diverses)-[:Linux]->(linux),
-	(diverses)-[:AutoCAD]->(autocad),
-	(diverses)-[:Gimp]->(gimp)
+	(php)-[:Libraries]->(libraries_php),
+	(php)-[:Datenbanken]->(datenbanken_php),
 
-CREATE (storagehosting:Kenntnisse {title: 'Hosting / Storage', body: '', avatar: 'hostingstorage.png', imageUrls: [], imageTexts: []}) 
-CREATE (heroku:Kenntnisse {title: 'Heroku', body: '', avatar: 'heroku.png', imageUrls: [], imageTexts: []}) 
-CREATE (amazon:Kenntnisse {title: 'Amazon Webservices', body: '', avatar: 'amazon.png', imageUrls: [], imageTexts: []}) 
-CREATE (googleappengine:Kenntnisse {title: 'Google App Engine', body: '', avatar: 'googleappengine.png', imageUrls: [], imageTexts: []}) 
-CREATE (github:Kenntnisse {title: 'Github', body: '', avatar: 'github.png', imageUrls: [], imageTexts: []}) 
+	(libraries_php)-[:Doctrine]->(doctrine),
+	(libraries_php)-[:ZendFramework_1]->(zendframework1),
+	(libraries_php)-[:ZendFramework_2]->(zendframework2),
+
+	(datenbanken_php)-[:MySQL]->(mysql)
+
+//Kenntnisse - Sonstige
+
+CREATE (office {title: 'Office', body: '', avatar: 'office.png', imageUrls: [], imageTexts: []}) 
+CREATE (windows {title: 'Windows', body: '', avatar: 'windows.png', imageUrls: [], imageTexts: []})
+CREATE (android {title: 'Android', body: '', avatar: 'android.png', imageUrls: [], imageTexts: []})  
+CREATE (linux {title: 'Linux', body: '', avatar: 'linux.png', imageUrls: [], imageTexts: []}) 
+CREATE (gimp {title: 'Gimp', body: '', avatar: 'gimp.png', imageUrls: [], imageTexts: []}) 
+CREATE (autocad {title: 'AutoCAD', body: '', avatar: 'autocad.png', imageUrls: [], imageTexts: []}) 
+CREATE
+	(sonstige)-[:Office]->(office),
+	(sonstige)-[:Windows]->(windows),
+	(sonstige)-[:Android]->(android),
+	(sonstige)-[:Linux]->(linux),
+	(sonstige)-[:AutoCAD]->(autocad),
+	(sonstige)-[:Gimp]->(gimp)
+
+//Kontakt
+
+CREATE (kontakt {title: 'Kontakt', body: '', avatar: 'kontakt.png', imageUrls: [], imageTexts: []})
+CREATE (email {title: 'E-Mail', body: '', avatar: 'email.png', imageUrls: [], imageTexts: []})
+CREATE (telefon {title: 'Telefon', body: '', avatar: 'telefon.png', imageUrls: [], imageTexts: []})
 CREATE 
-	(kenntnisse)-[:Hosting_Storage]->(storagehosting),
-	(storagehosting)-[:Heroku]->(heroku),
-	(storagehosting)-[:Amazon]->(amazon),
-	(storagehosting)-[:Github]->(github),
-	(storagehosting)-[:Google]->(googleappengine)
+	(phillip)-[:Kontakt]->(kontakt),
+	(kontakt)-[:Email]->(email),
+	(kontakt)-[:Telefon]->(telefon)
 
-CREATE (dokumente:Dokumente {title: 'Dokumente', body: '', avatar: 'dokumente.png', imageUrls: [], imageTexts: []})
-CREATE (maturazeugnis:Dokumente {title: 'Maturazeugnis', body: '', avatar: 'maturazeugnis.png', imageUrls: [], imageTexts: []})
-CREATE (abschlusszeugnis:Dokumente {title: 'Abschlusszeugnis', body: '', avatar: 'abschlusszeugnis.png', imageUrls: [], imageTexts: []})
-CREATE (foto:Dokumente {title: 'Foto', body: '', avatar: 'foto.png', imageUrls: [], imageTexts: []})
+//Stärken
+
+CREATE (staerken {title: 'Stärken', body: '', avatar: 'staerken.png', imageUrls: [], imageTexts: []})
+
+//Schwächen
+
+CREATE (schwaechen {title: 'Schwächen', body: '', avatar: 'schwächen.png', imageUrls: [], imageTexts: []})
+
+//Dokumente
+
+CREATE (dokumente {title: 'Dokumente', body: '', avatar: 'dokumente.png', imageUrls: [], imageTexts: []})
+CREATE (maturazeugnis {title: 'Maturazeugnis', body: '', avatar: 'maturazeugnis.png', imageUrls: [], imageTexts: []})
+CREATE (abschlusszeugnis {title: 'Abschlusszeugnis', body: '', avatar: 'abschlusszeugnis.png', imageUrls: [], imageTexts: []})
+CREATE (foto {title: 'Foto', body: '', avatar: 'foto.png', imageUrls: [], imageTexts: []})
 CREATE
 	(phillip)-[:Dokumente]->(dokumente),
 	(dokumente)-[:Maturazeugnis]->(maturazeugnis),
 	(dokumente)-[:Abschlusszeugnis]->(abschlusszeugnis),
 	(dokumente)-[:Foto]->(foto)
 
-CREATE (kontakt:Kontakt {title: 'Kontakt', body: '', avatar: 'kontakt.png', imageUrls: [], imageTexts: []})
-CREATE (email:Kontakt {title: 'E-Mail', body: '', avatar: 'email.png', imageUrls: [], imageTexts: []})
-CREATE (telefon:Kontakt {title: 'Telefon', body: '', avatar: 'telefon.png', imageUrls: [], imageTexts: []})
-CREATE 
-	(phillip)-[:Kontakt]->(kontakt),
-	(kontakt)-[:Email]->(email),
-	(kontakt)-[:Telefon]->(telefon)
-
-CREATE (staerken:Staerken {title: 'Stärken', body: '', avatar: 'staerken.png', imageUrls: [], imageTexts: []})
-CREATE (schwaechen:Schwaechen {title: 'Schwächen', body: '', avatar: 'schwächen.png', imageUrls: [], imageTexts: []})
 
 
 
 
-	
-		 
 
-MATCH (p:Phillip)
-CREATE (lebenslauf:Lebenslauf {title: 'Lebenslauf', imageUrls: [], imageTexts: [], body: '<h4>Lebenslauf</h4><p>Der Lauf meines Lebens</p>', avatar: '' }),
- 			 (y1990 {title: '1990', imageUrls: [], imageTexts: [], body: '<h4>1990</h4><p>24. April: Das Hubble-Weltraumteleskop wird vom Space Shuttle Discovery im Rahmen der Mission STS-31 in den Orbit gebracht.</p>', avatar: ''}),
-			 (y1996 {title: '1996', imageUrls: [], imageTexts: [], body: '<h4>1996</h4><p>5. Juli: Das Schaf Dolly, erstes geklontes Säugetier der Welt, wird geboren.</p>', avatar: ''}),
-			 (y2000 {title: '2000', imageUrls: [], imageTexts: [], body: '<h4>2000</h4><p>25. Juli: Bei dem Absturz einer französischen Concorde am 25. Juli 2000 bei Paris kommen 113 Menschen ums Leben.</p>', avatar: ''}),
-			 (y2004 {title: '2004', imageUrls: [], imageTexts: [], body: '<h4>2004</h4><p>4. Juli: Griechenland unter Trainer Otto Rehhagel wird mit einem 1:0 gegen Portugal erstmals Europameister.</p>', avatar: ''}),
-			 (y2006 {title: '2006', imageUrls: [], imageTexts: [], body: '<h4>2006</h4><p>ist in Österreich Mozartjahr (anlässlich des 250. Geburtstages des Komponisten).</p>', avatar: ''}),
-			 (y2008 {title: '2008', imageUrls: [], imageTexts: [], body: '<h4>2008</h4><p>Der Large Hadron Collider am CERN wird fertiggestellt.</p>', avatar: ''}),
-			 (y2009 {title: '2009', imageUrls: [], imageTexts: [], body: '<h4>2009</h4><p>Der Blaue Rindenpilz (Terana caerulea) ist Pilz des Jahres</p>', avatar: ''}),
-			 (y2010 {title: '2010', imageUrls: [], imageTexts: [], body: '<h4>2010</h4><p>12. Januar: Bei einem Erdbeben in Haiti sterben etwa 220.000 Menschen, über eine Million Menschen werden obdachlos.</p>', avatar: ''}),
-			 (y2011 {title: '2011', imageUrls: [], imageTexts: [], body: '<h4>2011</h4><p>25. November:  Der bisher größte Mars-Rover "Curiosity" startet zum Mars, wo er ca. ein Jahr später landen wird.</p>', avatar: ''}),
-			 (y2014 {title: '2014', imageUrls: [], imageTexts: [], body: '<h4>2014</h4><p>8. März: Der Malaysia-Airlines-Flug 370 verschwindet gegen 01:30 Uhr Ortszeit aus der Überwachung der Flugverkehrskontrolle.</p>', avatar: ''})
-CREATE (p)-[r1:Lebenslauf]->(lebenslauf),
-			 (lebenslauf)-[r2:Anno-1990]->(y1990),
-			 (lebenslauf)-[r2:Anno-1996]->(y1990),
-			 (lebenslauf)-[r2:Anno-2000]->(y2000),
-			 (lebenslauf)-[r2:Anno-2004]->(y2004),
-			 (lebenslauf)-[r2:Anno-2006]->(y2006),
-			 (lebenslauf)-[r2:Anno-2008]->(y2008),
-			 (lebenslauf)-[r2:Anno-2009]->(y2009),
-			 (lebenslauf)-[r2:Anno-2010]->(y2010),
-			 (lebenslauf)-[r2:Anno-2011]->(y2011),
-			 (lebenslauf)-[r2:Anno-2014]->(y2014)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
