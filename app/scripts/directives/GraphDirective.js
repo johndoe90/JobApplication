@@ -79,7 +79,7 @@ angular
 					.data(scope.graph.nodes)
 					.enter()
 					.append('svg:image')
-					.attr('xlink:href', function(d) { return '/images/avatars/' + d.properties.avatar; })
+					.attr('xlink:href', function(d) { return d.properties.avatar; })
 					.attr('width', r * 2)
 					.attr('height', r * 2)
 					.attr('class', 'node')
@@ -92,7 +92,7 @@ angular
 					.on('mouseup', function(d) {
 						if (d.down) {
 							scope.$apply(function() {
-								scope.infos.unshift({imageUrls: d.properties.imageUrls, imageTexts: d.properties.imageTexts, body: d.properties.body});
+								scope.infos.unshift({imageUrls: d.properties.imageUrls, imageTexts: d.properties.imageTexts, body: d.properties.body, title: d.properties.title});
 							});
 						}
 					})

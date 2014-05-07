@@ -5,11 +5,15 @@ html, body {
   margin: 0;
 }
 
-:-o-full-screen {
-  background-color: white;
+.caption h4 {
+  font-style: italic;
 }
 
 :-ms-full-screen {
+  background-color: white;
+}
+
+:-ms-fullscreen {
   background-color: white;
 }
 
@@ -18,6 +22,10 @@ html, body {
 }
 
 :-webkit-full-screen {
+  background-color: white;
+}
+
+:fullsceen {
   background-color: white;
 }
 
@@ -40,14 +48,24 @@ a:hover {
   margin-right: 0;
 }
 
+.query-box {
+  font-size: 150%; 
+  text-align: center; 
+  font-family: Menlo,Monaco,Consolas,monospace;
+}
+
 .query {
+  color: black;
+  background-color: #f9f2f4;
+}
+/*.query {
   font-size: 150%;
   color: black;
   background-color: #f9f2f4;
   border-radius: 4px;
   font-family: Menlo,Monaco,Consolas,monospace;
   margin: 0 15px 0 15px;
-}
+}*/
 
 .wrapper {
   padding: 10px 0 10px 10px;
@@ -139,6 +157,7 @@ a:hover {
   overflow-y: auto;
   margin-left: 15px;
   border-left: 1px solid #ddd;
+  flex-basis: auto;
 }
 
 .animate.ng-enter, 
@@ -163,5 +182,5 @@ a:hover {
 
 .animate.ng-enter.animate.ng-enter-active, 
 .animate.ng-leave {
-  width: 449px;
+  width: 100%;
 }

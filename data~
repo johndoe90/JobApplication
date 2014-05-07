@@ -1,21 +1,31 @@
-CREATE (phillip:Phillip {title: 'Phillip Friedrich', body: '', avatar: 'phillip.png', imageUrls: [], imageTexts: []})
+CREATE (phillip:Phillip {title: 'Phillip Friedrich', body: '', avatar: '/images/avatars/phillip.png', imageUrls: [], imageTexts: []})
 
-//Hobbies
+//Freizeit
 
-CREATE (hobbies {title: 'Hobbies', body: '', avatar: 'hobbies.png', imageUrls: [], imageTexts: []})
-CREATE (angeln {title: 'Angeln', body: '', avatar: 'angeln.png', imageUrls: [], imageTexts: []})
-CREATE (radfahren {title: 'Radfahren', body: '', avatar: 'radfahren.png', imageUrls: [], imageTexts: []})
+CREATE (freizeit:Freizeit {title: 'Freizeit', body: 'So verbringe ich meine Freizeit.', avatar: '/images/avatars/freizeit.png', imageUrls: ['/images/slides/freizeit/freizeit1.jpg', '/images/slides/freizeit/angeln/angeln2.jpg', '/images/slides/freizeit/grillen/grillen5.jpg', '/images/slides/freizeit/radfahren/radfahren1.jpg'], imageTexts: ['', '', '', '']})
+CREATE (angeln:Freizeit {title: 'Angeln', body: 'Ich bin nicht wirklich ein fachkundiger Angler, aber meine Forellen fange ich mir lieber selbst, anstatt sie im Supermarkt zu kaufen. ', avatar: '/images/avatars/angeln.png', imageUrls: ['/images/slides/freizeit/angeln/angeln1.jpg', '/images/slides/freizeit/angeln/angeln2.jpg', '/images/slides/freizeit/angeln/angeln3.jpg'], imageTexts: ['', '', '']})
+CREATE (radfahren:Freizeit {title: 'Radfahren', body: 'Vor ein paar Jahren habe ich mir ein Rennrad geleistet. Für die Tour de France hat es noch nicht gereicht, aber in der näheren Umgebung bin ich schon einmal auf einer ruhigen Straße unterwegs.', avatar: '/images/avatars/radfahren.png', imageUrls: ['/images/slides/freizeit/radfahren/radfahren1.jpg', '/images/slides/freizeit/radfahren/radfahren2.jpg'], imageTexts: ['', '']})
+CREATE (grillen:Freizeit {title: 'Grillen', body: 'Wenn das Wetter stimmt, werfe ich auch gerne einmal den Grill an oder mache ein Lagerfeuer in unserem Garten.', avatar: '/images/avatars/grillen.png', imageUrls: ['/images/slides/freizeit/grillen/grillen1.jpg', '/images/slides/freizeit/grillen/grillen2.jpg', '/images/slides/freizeit/grillen/grillen3.jpg', '/images/slides/freizeit/grillen/grillen4.jpg', '/images/slides/freizeit/grillen/grillen5.jpg'], imageTexts: ['', '', '', '', '']})
+CREATE (poker:Freizeit {title: 'Poker', body: 'In der Vergangenheit habe ich mit Online-Poker die Haushaltskasse aufgefüllt. Jetzt spiele ich nur noch ab und zu, aus reiner Freude am Spiel.', avatar: '/images/avatars/poker.png', imageUrls: [], imageTexts: []})
+CREATE (laufen:Freizeit {title: 'Laufen', body: 'Mit dem Laufen habe ich erst vor kurzem begonnen. Man wird sehen wie gut es sich in dem neuen Schuhwerk läuft.', avatar: '/images/avatars/laufen.png', imageUrls: ['/images/slides/freizeit/laufen/laufen1.jpg'], imageTexts: ['']})
+CREATE (coden:Freizeit {title: 'Programmieren', body: 'Man sagt doch immer, dass man sein Hobby zum Beruf machen soll. In meinem Fall trifft das Sprichwort auf jeden Fall zu.', avatar: '/images/avatars/programmieren.png', imageUrls: [], imageTexts: []})
+CREATE (schwimmen:Freizeit {title: 'Schwimmen', body: 'Gemeinsam mit einem Freund habe ich voriges Jahr einen Schwimmkurs für Fortgeschrittene besucht und seitdem betreibe ich den Sport regelmäßig.', avatar: '/images/avatars/schwimmen.png', imageUrls: ['/images/slides/freizeit/schwimmen/schwimmen1.jpg', '/images/slides/freizeit/schwimmen/schwimmen2.jpg', '/images/slides/freizeit/schwimmen/schwimmen3.jpg', '/images/slides/freizeit/schwimmen/schwimmen4.jpg'], imageTexts: ['', '', '', '']})
 CREATE 
-	(phillip)-[:Hobbies]->(hobbies),
-	(hobbies)-[:Angeln]->(angeln),
-	(hobbies)-[:Radfahren]->(radfahren)
+	(phillip)-[:Freizeit]->(freizeit),
+	(freizeit)-[:Angeln]->(angeln),
+	(freizeit)-[:Radfahren]->(radfahren),
+	(freizeit)-[:Grillen]->(grillen),
+	(freizeit)-[:Poker]->(poker),
+	(freizeit)-[:Laufen]->(laufen),
+	(freizeit)-[:Programmieren]->(coden),
+	(freizeit)-[:Schwimmen]->(schwimmen)
 
 //Familie
 
-CREATE (familie {title: 'Familie', body: '', avatar: 'familie.png', imageUrls: [], imageTexts: []})
-CREATE (andrea {title: 'Andrea Friedrich', body: '', avatar: 'andrea.png', imageUrls: [], imageTexts: []})
-CREATE (bruno {title: 'Bruno Friedrich', body: '', avatar: 'bruno.png', imageUrls: [], imageTexts: []})
-CREATE (stephy {title: 'Stephanie Friedrich', body: '', avatar: 'stephanie.png', imageUrls: [], imageTexts: []})
+CREATE (familie:Familie {title: 'Familie', body: 'Das ist meiner Familie.', avatar: '/images/avatars/familie.png', imageUrls: ['/images/slides/familie/familie1.jpg', '/images/slides/familie/familie2.jpg', '/images/slides/familie/familie3.jpg'], imageTexts: ['', '', '']})
+CREATE (andrea:Familie {title: 'Andrea Friedrich', body: 'Meine Mutter ist 48 Jahre alt und arbeitet als Büroangestellte bei der ÖBB-Postbus GmbH in Hollabrunn.', avatar: '/images/avatars/andrea.png', imageUrls: ['/images/slides/familie/andrea/andrea.jpg'], imageTexts: ['']})
+CREATE (bruno:Familie {title: 'Bruno Friedrich', body: 'Mein Vater ist 49 Jahre alt und arbeitet im Vertrieb bei Compuware, einer amerikanischen Softwarefirma.', avatar: '/images/avatars/bruno.png', imageUrls: ['/images/slides/familie/bruno/bruno.jpg'], imageTexts: ['']})
+CREATE (stephy:Familie {title: 'Stephanie Friedrich', body: 'Meine Schwester ist 25 Jahre alt und ist in der Volksschule Strasshof als Lehrerin angestellt.', avatar: '/images/avatars/stephanie.png', imageUrls: ['/images/slides/familie/stephy/stephy.jpg'], imageTexts: ['']})
 CREATE 
 	(phillip)-[:Familie]->(familie),
 	(familie)-[:Mutter]->(andrea),
@@ -24,14 +34,14 @@ CREATE
 
 //Ausbildung
 
-CREATE (ausbildung {title: 'Ausbildung', body: '', avatar: 'ausbildung.png', imageUrls: [], imageTexts: []})
-CREATE (volksschule {title: 'Volksschule', body: '', avatar: 'volksschule.png', imageUrls: [], imageTexts: []})
-CREATE (gymnasium {title: 'Gymnasium', body: '', avatar: 'gymnasium.png', imageUrls: [], imageTexts: []})
-CREATE (htl {title: 'HTL Hollabrunn', body: '', avatar: 'htl.png', imageUrls: [], imageTexts: []})
-CREATE (studium {title: 'TU - Wien', body: '', avatar: 'tuwien.png', imageUrls: [], imageTexts: []})
-CREATE (austrian {title: 'Austrian Airlines AG', body: '', avatar: 'austrian.png', imageUrls: [], imageTexts: []})
-CREATE (siemens {title: 'Siemens Business GmbH', body: '', avatar: 'siemens.png', imageUrls: [], imageTexts: []})
-CREATE (zivildienst {title: 'Caritas', body: '', avatar: 'caritas.png', imageUrls: [], imageTexts: []})
+CREATE (ausbildung:Ausbildung {title: 'Ausbildung', body: 'Diese Stationen in meiner Ausbildung habe ich schon hinter mir.', avatar: '/images/avatars/ausbildung.png', imageUrls: ['/images/slides/ausbildung/volksschule/volksschule.jpg', '/images/slides/ausbildung/gymnasium/gymnasium.jpg', '/images/slides/ausbildung/htl/htl.jpg'], imageTexts: ['Volksschule', 'Gymnasium', 'HTL - Technische Informatik']})
+CREATE (volksschule:Ausbildung {title: 'Volksschule', body: '<a href="http://www.vs2-hollabrunn.eduhi.at/Bilder/13_14/fotos2/verkleinert/k-lesenacht%20(13).JPG">Volksschule Koliskoplatz</a> von 1996 - 2000', avatar: '/images/avatars/volksschule.png', imageUrls: ['/images/slides/ausbildung/volksschule/volksschule.jpg'], imageTexts: ['']})
+CREATE (gymnasium:Ausbildung {title: 'Gymnasium', body: '<a href="http://www.bghollabrunn.ac.at/">Bundesrealgymnasium Hollabrunn</a> von 2000 - 2004</a>', avatar: '/images/avatars/gymnasium.png', imageUrls: ['/images/slides/ausbildung/gymnasium/gymnasium.jpg'], imageTexts: ['']})
+CREATE (htl:Ausbildung {title: 'HTL Hollabrunn', body: '<a href="http://www.htl-hl.ac.at/">HTL Hollabrunn</a>, Schwerpunkt Technische Informatik von 2004 - 2009', avatar: '/images/avatars/htl.png', imageUrls: ['/images/slides/ausbildung/htl/htl.jpg'], imageTexts: ['']})
+CREATE (studium:Ausbildung {title: 'TU - Wien', body: '2010 begann ich ein Studium Fachrichtung Elektrotechnik an der <a href="http://www.tuwien.ac.at/">TU Wien</a>, stellte aber relativ schnell fest, dass dieses Studium nichts für mich ist und habe es dann auch nach einem Semester wieder beendet.', avatar: '/images/avatars/tuwien.png', imageUrls: ['/images/slides/ausbildung/tu/tu.jpg'], imageTexts: ['']})
+CREATE (austrian:Ausbildung {title: 'Austrian Airlines AG', body: '2008 absolvierte ich ein einmonatiges Praktikum bei <a href="http://www.austriantechnik.at/">Austrian</a>. Dort half ich bei der Reparatur und Wartung von verschiedenen Flugzeugkomponenten aus.', avatar: '/images/avatars/austrian.png', imageUrls: ['/images/slides/ausbildung/austrian/austrian1.jpg', '/images/slides/ausbildung/austrian/austrian2.jpg', '/images/slides/ausbildung/austrian/austrian3.jpg', '/images/slides/ausbildung/austrian/austrian4.jpg'], imageTexts: ['', '', '', '']})
+CREATE (siemens:Ausbildung {title: 'Siemens Business GmbH', body: '2006 absolvierte ich ein einmonatiges Praktikum bei <a href="https://www.siemens.com/answers/at/de/">Siemens</a> in der IT Abteilung.', avatar: '/images/avatars/siemens.png', imageUrls: [], imageTexts: []})
+CREATE (zivildienst:Ausbildung {title: 'Caritas Retz', body: '2010 habe ich meinen Zivildienst bei der <a href="http://www.caritas-wien.at/hilfe-einrichtungen/menschen-mit-behinderung/werkstaetten/weinviertel/">Caritas Retz</a> abgeleistet. Meine Aufgaben waren vor allem die Betreuung von geistig/körperlich behinderten Menschen.', avatar: '/images/avatars/caritas.png', imageUrls: [], imageTexts: []})
 CREATE
 	(phillip)-[:Ausbildung]->(ausbildung),
 	(ausbildung)-[:Volksschule]->(volksschule),
@@ -44,15 +54,15 @@ CREATE
 
 //Kenntnisse
 
-CREATE (kenntnisse {title: 'Kenntnisse', body: '', avatar: 'kenntnisse.png', imageUrls: [], imageTexts: []}) 
+CREATE (kenntnisse:Kenntnisse {title: 'Kenntnisse', body: 'Ich kann Wissen in folgenden Bereichen aufweisen.', avatar: '/images/avatars/kenntnisse.png', imageUrls: [], imageTexts: []}) 
 CREATE
 	(phillip)-[:Kenntnisse]->(kenntnisse)
 
-CREATE (programmieren {title: 'Programmieren', body: '', avatar: 'programmieren.png', imageUrls: [], imageTexts: []}) 
-CREATE (sonstige {title: 'Diverses', body: '', avatar: 'diverses.png', imageUrls: [], imageTexts: []}) 
-CREATE (plattformen {title: 'Plattformen', body: '', avatar: 'plattform.png', imageUrls: [], imageTexts: []}) 
-CREATE (datenbanken {title: 'Datenbank', body: '', avatar: 'datenbank.png', imageUrls: [], imageTexts: []}) 
-CREATE (sprachen {title: 'Sprachen', body: '', avatar: 'sprachen.png', imageUrls: [], imageTexts: []})
+CREATE (programmieren:Kenntnisse_Programmieren {title: 'Programmieren', body: 'Mit folgenden Programmiersprachen habe ich schon Erfahrungen gesammelt.', avatar: '/images/avatars/programmieren.png', imageUrls: [], imageTexts: []}) 
+CREATE (sonstige:Kenntnisse_Sonstige {title: 'Sonstige', body: 'Weitere Fähigkeiten die vielleicht von Vorteil sind.', avatar: '/images/avatars/diverses.png', imageUrls: [], imageTexts: []}) 
+CREATE (plattformen:Kenntnisse_Plattformen {title: 'Plattformen', body: 'Mit diesen Plattformen hatte ich schon im Zusammenhang mit der Entwicklung von Anwendungen zu tun.', avatar: '/images/avatars/plattform.png', imageUrls: [], imageTexts: []}) 
+CREATE (datenbanken:Kenntnisse_Datenbanken {title: 'Datenbank', body: 'Mit diesen Datenbanksystemen habe ich mich schon beschäftigt.', avatar: '/images/avatars/datenbank.png', imageUrls: [], imageTexts: []}) 
+CREATE (sprachen:Kenntnisse_Sprachen {title: 'Sprachen', body: 'Diese Sprachen spreche ich.', avatar: '/images/avatars/sprachen.png', imageUrls: [], imageTexts: []})
 CREATE
 	(kenntnisse)-[:Programmieren]->(programmieren),
 	(kenntnisse)-[:Sonstige]->(sonstige),
@@ -61,33 +71,35 @@ CREATE
 	(kenntnisse)-[:Sprachen]->(sprachen)
 
 //Kenntnisse - Sprachen
-CREATE (deutsch {title: 'Deutsch', body: '', avatar: 'deutsch.png', imageUrls: [], imageTexts: []}) 
-CREATE (englisch {title: 'Englisch', body: '', avatar: 'englisch.png', imageUrls: [], imageTexts: []}) 
+CREATE (deutsch:Kenntnisse_Sprachen {title: 'Deutsch', body: 'Deutsch ist meine Muttersprache, daher beherrsche ich sie fließend in Wort und Schrift.', avatar: '/images/avatars/deutschland.png', imageUrls: [], imageTexts: []}) 
+CREATE (englisch:Kenntnisse_Sprachen {title: 'Englisch', body: 'Die meisten technischen Bücher die ich bis jetzt gelesen habe waren auf Englisch, meine Lieblingsserien und Filme schaue ich meistens im Originalton und bei der mündlichen Matura habe ich in Englisch sehr gut abgeschnitten. Von daher denke ich, dass ich sowohl beim Lesen, Schreiben und Sprechen in Englisch auf einem guten Niveau bin.', avatar: '/images/avatars/england.png', imageUrls: [], imageTexts: []}) 
 CREATE
 	(sprachen)-[:Deutsch]->(deutsch),
 	(sprachen)-[:Englisch]->(englisch) 
 
 //Kenntnisse - Plattformen
 
-CREATE (github {title: 'Github', body: '', avatar: 'github.png', imageUrls: [], imageTexts: []}) 
-CREATE (facebook {title: 'Facebook', body: '', avatar: 'facebook.png', imageUrls: [], imageTexts: []})
-CREATE (heroku {title: 'Heroku', body: '', avatar: 'heroku.png', imageUrls: [], imageTexts: []}) 
-CREATE (amazon {title: 'Amazon Webservices', body: '', avatar: 'amazon.png', imageUrls: [], imageTexts: []}) 
-CREATE (googleappengine {title: 'Google App Engine', body: '', avatar: 'googleappengine.png', imageUrls: [], imageTexts: []}) 
+CREATE (github:Kenntnisse_Plattformen {title: 'Github', body: 'Die meisten meiner Projekte sind auf Github. Daher bin ich mit den Grundfunktionen von Git sowohl in der Konsole als auch als Plugin für Eclipse (EGit) vertraut.', avatar: '/images/avatars/github.png', imageUrls: [], imageTexts: []}) 
+CREATE (facebook:Kenntnisse_Plattformen {title: 'Facebook', body: 'Ich habe schon Anwendungen entwickelt bei denen es möglich war sich via Facebook zu registrieren, einzuloggen bzw. mit der Einwilligung des Users bestimmte Aktionen auszuführen.', avatar: '/images/avatars/facebook.png', imageUrls: [], imageTexts: []})
+CREATE (heroku:Kenntnisse_Plattformen {title: 'Heroku', body: 'Auf Heroku bin ich aufmerksam geworden, weil es das Deploying bzw. Hosting von Anwendungen wesentlich schneller gestaltet und vereinfacht.', avatar: '/images/avatars/heroku.png', imageUrls: [], imageTexts: []}) 
+CREATE (amazon:Kenntnisse_Plattformen {title: 'Amazon Webservices', body: 'Diese Webapp wird per Amazon EC2 gehostet. Außerdem habe ich schon Erfahrung mit dem Simple Storage Service (S3) von Amazon.', avatar: '/images/avatars/amazon.png', imageUrls: [], imageTexts: []}) 
+CREATE (googleappengine:Kenntnisse_Plattformen {title: 'Google App Engine', body: 'Meine frühere <a href="http://my-job-application.appspot.com/?id=vector" target="_blank">Bewerbung</a> habe ich mithilfe des Google Web Toolkits entwickelt und auf der Google App Engine gehostet.', avatar: '/images/avatars/googleappengine.png', imageUrls: [], imageTexts: []}) 
+CREATE (android:Kenntnisse_Plattformen {title: 'Android', body: 'Für Android habe ich schon einfache native als auch hybride (HTML5 + CSS3 + JS + Cordova) Apps entwickelt.', avatar: '/images/avatars/android.png', imageUrls: [], imageTexts: []})  
 CREATE 
 	(plattformen)-[:Github]->(github),
 	(plattformen)-[:Heroku]->(heroku),
 	(plattformen)-[:Amazon]->(amazon),
 	(plattformen)-[:Facebook]->(facebook),
-	(plattformen)-[:Google]->(googleappengine)
+	(plattformen)-[:Google]->(googleappengine),
+	(plattformen)-[:Android]->(android)
 
 //Kenntnisse - Datenbanken
 
-CREATE (mysql {title: 'MySQL', body: '', avatar: 'mysql.png', imageUrls: [], imageTexts: []}) 
-CREATE (postgresql {title: 'PostgreSQL', body: '', avatar: 'postgresql.png', imageUrls: [], imageTexts: []}) 
-CREATE (redis {title: 'Redis', body: '', avatar: 'redis.png', imageUrls: [], imageTexts: []}) 
-CREATE (neo4j {title: 'Neo4j', body: '', avatar: 'neo4j.png', imageUrls: [], imageTexts: []}) 
-CREATE (mongodb {title: 'MongoDb', body: '', avatar: 'mongodb.png', imageUrls: [], imageTexts: []}) 
+CREATE (mysql:Kenntnisse_Datenbanken {title: 'MySQL', body: 'Meine ersten Eindrücke eines Datenbanksystems habe ich mit MySQL gewonnen. <br><br>Erfahrungen mit: <ul><li>SQL (CREATE, SELECT, JOIN, etc.)</li><li>Relationships (1/n, n/1, n/n)</li><li>SpringFramework + Hibernate ORM</li><li>verwendet in Projekten mit Java und PHP</li></ul>', avatar: '/images/avatars/mysql.png', imageUrls: [], imageTexts: []}) 
+CREATE (postgresql:Kenntnisse_Datenbanken {title: 'PostgreSQL', body: 'ist wie MySQL auch eine relationale Datenbank. Zu PostgreSQL bin ich gewechselt, da es die Volltextsuche zu dem Zeitpunkt besser unterstützt hat. <br> <br>Erfahrungen mit: <ul><li>SQL (CREATE, SELECT, JOIN, etc.)</li><li>Relationships (1/n, n/1, n/n)</li><li>SpringFramework + Hibernate ORM + HQL</li><li>verwendet in Projekten mit Java</li></ul>', avatar: '/images/avatars/postgresql.png', imageUrls: [], imageTexts: []}) 
+CREATE (redis:Kenntnisse_Datenbanken {title: 'Redis', body: 'ist ein sehr schneller key-value store. <br> <br> Erfahrungen mit: <ul><li>in Verbindung mit nodeJs zu Speicherung der Usersessions</li><li>verwendet in Projekten mit Javascript</li></ul>', avatar: '/images/avatars/redis.png', imageUrls: [], imageTexts: []}) 
+CREATE (neo4j:Kenntnisse_Datenbanken {title: 'Neo4j', body: 'ist eine der führenden Graphendatenbanksysteme auf dem Markt. Diese Webapp verwendet im Backend eine Neo4j Datenbank. <br> <br> Erfahrungen mit: <ul><li>Cypher Query Language</li><li>in Verbindung mit nodeJs + node-neo4j</li><li>in Verbindung mit dem SpringFramework (spring-data-neo4j)</li><li>verwendet in Projekten mit Java und Javascript</li></ul>', avatar: '/images/avatars/neo4j.png', imageUrls: [], imageTexts: []}) 
+CREATE (mongodb:Kenntnisse_Datenbanken {title: 'MongoDb', body: 'ist eine Dokument basiertes Datenbanksystem. Mit MongoDB habe ich bisher nur experimentiert, sprich wirklich in einem Projekt eingesetzt habe ich MongoDB noch nicht. <br><br> Erfahrungen mit: <ul><li>in Verbindung mit nodeJs + mongoose</li><li>verwendet in Projekten mit Javascript</li></ul>', avatar: '/images/avatars/mongodb.png', imageUrls: [], imageTexts: []}) 
 CREATE
 	(datenbanken)-[:MySQL]->(mysql),
 	(datenbanken)-[:PostgreSQL]->(postgresql),
@@ -96,14 +108,14 @@ CREATE
 	(datenbanken)-[:MongoDB]->(mongodb)
 
 //Kenntnisse - Programmieren 
-CREATE (java {title: 'Java', body: '<a href="http://10.0.0.38:9000/#/parent/child/MATCH%20(n1%3APhillip)-%5Br1%3AKenntnisse%5D-%3E(n2)-%5Br2%3AProgrammieren%5D-%3E(n3)-%5Br3%3AJava%5D-%3E(n4)-%5Br4*%5D-%3E(n5)%20RETURN%20n1%2Cn2%2Cn3%2Cn4%2Cn5%2Cr1%2Cr2%2Cr3%2Cr4">Details</a>', avatar: 'java.png', imageUrls: [], imageTexts: []}) 
-CREATE (javascript {title: 'Javascript', body: '<a href="http://10.0.0.38:9000/#/parent/child/MATCH%20(n1%3APhillip)-%5Br1%3AKenntnisse%5D-%3E(n2)-%5Br2%3AProgrammieren%5D-%3E(n3)-%5Br3%3AJavascript%5D-%3E(n4)-%5Br4*%5D-%3E(n5)%20RETURN%20n1%2Cn2%2Cn3%2Cn4%2Cn5%2Cr1%2Cr2%2Cr3%2Cr4">Details</a>', avatar: 'javascript.png', imageUrls: [], imageTexts: []}) 
-CREATE (php {title: 'PHP', body: '<a href="http://10.0.0.38:9000/#/parent/child/MATCH%20(n1%3APhillip)-%5Br1%3AKenntnisse%5D-%3E(n2)-%5Br2%3AProgrammieren%5D-%3E(n3)-%5Br3%3APHP%5D-%3E(n4)-%5Br4*%5D-%3E(n5)%20RETURN%20n1%2Cn2%2Cn3%2Cn4%2Cn5%2Cr1%2Cr2%2Cr3%2Cr4">Details</a>', avatar: 'php.png', imageUrls: [], imageTexts: []}) 
-CREATE (c {title: 'C', body: '', avatar: 'c.png', imageUrls: [], imageTexts: []}) 
-CREATE (css3 {title: 'CSS3', body: '', avatar: 'css3.png', imageUrls: [], imageTexts: []}) 
-CREATE (cpp {title: 'C++', body: '', avatar: 'cpp.png', imageUrls: [], imageTexts: []}) 
-CREATE (html5 {title: 'HTML5', body: '', avatar: 'html5.png', imageUrls: [], imageTexts: []}) 
-CREATE (asm {title: 'Assembler', body: '', avatar: 'asm.png', imageUrls: [], imageTexts: []}) 
+CREATE (java:Kenntnisse_Programmieren {title: 'Java', body: 'Eine genaue Aufschlüsselung meiner Erfahrungen mit Java finden sie <a href="/#/info/graph/MATCH%20(n1%3APhillip)-%5Br1%3AKenntnisse%5D-%3E(n2)-%5Br2%3AProgrammieren%5D-%3E(n3)-%5Br3%3AJava%5D-%3E(n4)-%5Br4*%5D-%3E(n5)%20RETURN%20n1%2Cn2%2Cn3%2Cn4%2Cn5%2Cr1%2Cr2%2Cr3%2Cr4" class="query">#hier</a>.', avatar: '/images/avatars/java.png', imageUrls: [], imageTexts: []}) 
+CREATE (javascript:Kenntnisse_Programmieren {title: 'Javascript', body: 'Eine genaue Aufschlüsselung meiner Erfahrungen mit Javascript finden sie <a href="/#/info/graph/MATCH%20(n1%3APhillip)-%5Br1%3AKenntnisse%5D-%3E(n2)-%5Br2%3AProgrammieren%5D-%3E(n3)-%5Br3%3AJavascript%5D-%3E(n4)-%5Br4*%5D-%3E(n5)%20RETURN%20n1%2Cn2%2Cn3%2Cn4%2Cn5%2Cr1%2Cr2%2Cr3%2Cr4" class="query">#hier</a>.', avatar: '/images/avatars/javascript.png', imageUrls: [], imageTexts: []}) 
+CREATE (php:Kenntnisse_Programmieren {title: 'PHP', body: 'Eine genaue Aufschlüsselung meiner Erfahrungen mit PHP finden sie <a href="/#/info/graph/MATCH%20(n1%3APhillip)-%5Br1%3AKenntnisse%5D-%3E(n2)-%5Br2%3AProgrammieren%5D-%3E(n3)-%5Br3%3APHP%5D-%3E(n4)-%5Br4*%5D-%3E(n5)%20RETURN%20n1%2Cn2%2Cn3%2Cn4%2Cn5%2Cr1%2Cr2%2Cr3%2Cr4" class="query">#hier</a>.', avatar: '/images/avatars/php.png', imageUrls: [], imageTexts: []}) 
+CREATE (c:Kenntnisse_Programmieren {title: 'C', body: 'Mit C hat während der Schulzeit alles begonnen und heute bin ich froh darüber, da viele andere Sprachen eine ähnliche Syntax haben. <br> <br> Erfahrungen mit: <ul><li>Programmierung von Mikrocontrollern</li><li>Entwicklung von Konsolenanwendungen</li></ul>', avatar: '/images/avatars/c.png', imageUrls: [], imageTexts: []}) 
+CREATE (css3:Kenntnisse_Programmieren {title: 'CSS3', body: 'CSS würde ich als mein schwächstes Glied im Webstack einstufen, da meine Interessen anderswo liegen und ich mich noch nie von Grund auf damit beschäftgt habe. <br> <br> Erfahrungen mit: <ul><li>CSS3 Selektoren</li><li>Responsive Design (Media Queries)</li><li>sonstige CSS Eigenschaften</li></ul>', avatar: '/images/avatars/css3.png', imageUrls: [], imageTexts: []}) 
+CREATE (cpp:Kenntnisse_Programmieren {title: 'C++', body: 'Mit C++ wurde uns in der Schule das Konzept der objektorientierten Programmierung begebracht. <br> <br> Erfahrungen mit: <ul><li>objektorientiertes Programmieren</li><li>Visual C++ (simple Anwendungen)</li></ul>', avatar: '/images/avatars/cpp.png', imageUrls: [], imageTexts: []}) 
+CREATE (html5:Kenntnisse_Programmieren {title: 'HTML5', body: 'Erfahrungen mit: <ul><li>neue HTML5 Elemente (article, header, etc.)</li><li>Drag & Drop (JS)</li><li>Fullscreen API (JS)</li><li>Audio und Video (JS)</li></ul>', avatar: '/images/avatars/html5.png', imageUrls: [], imageTexts: []}) 
+CREATE (asm:Kenntnisse_Programmieren {title: 'Assembler', body: 'Erfahrungen mit: <ul><li>Programmierung vom Zilog Z80 Mikrocontroller<li></ul>', avatar: '/images/avatars/asm.png', imageUrls: [], imageTexts: []}) 
 CREATE
 	(programmieren)-[:Java]->(java),
 	(programmieren)-[:Javascript]->(javascript),
@@ -115,21 +127,21 @@ CREATE
 	(programmieren)-[:Assembler]->(asm)
 
 //Kenntnisse - Programmieren - Java
-CREATE (libraries_java {title: 'Libraries', body: '', avatar: 'libraries.png', imageUrls: [], imageTexts: []}) 
-CREATE (plattformen_java {title: 'Plattformen', body: '', avatar: 'plattform.png', imageUrls: [], imageTexts: []}) 
-CREATE (tools_java {title: 'Tools', body: '', avatar: 'tools.png', imageUrls: [], imageTexts: []}) 
-CREATE (datenbanken_java {title: 'Datenbanken', body: '', avatar: 'datenbank.png', imageUrls: [], imageTexts: []})
+CREATE (libraries_java:Kenntnisse_Programmieren_Java_Libraries {title: 'Libraries', body: 'Mit diesen Java Frameworks/Bibliothenken habe ich schon gearbeitet.', avatar: '/images/avatars/libraries.png', imageUrls: [], imageTexts: []}) 
+CREATE (plattformen_java:Kenntnisse_Plattformen {title: 'Plattformen', body: 'Diese Plattformen habe ich schon für meine Java Anwendungen verwendet.', avatar: '/images/avatars/plattform.png', imageUrls: [], imageTexts: []}) 
+CREATE (tools_java:Kenntnisse_Programmieren_Java_Tools {title: 'Tools', body: 'Folgende Programme helfen mir bei der Entwicklung.', avatar: '/images/avatars/tools.png', imageUrls: [], imageTexts: []}) 
+CREATE (datenbanken_java:Kenntnisse_Datenbanken {title: 'Datenbanken', body: 'Mit diesen Datenbanken habe ich schon in Kombination mit Java Erfahrung.', avatar: '/images/avatars/datenbank.png', imageUrls: [], imageTexts: []})
 
-CREATE (eclipse {title: 'Eclipse', body: '', avatar: 'eclipse.png', imageUrls: [], imageTexts: []}) 
-CREATE (eclipse_android {title: 'Eclipse ADT Plugin', body: '', avatar: 'android.png', imageUrls: [], imageTexts: []})
-CREATE (adt {title: 'Android Development Tools', body: '', avatar: 'android.png', imageUrls: [], imageTexts: []})
-CREATE (hibernate {title: 'Hibernate', body: '', avatar: 'hibernate.png', imageUrls: [], imageTexts: []}) 
-CREATE (gwt {title: 'Google Web Toolkit', body: '', avatar: 'gwt.png', imageUrls: [], imageTexts: []}) 
-CREATE (springframework {title: 'Spring Framework', body: '', avatar: 'springframework.png', imageUrls: [], imageTexts: []}) 
-CREATE (cordova {title: 'Cordova', body: '', avatar: 'cordova.png', imageUrls: [], imageTexts: []}) 
-CREATE (junit {title: 'Junit', body: '', avatar: 'junit.png', imageUrls: [], imageTexts: []}) 
-CREATE (jstl {title: 'JSTL', body: '', avatar: 'jstl.png', imageUrls: [], imageTexts: []}) 
-CREATE (thymeleaf {title: 'Thymeleaf', body: '', avatar: 'thymeleaf.png', imageUrls: [], imageTexts: []})
+CREATE (eclipse:Kenntnisse_Programmieren_Java_Tools {title: 'Eclipse', body: 'Zur Softwareentwicklung in Java verwende ich Eclipse.', avatar: '/images/avatars/eclipse.png', imageUrls: [], imageTexts: []}) 
+CREATE (eclipse_android:Kenntnisse_Programmieren_Java_Tools {title: 'Eclipse ADT Plugin', body: 'Android Apps entwickle ich mit Eclipse + Android Development Tools Plugin', avatar: '/images/avatars/android.png', imageUrls: [], imageTexts: []})
+CREATE (adt:Kenntnisse_Programmieren_Java_Libraries {title: 'Android Development Tools', body: '', avatar: '/images/avatars/android.png', imageUrls: [], imageTexts: []})
+CREATE (hibernate:Kenntnisse_Programmieren_Java_Libraries {title: 'Hibernate', body: '', avatar: '/images/avatars/hibernate.png', imageUrls: [], imageTexts: []}) 
+CREATE (gwt:Kenntnisse_Programmieren_Java_Libraries {title: 'Google Web Toolkit', body: '', avatar: '/images/avatars/gwt.png', imageUrls: [], imageTexts: []}) 
+CREATE (springframework:Kenntnisse_Programmieren_Java_Libraries {title: 'Spring Framework', body: '', avatar: '/images/avatars/springframework.png', imageUrls: [], imageTexts: []}) 
+CREATE (cordova:Kenntnisse_Programmieren_Java_Libraries {title: 'Cordova', body: '', avatar: '/images/avatars/cordova.png', imageUrls: [], imageTexts: []}) 
+CREATE (junit:Kenntnisse_Programmieren_Java_Libraries {title: 'Junit', body: '', avatar: '/images/avatars/junit.png', imageUrls: [], imageTexts: []}) 
+CREATE (jstl:Kenntnisse_Programmieren_Java_Libraries {title: 'JSTL', body: '', avatar: '/images/avatars/jstl.png', imageUrls: [], imageTexts: []}) 
+CREATE (thymeleaf:Kenntnisse_Programmieren_Java_Libraries {title: 'Thymeleaf', body: '', avatar: '/images/avatars/thymeleaf.png', imageUrls: [], imageTexts: []})
 CREATE
 	(java)-[:Libraries]->(libraries_java),
 	(java)-[:Plattformen]->(plattformen_java),
@@ -155,29 +167,30 @@ CREATE
 	(plattformen_java)-[:Heroku]->(heroku),
 	(plattformen_java)-[:Google]->(googleappengine),
 	(plattformen_java)-[:Amazon]->(amazon),
-	(plattformen_java)-[:Facebook]->(facebook)
+	(plattformen_java)-[:Facebook]->(facebook),
+	(plattformen_java)-[:Android]->(android)
 
 
 //Kenntnisse - Programmieren - Javascript
-CREATE (libraries_javascript {title: 'Libraries', body: '', avatar: 'libraries.png', imageUrls: [], imageTexts: []}) 
-CREATE (plattformen_javascript {title: 'Plattformen', body: '', avatar: 'plattform.png', imageUrls: [], imageTexts: []}) 
-CREATE (tools_javascript {title: 'Tools', body: '', avatar: 'tools.png', imageUrls: [], imageTexts: []}) 
-CREATE (datenbanken_javascript {title: 'Datenbanken', body: '', avatar: 'datenbank.png', imageUrls: [], imageTexts: []})
+CREATE (libraries_javascript:Kenntnisse_Programmieren_Javascript_Libraries {title: 'Libraries', body: 'Mit diesen Javascript Frameworks/Bibliothenken habe ich schon gearbeitet.', avatar: '/images/avatars/libraries.png', imageUrls: [], imageTexts: []}) 
+CREATE (plattformen_javascript:Kenntnisse_Plattformen {title: 'Plattformen', body: '', avatar: '/images/avatars/plattform.png', imageUrls: [], imageTexts: []}) 
+CREATE (tools_javascript:Kenntnisse_Programmieren_Javascript_Tools {title: 'Tools', body: '', avatar: '/images/avatars/tools.png', imageUrls: [], imageTexts: []}) 
+CREATE (datenbanken_javascript:Kenntnisse_Datenbanken {title: 'Datenbanken', body: '', avatar: '/images/avatars/datenbank.png', imageUrls: [], imageTexts: []})
 
-CREATE (jquery {title: 'jQuery', body: '', avatar: 'jquery.png', imageUrls: [], imageTexts: []}) 
-CREATE (angularjs {title: 'AngularJs', body: '', avatar: 'angularjs.png', imageUrls: [], imageTexts: []}) 
-CREATE (nodejs {title: 'node.js', body: '', avatar: 'nodejs.png', imageUrls: [], imageTexts: []})
-CREATE (ionicframework {title: 'Ionic Framework', body: '', avatar: 'ionicframework.png', imageUrls: [], imageTexts: []}) 
-CREATE (yeoman {title: 'Yeoman', body: '', avatar: 'yeoman.png', imageUrls: [], imageTexts: []}) 
-CREATE (bower {title: 'Bower', body: '', avatar: 'bower.png', imageUrls: [], imageTexts: []}) 
-CREATE (grunt {title: 'Grunt', body: '', avatar: 'grunt.png', imageUrls: [], imageTexts: []}) 
-CREATE (d3 {title: 'd3.js', body: '', avatar: 'd3.png', imageUrls: [], imageTexts: []}) 
-CREATE (jasmine {title: 'Jasmine', body: '', avatar: 'jasmine.png', imageUrls: [], imageTexts: []}) 
-CREATE (expressframework {title: 'express Framework', body: '', avatar: 'express.png', imageUrls: [], imageTexts: []}) 
-CREATE (passport {title: 'passport.js', body: '', avatar: 'passport.png', imageUrls: [], imageTexts: []}) 
-CREATE (sockjs {title: 'sock.js', body: '', avatar: 'sockjs.png', imageUrls: [], imageTexts: []}) 
-CREATE (bluebird {title: 'bluebird', body: '', avatar: 'bluebird.png', imageUrls: [], imageTexts: []}) 
-CREATE (npm {title: 'Node Packaged Modules', body: '', avatar: 'npm.png', imageUrls: [], imageTexts: []}) 
+CREATE (jquery:Kenntnisse_Programmieren_Javascript_Libraries {title: 'jQuery', body: '', avatar: '/images/avatars/jquery.png', imageUrls: [], imageTexts: []}) 
+CREATE (angularjs:Kenntnisse_Programmieren_Javascript_Libraries {title: 'AngularJs', body: '', avatar: '/images/avatars/angularjs.png', imageUrls: [], imageTexts: []}) 
+CREATE (nodejs:Kenntnisse_Programmieren_Javascript_Libraries {title: 'node.js', body: '', avatar: '/images/avatars/nodejs.png', imageUrls: [], imageTexts: []})
+CREATE (ionicframework:Kenntnisse_Programmieren_Javascript_Libraries {title: 'Ionic Framework', body: '', avatar: '/images/avatars/ionicframework.png', imageUrls: [], imageTexts: []}) 
+CREATE (yeoman:Kenntnisse_Programmieren_Javascript_Tools {title: 'Yeoman', body: '', avatar: '/images/avatars/yeoman.png', imageUrls: [], imageTexts: []}) 
+CREATE (bower:Kenntnisse_Programmieren_Javascript_Tools {title: 'Bower', body: '', avatar: '/images/avatars/bower.png', imageUrls: [], imageTexts: []}) 
+CREATE (grunt:Kenntnisse_Programmieren_Javascript_Tools {title: 'Grunt', body: '', avatar: '/images/avatars/grunt.png', imageUrls: [], imageTexts: []}) 
+CREATE (d3:Kenntnisse_Programmieren_Javascript_Libraries {title: 'd3.js', body: '', avatar: '/images/avatars/d3.png', imageUrls: [], imageTexts: []}) 
+CREATE (jasmine:Kenntnisse_Programmieren_Javascript_Libraries {title: 'Jasmine', body: '', avatar: '/images/avatars/jasmine.png', imageUrls: [], imageTexts: []}) 
+CREATE (expressframework:Kenntnisse_Programmieren_Javascript_Libraries {title: 'express Framework', body: '', avatar: '/images/avatars/express.png', imageUrls: [], imageTexts: []}) 
+CREATE (passport:Kenntnisse_Programmieren_Javascript_Libraries {title: 'passport.js', body: '', avatar: '/images/avatars/passport.png', imageUrls: [], imageTexts: []}) 
+CREATE (sockjs:Kenntnisse_Programmieren_Javascript_Libraries {title: 'sock.js', body: '', avatar: '/images/avatars/sockjs.png', imageUrls: [], imageTexts: []}) 
+CREATE (bluebird:Kenntnisse_Programmieren_Javascript_Libraries {title: 'bluebird', body: '', avatar: '/images/avatars/bluebird.png', imageUrls: [], imageTexts: []}) 
+CREATE (npm:Kenntnisse_Programmieren_Javascript_Tools {title: 'Node Packaged Modules', body: '', avatar: '/images/avatars/npm.png', imageUrls: [], imageTexts: []}) 
 
 CREATE
 	(javascript)-[:Libraries]->(libraries_javascript),
@@ -210,12 +223,12 @@ CREATE
 	(plattformen_javascript)-[:Facebook]->(facebook)
 
 //Kenntnisse - Programmieren - Php
-CREATE (libraries_php {title: 'Libraries', body: '', avatar: 'libraries.png', imageUrls: [], imageTexts: []}) 
-CREATE (datenbanken_php {title: 'Datenbanken', body: '', avatar: 'datenbank.png', imageUrls: [], imageTexts: []})
+CREATE (libraries_php:Kenntnisse_Programmieren_Php_Libraries {title: 'Libraries', body: 'Mit diesen PHP Frameworks/Bibliothenken habe ich schon gearbeitet.', avatar: '/images/avatars/libraries.png', imageUrls: [], imageTexts: []}) 
+CREATE (datenbanken_php:Kenntnisse_Datenbanken {title: 'Datenbanken', body: 'Folgende Datenbanken habe ich schon in PHP Projekten verwendet.', avatar: '/images/avatars/datenbank.png', imageUrls: [], imageTexts: []})
 
-CREATE (doctrine {title: 'Doctrine ORM', body: '', avatar: 'doctrine.png', imageUrls: [], imageTexts: []}) 
-CREATE (zendframework1 {title: 'Zend Framework 1', body: '', avatar: 'zendframework1.png', imageUrls: [], imageTexts: []}) 
-CREATE (zendframework2 {title: 'Zend Framework 2', body: '', avatar: 'zendframework2.png', imageUrls: [], imageTexts: []}) 
+CREATE (doctrine:Kenntnisse_Programmieren_Php_Libraries {title: 'Doctrine ORM', body: 'Erfahrungen mit: <ul><li>Datenspeicherung</li><li>Caching</li></ul>', avatar: '/images/avatars/doctrine.png', imageUrls: [], imageTexts: []}) 
+CREATE (zendframework1:Kenntnisse_Programmieren_Php_Libraries {title: 'Zend Framework 1', body: 'Erfahrungen mit: <ul><li>User Authentifizierung</li><li>REST Webservices</li></ul>', avatar: '/images/avatars/zendframework1.png', imageUrls: [], imageTexts: []}) 
+CREATE (zendframework2:Kenntnisse_Programmieren_Php_Libraries {title: 'Zend Framework 2', body: 'Erfahrungen mit: <ul><li>User Authentifizierung</li><li>REST Webservices</li><li>Galleriemodul (Upload, Konvertierung und Darstellung von Bildern)</li></ul>', avatar: '/images/avatars/zendframework2.png', imageUrls: [], imageTexts: []}) 
 
 CREATE
 	(php)-[:Libraries]->(libraries_php),
@@ -229,48 +242,66 @@ CREATE
 
 //Kenntnisse - Sonstige
 
-CREATE (office {title: 'Office', body: '', avatar: 'office.png', imageUrls: [], imageTexts: []}) 
-CREATE (windows {title: 'Windows', body: '', avatar: 'windows.png', imageUrls: [], imageTexts: []})
-CREATE (android {title: 'Android', body: '', avatar: 'android.png', imageUrls: [], imageTexts: []})  
-CREATE (linux {title: 'Linux', body: '', avatar: 'linux.png', imageUrls: [], imageTexts: []}) 
-CREATE (gimp {title: 'Gimp', body: '', avatar: 'gimp.png', imageUrls: [], imageTexts: []}) 
-CREATE (autocad {title: 'AutoCAD', body: '', avatar: 'autocad.png', imageUrls: [], imageTexts: []}) 
+CREATE (office:Kenntnisse_Sonstige {title: 'Office', body: 'Bis ins letzte Detail bin ich mit Officeanwendungen nich vertraut, aber die wichtigen Funktionen wie Textformatierung, Formeln, Charts etc. sind kein Problem.', avatar: '/images/avatars/office.png', imageUrls: [], imageTexts: []}) 
+CREATE (windows:Kenntnisse_Sonstige {title: 'Windows', body: 'Mit Windows (Windows 2000 - Windows 8) habe ich, wie wohl die meisten Leute, jahrelange Erfahrung.', avatar: '/images/avatars/windows.png', imageUrls: [], imageTexts: []})
+CREATE (linux:Kenntnisse_Sonstige {title: 'Linux', body: 'Seit gut einem Jahr bin ich von Windows auf Ubuntu umgestiegen und bereue meine Entscheidung nicht. Ich w&uuml;rde mich pers&ouml;nlich nicht als Linuxexperte bezeichnen, aber über die Jahre und einige Troubleshoots später habe ich mich an die Unterschiede gewöhnt.', avatar: '/images/avatars/linux.png', imageUrls: [], imageTexts: []}) 
+CREATE (gimp:Kenntnisse_Sonstige {title: 'Gimp', body: 'Grundlegende Kenntnisse in der Bildbearbeitung', avatar: '/images/avatars/gimp.png', imageUrls: [], imageTexts: []}) 
+CREATE (autocad:Kenntnisse_Sonstige {title: 'AutoCAD', body: 'Meine letzten Erfahrungen mit AutoCAD habe ich während der Schulzeit gemacht. Damals haben wir vor allem unterschiedlichste Werkstücke in verschiedenen 2D Projektionen gezeichnet und bemaßt.', avatar: '/images/avatars/autocad.png', imageUrls: [], imageTexts: []}) 
 CREATE
 	(sonstige)-[:Office]->(office),
 	(sonstige)-[:Windows]->(windows),
-	(sonstige)-[:Android]->(android),
 	(sonstige)-[:Linux]->(linux),
 	(sonstige)-[:AutoCAD]->(autocad),
 	(sonstige)-[:Gimp]->(gimp)
 
 //Kontakt
 
-CREATE (kontakt {title: 'Kontakt', body: '', avatar: 'kontakt.png', imageUrls: [], imageTexts: []})
-CREATE (email {title: 'E-Mail', body: '', avatar: 'email.png', imageUrls: [], imageTexts: []})
-CREATE (telefon {title: 'Telefon', body: '', avatar: 'telefon.png', imageUrls: [], imageTexts: []})
+CREATE (kontakt:Kontakt {title: 'Kontakt', body: 'So k&ouml;nnen Sie mich erreichen.', avatar: '/images/avatars/kontakt.png', imageUrls: [], imageTexts: []})
+CREATE (email:Kontakt {title: 'E-Mail', body: '<a href="mailto:friedrich.phillip@gmail.com">friedrich.phillip@gmail.com</a>', avatar: '/images/avatars/email.png', imageUrls: [], imageTexts: []})
+CREATE (telefon:Kontakt {title: 'Telefon', body: '<a href="tel:+436801452328">+43 680 145 23 28</a>', avatar: '/images/avatars/telefon.png', imageUrls: [], imageTexts: []})
+CREATE (adresse:Kontakt {title: 'Adresse', body: 'Marichtalerweg 18<br>2020 Hollabrunn<br>Niederösterreich', avatar: '/images/avatars/adresse.png', imageUrls: ['/images/slides/kontakt/haus.jpg'], imageTexts: ['']})
 CREATE 
 	(phillip)-[:Kontakt]->(kontakt),
 	(kontakt)-[:Email]->(email),
-	(kontakt)-[:Telefon]->(telefon)
+	(kontakt)-[:Telefon]->(telefon),
+	(kontakt)-[:Adresse]->(adresse)
 
 //Stärken
 
-CREATE (staerken {title: 'Stärken', body: '', avatar: 'staerken.png', imageUrls: [], imageTexts: []})
+CREATE (staerken:Stärken {title: 'Stärken', body: 'Diese Charaktereigenschaften zähle ich zu meinen persönlichen Stärken', avatar: '/images/avatars/staerken.png', imageUrls: [], imageTexts: []})
+CREATE (lernfähig:Stärken {title: 'Lernfähigkeit', body: 'Während meiner Schulzeit (zumindest in der HTL) war ich immer einer der besten und habe auch stets gute Noten bekommen. Daher denke ich, dass ich mir das Prädikat "lernfähig" verdient habe.', avatar: '/images/avatars/lernfähigkeit.png', imageUrls: [], imageTexts: []})
+CREATE (selbstständig:Stärken {title: 'Selbstständigkeit', body: 'Fast alles was ich heute über das Programmieren, vor allem im Webbereich weiß, habe ich mir selbstständig beigebracht. Als Lernhilfen habe ich Artikel und Bücher gelesen, in Foren gestöbert, Videos geschaut und vor allem viel selbst ausprobiert.', avatar: '/images/avatars/selbstständigkeit.png', imageUrls: [], imageTexts: []})
+CREATE (ehrgeizig:Stärken {title: 'Ehrgeiz', body: 'Wenn ich eine Aufgabe bekomme, dann gebe ich mir immer Mühe diese auch bestmöglich zu erfüllen.', avatar: '/images/avatars/ehrgeiz.png', imageUrls: [], imageTexts: []})
+CREATE (interessiert:Stärken {title: 'Interesse', body: 'Meine Interessen sind breit gefächert und ich bin eigentlich immer wißbegierig neue Dinge auszuprobieren bzw. kennenzulernen.', avatar: '/images/avatars/interesse.png', imageUrls: [], imageTexts: []})
+CREATE (humorvoll:Stärken {title: 'Humor', body: 'Läuft es einmal nicht so gut, dann nehme ich die Dinge oft mit Humor und schaffe es so optimistisch zu bleiben.', avatar: '/images/avatars/humor.png', imageUrls: [], imageTexts: []})
+CREATE
+	(phillip)-[:Stärken]->(staerken),
+	(staerken)-[:lernfähig]->(lernfähig),
+	(staerken)-[:selbstständig]->(selbstständig),
+	(staerken)-[:ehrgeizig]->(ehrgeizig),
+	(staerken)-[:interessiert]->(interessiert),
+	(staerken)-[:humorvoll]->(humorvoll)
 
 //Schwächen
 
-CREATE (schwaechen {title: 'Schwächen', body: '', avatar: 'schwächen.png', imageUrls: [], imageTexts: []})
+CREATE (schwaechen:Schwächen {title: 'Schwächen', body: 'Wie jeder Mensch habe natürlich auch ich meine Schwächen, aber wie heißt es so schön: <i>"Stärke deine Stärken, Schwäche deine Schwächen"</i>.', avatar: '/images/avatars/schwächen.png', imageUrls: [], imageTexts: []})
+CREATE (unerfahren:Schwächen {title: 'Erfahrung', body: 'In der Vergangenheit habe ich noch nicht wirklich an einem Projekt gearbeitet, an dem mehrere Leute beteiligt waren. Aus eigener Erfahrung kann ich sagen, dass ich im Bereich des Projektmanegements noch einiges zu lernen habe.', avatar: '/images/avatars/erfahrung.png', imageUrls: [], imageTexts: []})
+CREATE (introvertiert:Schwächen {title: 'Introvertierte Persönlichkeit', body: 'Ich bin eher der introvertierte Typ und versuche viele Probleme selbst zu lösen, auch wenn es manchmal einfach besser wäre sich Hilfe zu suchen.', avatar: '/images/avatars/introvertiert.png', imageUrls: [], imageTexts: []})
+CREATE
+	(phillip)-[:Schwächen]->(schwaechen),
+	(schwaechen)-[:introvertiert]->(introvertiert),
+	(schwaechen)-[:unerfahren]->(unerfahren)
 
 //Dokumente
 
-CREATE (dokumente {title: 'Dokumente', body: '', avatar: 'dokumente.png', imageUrls: [], imageTexts: []})
-CREATE (maturazeugnis {title: 'Maturazeugnis', body: '', avatar: 'maturazeugnis.png', imageUrls: [], imageTexts: []})
-CREATE (abschlusszeugnis {title: 'Abschlusszeugnis', body: '', avatar: 'abschlusszeugnis.png', imageUrls: [], imageTexts: []})
-CREATE (foto {title: 'Foto', body: '', avatar: 'foto.png', imageUrls: [], imageTexts: []})
+CREATE (dokumente:Dokumente {title: 'Dokumente', body: 'diverse Dokumente', avatar: '/images/avatars/dokumente.png', imageUrls: [], imageTexts: []})
+CREATE (maturazeugnis:Dokumente {title: 'Maturazeugnis', body: '', avatar: '/images/avatars/maturazeugnis.png', imageUrls: ['/images/slides/dokumente/maturazeugnis.jpg'], imageTexts: ['']})
+CREATE (abschlusszeugnis:Dokumente {title: 'Abschlusszeugnis', body: '', avatar: '/images/avatars/abschlusszeugnis.png', imageUrls: ['/images/slides/dokumente/abschlusszeugnis.jpg'], imageTexts: ['']})
+CREATE (foto:Dokumente {title: 'Foto', body: '', avatar: '/images/avatars/foto.png', imageUrls: ['/images/slides/dokumente/foto.jpg'], imageTexts: ['']})
 CREATE
 	(phillip)-[:Dokumente]->(dokumente),
-	(dokumente)-[:Maturazeugnis]->(maturazeugnis),
-	(dokumente)-[:Abschlusszeugnis]->(abschlusszeugnis),
+	(dokumente)-[:Matura]->(maturazeugnis),
+	(dokumente)-[:Zeugnis]->(abschlusszeugnis),
 	(dokumente)-[:Foto]->(foto)
 
 

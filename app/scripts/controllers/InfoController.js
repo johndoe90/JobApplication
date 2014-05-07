@@ -4,12 +4,13 @@ angular
 	.module('jobApplication.controllers')
 	.controller('InfoController', ['$scope', function($scope){
 		$scope.infos = [{
+			title: 'Willkommen',
 			imageUrls: [],
 			imageTexts: [],
-			body: '<h4>Check it out!</h4><p>This is my Application</p>'
+			body: 'zu meinem etwas anderen Bewerbungsschreiben.'
 		}];
 
-		$scope.remove = function(index) {
+		/*$scope.remove = function(index) {
 			$scope.infos.splice(index, 1);
-		};
+		};*/
 	}]);

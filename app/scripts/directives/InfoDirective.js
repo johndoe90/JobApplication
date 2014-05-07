@@ -5,6 +5,7 @@ angular
 	.directive('info', ['$timeout', function($timeout){
 		return {
 			restrict: 'AE',
+			replace: true,
 			templateUrl: 'views/partials/info.tpl.html',
 			link: function(scope, element) {
 				scope.image = scope.info.imageUrls.length === 1 ? true : false;
@@ -14,7 +15,7 @@ angular
 				$timeout(function(){
 					if (scope.carousel) {
 						element.find('#' + scope.carouselId).carousel({
-							interval: 2500,
+							interval: 4000,
 							wrap: false
 						}, 100);
 					}
@@ -22,9 +23,19 @@ angular
 
 				var remove = element.find('.remove');
 				element.on('mouseenter', function(){
-					remove.fadeIn();
+					remove.fadeIn(200);
 				}).on('mouseleave', function() {
-					remove.fadeOut();
+					remove.fadeOut(200);
+				});
+
+				remove.on('click', function() {
+					element.animate({
+						'height': '0'
+					}, 400, function(){
+						scope.$apply(function() {
+							scope.infos.splice(+element.attr('index'), 1);
+						});
+					})
 				});
 			}
 		};
