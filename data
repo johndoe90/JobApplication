@@ -80,7 +80,7 @@ CREATE
 //Kenntnisse - Plattformen
 
 CREATE (github:Kenntnisse_Plattformen {title: 'Github', body: 'Die meisten meiner Projekte sind auf Github. Daher bin ich mit den Grundfunktionen von Git sowohl in der Konsole als auch als Plugin für Eclipse (EGit) vertraut.', avatar: '/images/avatars/github.png', imageUrls: [], imageTexts: []}) 
-CREATE (facebook:Kenntnisse_Plattformen {title: 'Facebook', body: 'Ich habe schon Anwendungen entwickelt bei denen es möglich war sich via Facebook zu registrieren, einzuloggen bzw. mit der Einwilligung des Users bestimmte Aktionen auszuführen.', avatar: '/images/avatars/facebook.png', imageUrls: [], imageTexts: []})
+CREATE (facebook:Kenntnisse_Plattformen {title: 'Facebook', body: 'Ich habe schon Anwendungen entwickelt bei denen es möglich war sich via Facebook zu registrieren, einzuloggen bzw. mit der Einwilligung des Users bestimmte Aktionen auf dessen Profil auszuführen.', avatar: '/images/avatars/facebook.png', imageUrls: [], imageTexts: []})
 CREATE (heroku:Kenntnisse_Plattformen {title: 'Heroku', body: 'Auf Heroku bin ich aufmerksam geworden, weil es das Deploying bzw. Hosting von Anwendungen wesentlich schneller gestaltet und vereinfacht.', avatar: '/images/avatars/heroku.png', imageUrls: [], imageTexts: []}) 
 CREATE (amazon:Kenntnisse_Plattformen {title: 'Amazon Webservices', body: 'Diese Webapp wird per Amazon EC2 gehostet. Außerdem habe ich schon Erfahrung mit dem Simple Storage Service (S3) von Amazon.', avatar: '/images/avatars/amazon.png', imageUrls: [], imageTexts: []}) 
 CREATE (googleappengine:Kenntnisse_Plattformen {title: 'Google App Engine', body: 'Meine frühere <a href="http://my-job-application.appspot.com/?id=vector" target="_blank">Bewerbung</a> habe ich mithilfe des Google Web Toolkits entwickelt und auf der Google App Engine gehostet.', avatar: '/images/avatars/googleappengine.png', imageUrls: [], imageTexts: []}) 
@@ -97,9 +97,9 @@ CREATE
 
 CREATE (mysql:Kenntnisse_Datenbanken {title: 'MySQL', body: 'Meine ersten Eindrücke eines Datenbanksystems habe ich mit MySQL gewonnen. <br><br>Erfahrungen mit: <ul><li>SQL (CREATE, SELECT, JOIN, etc.)</li><li>Relationships (1/n, n/1, n/n)</li><li>SpringFramework + Hibernate ORM</li><li>verwendet in Projekten mit Java und PHP</li></ul>', avatar: '/images/avatars/mysql.png', imageUrls: [], imageTexts: []}) 
 CREATE (postgresql:Kenntnisse_Datenbanken {title: 'PostgreSQL', body: 'ist wie MySQL auch eine relationale Datenbank. Zu PostgreSQL bin ich gewechselt, da es die Volltextsuche zu dem Zeitpunkt besser unterstützt hat. <br> <br>Erfahrungen mit: <ul><li>SQL (CREATE, SELECT, JOIN, etc.)</li><li>Relationships (1/n, n/1, n/n)</li><li>SpringFramework + Hibernate ORM + HQL</li><li>verwendet in Projekten mit Java</li></ul>', avatar: '/images/avatars/postgresql.png', imageUrls: [], imageTexts: []}) 
-CREATE (redis:Kenntnisse_Datenbanken {title: 'Redis', body: 'ist ein sehr schneller key-value store. <br> <br> Erfahrungen mit: <ul><li>in Verbindung mit nodeJs zu Speicherung der Usersessions</li><li>verwendet in Projekten mit Javascript</li></ul>', avatar: '/images/avatars/redis.png', imageUrls: [], imageTexts: []}) 
-CREATE (neo4j:Kenntnisse_Datenbanken {title: 'Neo4j', body: 'ist eine der führenden Graphendatenbanksysteme auf dem Markt. Diese Webapp verwendet im Backend eine Neo4j Datenbank. <br> <br> Erfahrungen mit: <ul><li>Cypher Query Language</li><li>in Verbindung mit nodeJs + node-neo4j</li><li>in Verbindung mit dem SpringFramework (spring-data-neo4j)</li><li>verwendet in Projekten mit Java und Javascript</li></ul>', avatar: '/images/avatars/neo4j.png', imageUrls: [], imageTexts: []}) 
-CREATE (mongodb:Kenntnisse_Datenbanken {title: 'MongoDb', body: 'ist eine Dokument basiertes Datenbanksystem. Mit MongoDB habe ich bisher nur experimentiert, sprich wirklich in einem Projekt eingesetzt habe ich MongoDB noch nicht. <br><br> Erfahrungen mit: <ul><li>in Verbindung mit nodeJs + mongoose</li><li>verwendet in Projekten mit Javascript</li></ul>', avatar: '/images/avatars/mongodb.png', imageUrls: [], imageTexts: []}) 
+CREATE (redis:Kenntnisse_Datenbanken {title: 'Redis', body: 'ist ein sehr schneller key-value store. <br> <br> Erfahrungen mit: <ul><li>in Verbindung mit nodeJs zu Speicherung der Usersessions</li><li>verwendet in Projekten mit JavaScript</li></ul>', avatar: '/images/avatars/redis.png', imageUrls: [], imageTexts: []}) 
+CREATE (neo4j:Kenntnisse_Datenbanken {title: 'Neo4j', body: 'ist eine der führenden Graphendatenbanksysteme auf dem Markt. Diese Webapp verwendet im Backend eine Neo4j Datenbank. <br> <br> Erfahrungen mit: <ul><li>Cypher Query Language</li><li>in Verbindung mit nodeJs + node-neo4j</li><li>in Verbindung mit dem SpringFramework (spring-data-neo4j)</li><li>verwendet in Projekten mit Java und JavaScript</li></ul>', avatar: '/images/avatars/neo4j.png', imageUrls: [], imageTexts: []}) 
+CREATE (mongodb:Kenntnisse_Datenbanken {title: 'MongoDb', body: 'ist eine Dokument basiertes Datenbanksystem. Mit MongoDB habe ich bisher nur experimentiert, sprich wirklich in einem Projekt eingesetzt habe ich MongoDB noch nicht. <br><br> Erfahrungen mit: <ul><li>in Verbindung mit nodeJs + mongoose</li><li>verwendet in Projekten mit JavaScript</li></ul>', avatar: '/images/avatars/mongodb.png', imageUrls: [], imageTexts: []}) 
 CREATE
 	(datenbanken)-[:MySQL]->(mysql),
 	(datenbanken)-[:PostgreSQL]->(postgresql),
@@ -109,7 +109,7 @@ CREATE
 
 //Kenntnisse - Programmieren 
 CREATE (java:Kenntnisse_Programmieren {title: 'Java', body: 'Eine genaue Aufschlüsselung meiner Erfahrungen mit Java finden sie <a href="/#/info/graph/MATCH%20(n1%3APhillip)-%5Br1%3AKenntnisse%5D-%3E(n2)-%5Br2%3AProgrammieren%5D-%3E(n3)-%5Br3%3AJava%5D-%3E(n4)-%5Br4*%5D-%3E(n5)%20RETURN%20n1%2Cn2%2Cn3%2Cn4%2Cn5%2Cr1%2Cr2%2Cr3%2Cr4" class="query">#hier</a>.', avatar: '/images/avatars/java.png', imageUrls: [], imageTexts: []}) 
-CREATE (javascript:Kenntnisse_Programmieren {title: 'Javascript', body: 'Eine genaue Aufschlüsselung meiner Erfahrungen mit Javascript finden sie <a href="/#/info/graph/MATCH%20(n1%3APhillip)-%5Br1%3AKenntnisse%5D-%3E(n2)-%5Br2%3AProgrammieren%5D-%3E(n3)-%5Br3%3AJavascript%5D-%3E(n4)-%5Br4*%5D-%3E(n5)%20RETURN%20n1%2Cn2%2Cn3%2Cn4%2Cn5%2Cr1%2Cr2%2Cr3%2Cr4" class="query">#hier</a>.', avatar: '/images/avatars/javascript.png', imageUrls: [], imageTexts: []}) 
+CREATE (javascript:Kenntnisse_Programmieren {title: 'JavaScript', body: 'Eine genaue Aufschlüsselung meiner Erfahrungen mit JavaScript finden sie <a href="/#/info/graph/MATCH%20(n1%3APhillip)-%5Br1%3AKenntnisse%5D-%3E(n2)-%5Br2%3AProgrammieren%5D-%3E(n3)-%5Br3%3AJavaScript%5D-%3E(n4)-%5Br4*%5D-%3E(n5)%20RETURN%20n1%2Cn2%2Cn3%2Cn4%2Cn5%2Cr1%2Cr2%2Cr3%2Cr4" class="query">#hier</a>.', avatar: '/images/avatars/javascript.png', imageUrls: [], imageTexts: []}) 
 CREATE (php:Kenntnisse_Programmieren {title: 'PHP', body: 'Eine genaue Aufschlüsselung meiner Erfahrungen mit PHP finden sie <a href="/#/info/graph/MATCH%20(n1%3APhillip)-%5Br1%3AKenntnisse%5D-%3E(n2)-%5Br2%3AProgrammieren%5D-%3E(n3)-%5Br3%3APHP%5D-%3E(n4)-%5Br4*%5D-%3E(n5)%20RETURN%20n1%2Cn2%2Cn3%2Cn4%2Cn5%2Cr1%2Cr2%2Cr3%2Cr4" class="query">#hier</a>.', avatar: '/images/avatars/php.png', imageUrls: [], imageTexts: []}) 
 CREATE (c:Kenntnisse_Programmieren {title: 'C', body: 'Mit C hat während der Schulzeit alles begonnen und heute bin ich froh darüber, da viele andere Sprachen eine ähnliche Syntax haben. <br> <br> Erfahrungen mit: <ul><li>Programmierung von Mikrocontrollern</li><li>Entwicklung von Konsolenanwendungen</li></ul>', avatar: '/images/avatars/c.png', imageUrls: [], imageTexts: []}) 
 CREATE (css3:Kenntnisse_Programmieren {title: 'CSS3', body: 'CSS würde ich als mein schwächstes Glied im Webstack einstufen, da meine Interessen anderswo liegen und ich mich noch nie von Grund auf damit beschäftgt habe. <br> <br> Erfahrungen mit: <ul><li>CSS3 Selektoren</li><li>Responsive Design (Media Queries)</li><li>sonstige CSS Eigenschaften</li></ul>', avatar: '/images/avatars/css3.png', imageUrls: [], imageTexts: []}) 
@@ -118,7 +118,7 @@ CREATE (html5:Kenntnisse_Programmieren {title: 'HTML5', body: 'Erfahrungen mit: 
 CREATE (asm:Kenntnisse_Programmieren {title: 'Assembler', body: 'Erfahrungen mit: <ul><li>Programmierung vom Zilog Z80 Mikrocontroller<li></ul>', avatar: '/images/avatars/asm.png', imageUrls: [], imageTexts: []}) 
 CREATE
 	(programmieren)-[:Java]->(java),
-	(programmieren)-[:Javascript]->(javascript),
+	(programmieren)-[:JavaScript]->(javascript),
 	(programmieren)-[:PHP]->(php),
 	(programmieren)-[:C]->(c),
 	(programmieren)-[:CSS3]->(css3),
@@ -132,23 +132,24 @@ CREATE (plattformen_java:Kenntnisse_Plattformen {title: 'Plattformen', body: 'Di
 CREATE (tools_java:Kenntnisse_Programmieren_Java_Tools {title: 'Tools', body: 'Folgende Programme helfen mir bei der Entwicklung.', avatar: '/images/avatars/tools.png', imageUrls: [], imageTexts: []}) 
 CREATE (datenbanken_java:Kenntnisse_Datenbanken {title: 'Datenbanken', body: 'Mit diesen Datenbanken habe ich schon in Kombination mit Java Erfahrung.', avatar: '/images/avatars/datenbank.png', imageUrls: [], imageTexts: []})
 
-CREATE (eclipse:Kenntnisse_Programmieren_Java_Tools {title: 'Eclipse', body: 'Zur Softwareentwicklung in Java verwende ich Eclipse.', avatar: '/images/avatars/eclipse.png', imageUrls: [], imageTexts: []}) 
+CREATE (eclipse:Kenntnisse_Programmieren_Java_Tools {title: 'Eclipse', body: 'Zur Softwareentwicklung in Java verwende ich am liebsten Eclipse.', avatar: '/images/avatars/eclipse.png', imageUrls: [], imageTexts: []}) 
 CREATE (eclipse_android:Kenntnisse_Programmieren_Java_Tools {title: 'Eclipse ADT Plugin', body: 'Android Apps entwickle ich mit Eclipse + Android Development Tools Plugin', avatar: '/images/avatars/android.png', imageUrls: [], imageTexts: []})
-CREATE (adt:Kenntnisse_Programmieren_Java_Libraries {title: 'Android Development Tools', body: '', avatar: '/images/avatars/android.png', imageUrls: [], imageTexts: []})
-CREATE (hibernate:Kenntnisse_Programmieren_Java_Libraries {title: 'Hibernate', body: '', avatar: '/images/avatars/hibernate.png', imageUrls: [], imageTexts: []}) 
-CREATE (gwt:Kenntnisse_Programmieren_Java_Libraries {title: 'Google Web Toolkit', body: '', avatar: '/images/avatars/gwt.png', imageUrls: [], imageTexts: []}) 
-CREATE (springframework:Kenntnisse_Programmieren_Java_Libraries {title: 'Spring Framework', body: '', avatar: '/images/avatars/springframework.png', imageUrls: [], imageTexts: []}) 
-CREATE (cordova:Kenntnisse_Programmieren_Java_Libraries {title: 'Cordova', body: '', avatar: '/images/avatars/cordova.png', imageUrls: [], imageTexts: []}) 
-CREATE (junit:Kenntnisse_Programmieren_Java_Libraries {title: 'Junit', body: '', avatar: '/images/avatars/junit.png', imageUrls: [], imageTexts: []}) 
-CREATE (jstl:Kenntnisse_Programmieren_Java_Libraries {title: 'JSTL', body: '', avatar: '/images/avatars/jstl.png', imageUrls: [], imageTexts: []}) 
-CREATE (thymeleaf:Kenntnisse_Programmieren_Java_Libraries {title: 'Thymeleaf', body: '', avatar: '/images/avatars/thymeleaf.png', imageUrls: [], imageTexts: []})
+CREATE (androidsdk:Kenntnisse_Programmieren_Java_Libraries {title: 'Android SDK', body: 'beinhaltet wichtige Bibliotheken und APIs die für die Entwicklung von Android Apps nötig sind.', avatar: '/images/avatars/android.png', imageUrls: [], imageTexts: []})
+CREATE (gwt:Kenntnisse_Programmieren_Java_Libraries {title: 'Google Web Toolkit', body: 'ist ein Toolkit zur Entwicklung von Webanwendungen.', avatar: '/images/avatars/gwt.png', imageUrls: [], imageTexts: []}) 
+CREATE (cordova:Kenntnisse_Programmieren_Java_Libraries {title: 'Cordova', body: 'ist eine Sammlung von APIs, die es einem Entwickler von mobilen Webapps erlaubt native Gerätefunktionen zu verwenden.', avatar: '/images/avatars/cordova.png', imageUrls: [], imageTexts: []}) 
+CREATE (junit:Kenntnisse_Programmieren_Java_Libraries {title: 'Junit', body: 'ist ein Framework zum automatisierten Testen von Java Programmen.', avatar: '/images/avatars/junit.png', imageUrls: [], imageTexts: []}) 
+CREATE (jstl:Kenntnisse_Programmieren_Java_Libraries {title: 'JSTL', body: 'steht für Java Server Pages Standard Tag Library und ist eine Sammlung von Bibliotheken, die für die Erstellung von JSP Seiten hilfreich sind. ', avatar: '/images/avatars/jstl.png', imageUrls: [], imageTexts: []}) 
+CREATE (thymeleaf:Kenntnisse_Programmieren_Java_Libraries {title: 'Thymeleaf', body: 'ist eine HTML5 template engine als Alternative zu JSP/JSTL.', avatar: '/images/avatars/thymeleaf.png', imageUrls: [], imageTexts: []})
+
+CREATE (springframework:Kenntnisse_Programmieren_Java_Libraries {title: 'Spring', body: 'ist ein Java Framework mit dem Ziel die Entwicklung mit Java/Java EE zu vereinfachen und gute Programmierpraktiken zu fördern. Erfahrungen mit: <ul><li>Spring Core</li><li>Spring MVC</li><li>Spring Social</li><li>Spring Security</li><li>Spring Data, Spring Data für Neo4j</li><li>Restful Services</li><li>JSP, Thymeleaf</li><li>...</li></ul>', avatar: '/images/avatars/springframework.png', imageUrls: [], imageTexts: []}) 
+CREATE (hibernate:Kenntnisse_Programmieren_Java_Libraries {title: 'Hibernate', body: 'ist ein Persistenz und ORM Framework. <br><br> Erfahrungen mit: <ul><li>Hibernate ORM</li><li>Hibernate Validator</li></ul>', avatar: '/images/avatars/hibernate.png', imageUrls: [], imageTexts: []}) 
 CREATE
 	(java)-[:Libraries]->(libraries_java),
 	(java)-[:Plattformen]->(plattformen_java),
 	(java)-[:Tools]->(tools_java),
 	(java)-[:Datenbanken]->(datenbanken_java),
 
-	(libraries_java)-[:ADT]->(adt),
+	(libraries_java)-[:AndroidSDK]->(androidsdk),
 	(libraries_java)-[:Hibernate]->(hibernate),
 	(libraries_java)-[:GWT]->(gwt),
 	(libraries_java)-[:Spring]->(springframework),
@@ -172,25 +173,28 @@ CREATE
 
 
 //Kenntnisse - Programmieren - Javascript
-CREATE (libraries_javascript:Kenntnisse_Programmieren_Javascript_Libraries {title: 'Libraries', body: 'Mit diesen Javascript Frameworks/Bibliothenken habe ich schon gearbeitet.', avatar: '/images/avatars/libraries.png', imageUrls: [], imageTexts: []}) 
-CREATE (plattformen_javascript:Kenntnisse_Plattformen {title: 'Plattformen', body: '', avatar: '/images/avatars/plattform.png', imageUrls: [], imageTexts: []}) 
-CREATE (tools_javascript:Kenntnisse_Programmieren_Javascript_Tools {title: 'Tools', body: '', avatar: '/images/avatars/tools.png', imageUrls: [], imageTexts: []}) 
-CREATE (datenbanken_javascript:Kenntnisse_Datenbanken {title: 'Datenbanken', body: '', avatar: '/images/avatars/datenbank.png', imageUrls: [], imageTexts: []})
+CREATE (libraries_javascript:Kenntnisse_Programmieren_Javascript_Libraries {title: 'Libraries', body: 'Mit diesen JavaScript Frameworks/Bibliothenken habe ich schon gearbeitet.', avatar: '/images/avatars/libraries.png', imageUrls: [], imageTexts: []}) 
+CREATE (plattformen_javascript:Kenntnisse_Plattformen {title: 'Plattformen', body: 'Diese Plattformen habe ich schon für meine JavaScript Anwendungen verwendet.', avatar: '/images/avatars/plattform.png', imageUrls: [], imageTexts: []}) 
+CREATE (tools_javascript:Kenntnisse_Programmieren_Javascript_Tools {title: 'Tools', body: 'Folgende Programme helfen mir bei der Entwicklung.', avatar: '/images/avatars/tools.png', imageUrls: [], imageTexts: []}) 
+CREATE (datenbanken_javascript:Kenntnisse_Datenbanken {title: 'Datenbanken', body: 'Mit diesen Datenbanken habe ich schon in Kombination mit JavaScript Erfahrung.', avatar: '/images/avatars/datenbank.png', imageUrls: [], imageTexts: []})
 
-CREATE (jquery:Kenntnisse_Programmieren_Javascript_Libraries {title: 'jQuery', body: '', avatar: '/images/avatars/jquery.png', imageUrls: [], imageTexts: []}) 
-CREATE (angularjs:Kenntnisse_Programmieren_Javascript_Libraries {title: 'AngularJs', body: '', avatar: '/images/avatars/angularjs.png', imageUrls: [], imageTexts: []}) 
-CREATE (nodejs:Kenntnisse_Programmieren_Javascript_Libraries {title: 'node.js', body: '', avatar: '/images/avatars/nodejs.png', imageUrls: [], imageTexts: []})
-CREATE (ionicframework:Kenntnisse_Programmieren_Javascript_Libraries {title: 'Ionic Framework', body: '', avatar: '/images/avatars/ionicframework.png', imageUrls: [], imageTexts: []}) 
+CREATE (jquery:Kenntnisse_Programmieren_Javascript_Libraries {title: 'jQuery', body: 'ist eine JavaScript Bibliothek, die Funktionen zur DOM Navigation und Manipulation zur Verfügung stellt. <br><br> Erfahrungen mit: <ul><li>DOM Navigation und Manipulation (in unterschiedlichster Form)</li><li>Ajax</li></ul>', avatar: '/images/avatars/jquery.png', imageUrls: [], imageTexts: []}) 
+CREATE (angularjs:Kenntnisse_Programmieren_Javascript_Libraries {title: 'AngularJs', body: 'ist ein Framework, welches die Erstellung von komplexen Web Anwendungen erleichtert. <br><br> Erfahrungen mit: <ul><li>Single Page Anwendungen</li><li>Services, Controller, Direktiven, Filter</li><li>two way data binding</li><li>Ajax - Requests</li><li>...</li></ul>', avatar: '/images/avatars/angularjs.png', imageUrls: [], imageTexts: []}) 
+CREATE (nodejs:Kenntnisse_Programmieren_Javascript_Libraries {title: 'node.js', body: 'baut auf Chromes JavaScript runtime auf, mit dem Ziel JavaScript auch am Server einsetzen zu können. <br><br> Erfahrungen mit: <ul><li>diverse Middleware (authentication, authorization, validation, session)</li><li>Restful Services</li></ul>', avatar: '/images/avatars/nodejs.png', imageUrls: [], imageTexts: []})
+CREATE (expressframework:Kenntnisse_Programmieren_Javascript_Libraries {title: 'express', body: 'ist ein minimalistisches, flexibles Node.js Webframework, das ein robustes Set von Features bietet. <br><br> Erfahrungen mit: <ul><li>diverse Middleware (authentication, authorization, validation, session)</li><li>Restful Services</li></ul>', avatar: '/images/avatars/express.png', imageUrls: [], imageTexts: []}) 
+
+
+CREATE (ionicframework:Kenntnisse_Programmieren_Javascript_Libraries {title: 'Ionic', body: 'ist ein Projekt, das auf AngularJS aufbaut und sich zum Ziel gesetzt hat das Entwickeln von hybrid Apps (HTML5 + CSS3 + JS) zu erleichtern. Ionic versucht dabei eine ähnlich gute User Experience wie von einer nativen App zu erreichen.', avatar: '/images/avatars/ionicframework.png', imageUrls: [], imageTexts: []}) 
 CREATE (yeoman:Kenntnisse_Programmieren_Javascript_Tools {title: 'Yeoman', body: '', avatar: '/images/avatars/yeoman.png', imageUrls: [], imageTexts: []}) 
-CREATE (bower:Kenntnisse_Programmieren_Javascript_Tools {title: 'Bower', body: '', avatar: '/images/avatars/bower.png', imageUrls: [], imageTexts: []}) 
-CREATE (grunt:Kenntnisse_Programmieren_Javascript_Tools {title: 'Grunt', body: '', avatar: '/images/avatars/grunt.png', imageUrls: [], imageTexts: []}) 
-CREATE (d3:Kenntnisse_Programmieren_Javascript_Libraries {title: 'd3.js', body: '', avatar: '/images/avatars/d3.png', imageUrls: [], imageTexts: []}) 
-CREATE (jasmine:Kenntnisse_Programmieren_Javascript_Libraries {title: 'Jasmine', body: '', avatar: '/images/avatars/jasmine.png', imageUrls: [], imageTexts: []}) 
-CREATE (expressframework:Kenntnisse_Programmieren_Javascript_Libraries {title: 'express Framework', body: '', avatar: '/images/avatars/express.png', imageUrls: [], imageTexts: []}) 
-CREATE (passport:Kenntnisse_Programmieren_Javascript_Libraries {title: 'passport.js', body: '', avatar: '/images/avatars/passport.png', imageUrls: [], imageTexts: []}) 
-CREATE (sockjs:Kenntnisse_Programmieren_Javascript_Libraries {title: 'sock.js', body: '', avatar: '/images/avatars/sockjs.png', imageUrls: [], imageTexts: []}) 
-CREATE (bluebird:Kenntnisse_Programmieren_Javascript_Libraries {title: 'bluebird', body: '', avatar: '/images/avatars/bluebird.png', imageUrls: [], imageTexts: []}) 
-CREATE (npm:Kenntnisse_Programmieren_Javascript_Tools {title: 'Node Packaged Modules', body: '', avatar: '/images/avatars/npm.png', imageUrls: [], imageTexts: []}) 
+CREATE (bower:Kenntnisse_Programmieren_Javascript_Tools {title: 'Bower', body: 'ist ein weit verbreiteter Paketmanager für den Webbereich.', avatar: '/images/avatars/bower.png', imageUrls: [], imageTexts: []}) 
+CREATE (grunt:Kenntnisse_Programmieren_Javascript_Tools {title: 'Grunt', body: 'ist ein JavaScript Task Runner, der es schafft viele Dinge, die sonst viel Zeit in Anspruch nehmen würden, zu automatisieren (minifying, uglifying, building, running tests etc.)', avatar: '/images/avatars/grunt.png', imageUrls: [], imageTexts: []}) 
+CREATE (d3:Kenntnisse_Programmieren_Javascript_Libraries {title: 'd3.js', body: 'ist eine JavaScript Bibliothek zur interaktiven Visualisierung von Daten zum Beispiel wie in dieser Webapp.', avatar: '/images/avatars/d3.png', imageUrls: [], imageTexts: []}) 
+CREATE (jasmine:Kenntnisse_Programmieren_Javascript_Libraries {title: 'Jasmine', body: 'ist ein Framework zum Testen von JavaScript Programmen.', avatar: '/images/avatars/jasmine.png', imageUrls: [], imageTexts: []}) 
+
+//CREATE (passport:Kenntnisse_Programmieren_Javascript_Libraries {title: 'passport.js', body: '', avatar: '/images/avatars/passport.png', imageUrls: [], imageTexts: []}) 
+CREATE (sockjs:Kenntnisse_Programmieren_Javascript_Libraries {title: 'sock.js', body: 'ist eine Bibliothek, die die Verwendung von Websockets erleichtern soll. Es wird automatisch festgestellt, ob der Browser Websockets unterstützt und im Zweifelsfall wird automatisch auf andere Verbindungsarten zurückgegriffen (zB: long-polling).', avatar: '/images/avatars/sockjs.png', imageUrls: [], imageTexts: []}) 
+CREATE (bluebird:Kenntnisse_Programmieren_Javascript_Libraries {title: 'bluebird', body: 'ist eine "promise" Bibliothek (ähnlich wie "q"), deren Fokus auf innovativen Features und Performance liegt.', avatar: '/images/avatars/bluebird.png', imageUrls: [], imageTexts: []}) 
+CREATE (npm:Kenntnisse_Programmieren_Javascript_Tools {title: 'Node Packaged Modules', body: 'ist, wie der Name vielleicht schon vermuten lässt, der Paketmanager für Node.js.', avatar: '/images/avatars/npm.png', imageUrls: [], imageTexts: []}) 
 
 CREATE
 	(javascript)-[:Libraries]->(libraries_javascript),
@@ -201,11 +205,11 @@ CREATE
 	(libraries_javascript)-[:jQuery]->(jquery),
 	(libraries_javascript)-[:AngularJs]->(angularjs),
 	(libraries_javascript)-[:NodeJs]->(nodejs),
-	(libraries_javascript)-[:IonicFramework]->(ionicframework),
+	(libraries_javascript)-[:Ionic]->(ionicframework),
 	(libraries_javascript)-[:d3]->(d3),
 	(libraries_javascript)-[:Jasmine]->(jasmine),
 	(libraries_javascript)-[:express]->(expressframework),
-	(libraries_javascript)-[:passportJs]->(passport),
+	//(libraries_javascript)-[:passportJs]->(passport),
 	(libraries_javascript)-[:sockJs]->(sockjs),
 	(libraries_javascript)-[:bluebird]->(bluebird),
 

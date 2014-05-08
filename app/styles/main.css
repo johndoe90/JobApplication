@@ -157,7 +157,6 @@ a:hover {
   overflow-y: auto;
   margin-left: 15px;
   border-left: 1px solid #ddd;
-  flex-basis: auto;
 }
 
 .animate.ng-enter, 
