@@ -6,7 +6,7 @@ angular
 		return {
 			restrict: 'AE',
 			replace: true,
-			templateUrl: 'partials/wtf.html',
+			templateUrl: 'partials/template.html',
 			link: function(scope, element) {
 				scope.image = scope.info.imageUrls.length === 1 ? true : false;
 				scope.carousel = scope.info.imageUrls.length > 1 ? true : false;
