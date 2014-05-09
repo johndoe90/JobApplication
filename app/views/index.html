@@ -34,15 +34,13 @@
             return M.join(' ');
         })();
     </script>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
 
     <!-- Add your site or application content here -->
 
 
     <!--<div class="fp box box-flex-row wrapper" fullscreen ui-view></div>-->
-    <div class="fp box box-flex-row wrapper" fullscreen ui-view></div>
+    <div browser></div>
+    <div class="fp wrapper" fullscreen ui-view></div>
 
 
     <!--[if lt IE 9]>
@@ -72,6 +70,7 @@
         <script src="scripts/services/GraphConverter.js"></script>
         <script src="scripts/directives/FullscreenDirective.js"></script>
         <script src="scripts/directives/LoaderDirective.js"></script>
+        <script src="scripts/directives/BrowserDirective.js"></script>
         <!-- endbuild -->
 </body>
 </html>

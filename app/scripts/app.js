@@ -20,12 +20,12 @@ angular
 				abstract: true,
 				url: '/info',
 				controller: 'InfoController',
-				templateUrl: 'views/partials/info.html'
+				templateUrl: 'partials/info.html'
 			})
 			.state('info.graph', {
 				url: '/graph/:q',
 				controller: 'GraphController',
-				templateUrl: 'views/partials/graph.html'
+				templateUrl: 'partials/graph.html'
 			});
 
 		$urlRouterProvider.otherwise('/info/graph/');

@@ -6,7 +6,7 @@ angular
 		return {
 			restrict: 'AE',
 			replace: true,
-			templateUrl: 'views/partials/info.tpl.html',
+			templateUrl: 'partials/wtf.html',
 			link: function(scope, element) {
 				scope.image = scope.info.imageUrls.length === 1 ? true : false;
 				scope.carousel = scope.info.imageUrls.length > 1 ? true : false;
@@ -35,7 +35,7 @@ angular
 						scope.$apply(function() {
 							scope.infos.splice(+element.attr('index'), 1);
 						});
-					})
+					});
 				});
 			}
 		};

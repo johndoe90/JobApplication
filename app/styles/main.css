@@ -29,16 +29,6 @@ html, body {
   background-color: white;
 }
 
-#loading {
-  display: none;
-  position: absolute;
-  top: 50%;
-  top: calc(50% - 33px);
-  left: 50%;
-  left: calc(50% - 33px);
-  z-index: 250;
-}
-
 a:hover {
   color: black;
 }
@@ -49,28 +39,21 @@ a:hover {
 }
 
 .query-box {
-  font-size: 150%; 
+  font-size: 135%; 
   text-align: center; 
-  font-family: Menlo,Monaco,Consolas,monospace;
+  font-family: monospace;
 }
 
 .query {
+  padding: 0 2px 0 2px;
   color: black;
-  background-color: #f9f2f4;
+  background-color: hsla(0, 100%, 50%, 0.13); /*#f9f2f4;*/
 }
-/*.query {
-  font-size: 150%;
-  color: black;
-  background-color: #f9f2f4;
-  border-radius: 4px;
-  font-family: Menlo,Monaco,Consolas,monospace;
-  margin: 0 15px 0 15px;
-}*/
 
 .wrapper {
-  padding: 10px 0 10px 10px;
   min-width: 1366px;
   min-height: 768px;
+  padding: 10px;
 }
 
 .fp {
@@ -94,72 +77,7 @@ a:hover {
   font-weight: bold;
 }
 
-.box {
-  display: -ms-flexbox;
-
-  display: -o-box;
-  display: -ms-box; 
-  display: -moz-box;
-  display: -webkit-box;
-  display: box;
-
-  display: -o-flex;
-  display: -ms-flex; 
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
-}
-
-.box-flex-row {
-  -o-box-orient: horizontal;
-  -ms-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  -webkit-box-orient: horizontal;
-  box-orient: horizontal;
-
-  -o-flex-direction: row;
-  -ms-flex-direction: row;
-  -moz-flex-direction: row;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-}
-
-.box-flex-column {
-  -o-box-orient: vertical;
-  -ms-box-orient: vertical;
-  -moz-box-orient: vertical;
-  -webkit-box-orient: vertical;
-  box-orient: vertical;
-
-  -o-flex-direction: column;
-  -ms-flex-direction: column;
-  -moz-flex-direction: column;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-}
-
-.box-flex-1 {
-  -o-box-flex: 1;
-  -ms-box-flex: 1;
-  -moz-box-flex: 1;
-  -webkit-box-flex: 1;
-  box-flex: 1;
-
-  -o-flex: 1;
-  -ms-flex: 1;
-  -moz-flex: 1;
-  -webkit-flex: 1;
-  flex: 1;
-}
-
-.info-container {
-  max-width: 450px;
-  overflow-y: auto;
-  margin-left: 15px;
-  border-left: 1px solid #ddd;
-}
-
-.animate.ng-enter, 
+/*.animate.ng-enter, 
 .animate.ng-leave
 { 
   -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
@@ -182,4 +100,4 @@ a:hover {
 .animate.ng-enter.animate.ng-enter-active, 
 .animate.ng-leave {
   width: 100%;
-}
+}*/

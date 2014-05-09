@@ -1,11 +1,9 @@
-<div class="box box-flex-row box-flex-1">
-	<div class="box box-flex-column box-flex-1" style="position: relative;">
+<div class="fp" style="position: relative;">
+	<div style="position: absolute; top: 0; left: 0; width: calc(100% - 451px); height: 100%;">
 		<loader></loader>
-		<div class="box box-flex-column box-flex-1"  ui-view></div>
+		<div class="fp" style="position: relative;" ui-view></div>
 	</div>
-	<div class="info-container box-flex-1">
-		<!--<div info class="animate" ng-repeat="info in infos"></div>-->
+	<div style="position: absolute; top: 0; right: 0; width: 440px; height: 100%; overflow-y: auto; border-left: 1px solid #ddd; margin-left: 10px;">
 		<div info ng-repeat="info in infos" index="{{$index}}"></div>
-
 	</div>
 </div>
