@@ -3,7 +3,7 @@
 angular
 	.module('jobApplication.services', [])
 	.constant('DataServiceConfig', {
-		url: 'http://ec2-54-184-78-20.us-west-2.compute.amazonaws.com:9000/api/query'
+		url: 'http://10.0.0.38:9000/api/query'
 	});
 
 angular
