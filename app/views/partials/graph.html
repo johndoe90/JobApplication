@@ -1,14 +1,14 @@
 <div class="fp">
-	<div class="query-box" style="height: 37px;">
-		<a class="query" ui-sref="info.graph({q: 'MATCH (n1:Phillip)-[r1:Familie]->(n2)-[r2]->(n3) RETURN n1,n2,n3,r1,r2'})">Familie</a>
-		<a class="query" ui-sref="info.graph({q: 'MATCH (n1:Phillip)-[r1:Freizeit]->(n2)-[r2]->(n3) RETURN n1,n2,n3,r1,r2'})">Freizeit</a>
-		<a class="query" ui-sref="info.graph({q: 'MATCH (n1:Phillip)-[r1:Stärken]->(n2)-[r2]->(n3) RETURN n1,n2,n3,r1,r2'})">St&auml;rken</a>
-		<a class="query" ui-sref="info.graph({q: 'MATCH (n1:Phillip)-[r1:Schwächen]->(n2)-[r2]->(n3) RETURN n1,n2,n3,r1,r2'})">Schw&auml;chen</a>
-		<a class="query" ui-sref="info.graph({q: 'MATCH (n1:Phillip)-[r1:Ausbildung]->(n2)-[r2]->(n3) RETURN n1,n2,n3,r1,r2'})">Ausbildung</a>
-		<a class="query" ui-sref="info.graph({q: 'MATCH (n1:Phillip)-[r1:Kenntnisse]->(n2), (n2)-[r2:Programmieren]->(n3), (n3)-[r3]->(n4), (n2)-[r4:Sonstige|Plattformen|Datenbanken|Sprachen]->(n5), (n5)-[r5]->(n6) RETURN n1,n2,n3,n4,n5,n6,r1,r2,r3,r4,r5'})">Kenntnisse</a>
-		<a class="query" ui-sref="info.graph({q: 'MATCH (n1:Phillip)-[r1:Dokumente]->(n2)-[r2]->(n3) RETURN n1,n2,n3,r1,r2'})">Dokumente</a>
-		<a class="query" ui-sref="info.graph({q: 'MATCH (n1:Phillip)-[r1:Kontakt]->(n2)-[r2]->(n3) RETURN n1,n2,n3,r1,r2'})">Kontakt</a>
+	<div once class="query-box" style="height: 37px;">
+		<a ng-click="clicked()" class="query" ui-sref="info.graph({q: 'MATCH (n1:Phillip)-[r1:Familie]->(n2)-[r2]->(n3) RETURN n1,n2,n3,r1,r2'})">Familie</a>
+		<a ng-click="clicked()" class="query" ui-sref="info.graph({q: 'MATCH (n1:Phillip)-[r1:Freizeit]->(n2)-[r2]->(n3) RETURN n1,n2,n3,r1,r2'})">Freizeit</a>
+		<a ng-click="clicked()" class="query" ui-sref="info.graph({q: 'MATCH (n1:Phillip)-[r1:Stärken]->(n2)-[r2]->(n3) RETURN n1,n2,n3,r1,r2'})">St&auml;rken</a>
+		<a ng-click="clicked()" class="query" ui-sref="info.graph({q: 'MATCH (n1:Phillip)-[r1:Schwächen]->(n2)-[r2]->(n3) RETURN n1,n2,n3,r1,r2'})">Schw&auml;chen</a>
+		<a ng-click="clicked()" class="query" ui-sref="info.graph({q: 'MATCH (n1:Phillip)-[r1:Ausbildung]->(n2)-[r2]->(n3) RETURN n1,n2,n3,r1,r2'})">Ausbildung</a>
+		<a ng-click="clicked()" class="query" ui-sref="info.graph({q: 'MATCH (n1:Phillip)-[r1:Kenntnisse]->(n2), (n2)-[r2:Programmieren]->(n3), (n3)-[r3]->(n4), (n2)-[r4:Sonstige|Plattformen|Datenbanken|Sprachen]->(n5), (n5)-[r5]->(n6) RETURN n1,n2,n3,n4,n5,n6,r1,r2,r3,r4,r5'})">Kenntnisse</a>
+		<a ng-click="clicked()" class="query" ui-sref="info.graph({q: 'MATCH (n1:Phillip)-[r1:Dokumente]->(n2)-[r2]->(n3) RETURN n1,n2,n3,r1,r2'})">Dokumente</a>
+		<a ng-click="clicked()" class="query" ui-sref="info.graph({q: 'MATCH (n1:Phillip)-[r1:Kontakt]->(n2)-[r2]->(n3) RETURN n1,n2,n3,r1,r2'})">Kontakt</a>
 	</div>
 
-	<div graph style="width: 100%; height: calc(100% - 37px);" ng-if="graph"></div>
+	<div graph style="width: 100%; height: calc(100% - 37px); position: relative;" ng-if="graph"></div>
 </div>

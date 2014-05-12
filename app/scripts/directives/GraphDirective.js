@@ -109,7 +109,6 @@ angular
 					.attr('class', 'link-text')
 					.text(function(d) { return d.type; });
 
-
 				scope.$watch(function() {
 					return element[0].clientWidth * element[0].clientHeight;
 				}, function() {
