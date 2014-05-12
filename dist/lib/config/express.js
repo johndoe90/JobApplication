@@ -28,7 +28,7 @@ module.exports = function(app) {
 
   app.configure('production', function(){
     app.use(express.favicon(path.join(config.root, 'public', 'favicon.ico')));
-    app.use(express.static(path.join(config.root, 'public')));
+    app.use(express.static(path.join(config.root, 'public'), { maxAge: 86400000 }));
     app.set('views', config.root + '/views');
   });
 
