@@ -3,7 +3,7 @@
 angular
 	.module('jobApplication.services', [])
 	.constant('DataServiceConfig', {
-		url: 'http://ec2-54-184-78-20.us-west-2.compute.amazonaws.com:9000/api/query'
+		url: 'http://mysterious-sands-4193.herokuapp.com/api/query'
 	});
 
 angular
