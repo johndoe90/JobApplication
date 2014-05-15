@@ -5,25 +5,3 @@ var neo4j = require('node-neo4j');
 var db = Promise.promisifyAll(new neo4j('http://localhost:7474'));
 
 exports.db = db;
-
-/*exports.relationships = {
-	FACEBOOK: 'FACEBOOK',
-	PREVIOUS: 'PREVIOUS',
-	BELONGS_TO: 'BELONGS_TO',
-	LATEST_QUESTION: 'LATEST_QUESTION',
-	SOCIAL: 'SOCIAL'
-};
-
-exports.labels = {
-	USER: 'User',
-	SOCIAL_USER: 'SocialUser',
-	ANSWER: 'Answer', 
-	ANSWERS: 'Answers',
-	QUESTION: 'Question',
-	QUESTIONS: 'Questions',
-	CATEGORY: 'Category'
-};
-
-exports.indices = {
-
-};*/
