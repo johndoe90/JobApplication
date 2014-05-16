@@ -1,12 +1,12 @@
 'use strict';
 
 var neo4j = require('./../config/neo4j'),
-		db = neo4j.db
+		db = neo4j.db,
 		restricted = ['create', 'merge', 'set', 'delete', 'remove', 'index', 'constraint'];
 
 exports.query = function(req, res) {
-	if (!req.query.q) { res.send(400, 'No query specified!'); }
-	if ( restricted.some(function(word) { return req.query.q.toLowerCase().indexOf(word) + 1; })) { res.send(400, 'You naughty boy!'); }
+	if (!req.query.q) { return res.send(400, 'No query specified!'); }
+	if ( restricted.some(function(word) { return req.query.q.toLowerCase().indexOf(word) + 1; })) { return res.send(400, 'You naughty boy!'); }
 
 	var statements = {
 		statements: [
