@@ -4,7 +4,7 @@ angular
 	.module('jobApplication.directives')
 	.directive('browser', [function(){
 		navigator.sayswho= (function(){
-			var ua= navigator.userAgent, tem, 
+			var ua= navigator.userAgent, tem,
 			M= ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*([\d\.]+)/i) || [];
 			if(/trident/i.test(M[1])){
 				tem=  /\brv[ :]+(\d+(\.\d+)?)/g.exec(ua) || [];

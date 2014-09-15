@@ -1,12 +1,12 @@
 CREATE (phillip:Phillip {title: 'Phillip Friedrich', body: 'Das bin ich!', avatar: '/images/avatars/phillip.png', imageUrls: ['/images/slides/phillip/ich.jpg'], imageTexts: ['']})
 
-//Freizeit
+
 
 CREATE (freizeit:Freizeit {title: 'Freizeit', body: 'So verbringe ich meine Freizeit.', avatar: '/images/avatars/freizeit.png', imageUrls: ['/images/slides/freizeit/freizeit1.jpg', '/images/slides/freizeit/angeln/angeln2.jpg', '/images/slides/freizeit/grillen/grillen5.jpg', '/images/slides/freizeit/radfahren/radfahren1.jpg'], imageTexts: ['', '', '', '']})
 CREATE (angeln:Freizeit {title: 'Angeln', body: 'Ich bin nicht wirklich ein fachkundiger Angler, aber meine Forellen fange ich mir lieber selbst, anstatt sie im Supermarkt zu kaufen. ', avatar: '/images/avatars/angeln.png', imageUrls: ['/images/slides/freizeit/angeln/angeln1.jpg', '/images/slides/freizeit/angeln/angeln2.jpg', '/images/slides/freizeit/angeln/angeln3.jpg'], imageTexts: ['', '', '']})
 CREATE (radfahren:Freizeit {title: 'Radfahren', body: 'Vor ein paar Jahren habe ich mir ein Rennrad geleistet. Für die Tour de France hat es noch nicht gereicht, aber in der näheren Umgebung bin ich schon einmal auf einer ruhigen Straße unterwegs.', avatar: '/images/avatars/radfahren.png', imageUrls: ['/images/slides/freizeit/radfahren/radfahren1.jpg', '/images/slides/freizeit/radfahren/radfahren2.jpg'], imageTexts: ['', '']})
 CREATE (grillen:Freizeit {title: 'Grillen', body: 'Wenn das Wetter stimmt, werfe ich auch gerne einmal den Grill an oder mache ein Lagerfeuer in unserem Garten.', avatar: '/images/avatars/grillen.png', imageUrls: ['/images/slides/freizeit/grillen/grillen1.jpg', '/images/slides/freizeit/grillen/grillen2.jpg', '/images/slides/freizeit/grillen/grillen3.jpg', '/images/slides/freizeit/grillen/grillen4.jpg', '/images/slides/freizeit/grillen/grillen5.jpg'], imageTexts: ['', '', '', '', '']})
-CREATE (poker:Freizeit {title: 'Poker', body: 'In der Vergangenheit habe ich mit Online-Poker die Haushaltskasse aufgefüllt. Jetzt spiele ich nur noch ab und zu, aus reiner Freude am Spiel.', avatar: '/images/avatars/poker.png', imageUrls: [], imageTexts: []})
+CREATE (poker:Freizeit {title: 'Poker', body: 'Bis vor 1.5 Jahren war Onlinepoker meine Haupteinnahmequelle. Jetzt spiele ich nur noch ab und zu, aus reiner Freude am Spiel.', avatar: '/images/avatars/poker.png', imageUrls: [], imageTexts: []})
 CREATE (laufen:Freizeit {title: 'Laufen', body: 'Mit dem Laufen habe ich erst vor kurzem begonnen. Man wird sehen wie gut es sich in dem neuen Schuhwerk läuft.', avatar: '/images/avatars/laufen.png', imageUrls: ['/images/slides/freizeit/laufen/laufen1.jpg'], imageTexts: ['']})
 CREATE (coden:Freizeit {title: 'Programmieren', body: 'Man sagt doch immer, dass man sein Hobby zum Beruf machen soll. In meinem Fall trifft das Sprichwort auf jeden Fall zu.', avatar: '/images/avatars/programmieren.png', imageUrls: [], imageTexts: []})
 CREATE (schwimmen:Freizeit {title: 'Schwimmen', body: 'Voriges Jahr habe ich einen Schwimmkurs für Fortgeschrittene besucht und seitdem betreibe ich den Sport regelmäßig.', avatar: '/images/avatars/schwimmen.png', imageUrls: ['/images/slides/freizeit/schwimmen/schwimmen1.jpg', '/images/slides/freizeit/schwimmen/schwimmen2.jpg', '/images/slides/freizeit/schwimmen/schwimmen3.jpg', '/images/slides/freizeit/schwimmen/schwimmen4.jpg'], imageTexts: ['', '', '', '']})
@@ -20,7 +20,7 @@ CREATE
 	(freizeit)-[:Programmieren]->(coden),
 	(freizeit)-[:Schwimmen]->(schwimmen)
 
-//Familie
+
 
 CREATE (familie:Familie {title: 'Familie', body: 'Das ist meine Familie.', avatar: '/images/avatars/familie.png', imageUrls: ['/images/slides/familie/familie1.jpg', '/images/slides/familie/familie2.jpg', '/images/slides/familie/familie3.jpg'], imageTexts: ['', '', '']})
 CREATE (andrea:Familie {title: 'Andrea Friedrich', body: 'Meine Mutter ist 48 Jahre alt und arbeitet als Büroangestellte bei der ÖBB-Postbus GmbH in Hollabrunn.', avatar: '/images/avatars/andrea.png', imageUrls: ['/images/slides/familie/andrea/andrea.jpg'], imageTexts: ['']})
@@ -32,7 +32,7 @@ CREATE
 	(familie)-[:Vater]->(bruno),
 	(familie)-[:Schwester]->(stephy)
 
-//Ausbildung
+
 
 CREATE (ausbildung:Ausbildung {title: 'Ausbildung', body: 'Diese Stationen in meiner Ausbildung habe ich schon hinter mir.', avatar: '/images/avatars/ausbildung.png', imageUrls: ['/images/slides/ausbildung/volksschule/volksschule.jpg', '/images/slides/ausbildung/gymnasium/gymnasium.jpg', '/images/slides/ausbildung/htl/htl.jpg'], imageTexts: ['Volksschule', 'Gymnasium', 'HTL - Technische Informatik']})
 CREATE (volksschule:Ausbildung {title: 'Volksschule', body: '<a href="http://www.vs2-hollabrunn.eduhi.at/Bilder/13_14/fotos2/verkleinert/k-lesenacht%20(13).JPG">Volksschule Koliskoplatz</a> von 1996 - 2000', avatar: '/images/avatars/volksschule.png', imageUrls: ['/images/slides/ausbildung/volksschule/volksschule.jpg'], imageTexts: ['']})
@@ -52,7 +52,7 @@ CREATE
 	(ausbildung)-[:Praktikum]->(siemens),
 	(ausbildung)-[:Zivildienst]->(zivildienst)
 
-//Kenntnisse
+
 
 CREATE (kenntnisse:Kenntnisse {title: 'Kenntnisse', body: 'Ich kann Wissen in folgenden Bereichen aufweisen.', avatar: '/images/avatars/kenntnisse.png', imageUrls: [], imageTexts: []}) 
 CREATE
@@ -70,21 +70,21 @@ CREATE
 	(kenntnisse)-[:Datenbanken]->(datenbanken),
 	(kenntnisse)-[:Sprachen]->(sprachen)
 
-//Kenntnisse - Sprachen
+
 CREATE (deutsch:Kenntnisse_Sprachen {title: 'Deutsch', body: 'Deutsch ist meine Muttersprache, daher beherrsche ich sie fließend in Wort und Schrift.', avatar: '/images/avatars/deutschland.png', imageUrls: [], imageTexts: []}) 
 CREATE (englisch:Kenntnisse_Sprachen {title: 'Englisch', body: 'Die meisten technischen Bücher die ich bis jetzt gelesen habe waren auf Englisch, meine Lieblingsserien und Filme schaue ich meistens im Originalton und bei der mündlichen Matura habe ich in Englisch sehr gut abgeschnitten. Von daher denke ich, dass ich sowohl beim Lesen, Schreiben und Sprechen in Englisch auf einem guten Niveau bin.', avatar: '/images/avatars/england.png', imageUrls: [], imageTexts: []}) 
 CREATE
 	(sprachen)-[:Deutsch]->(deutsch),
 	(sprachen)-[:Englisch]->(englisch) 
 
-//Kenntnisse - Plattformen
+
 
 CREATE (github:Kenntnisse_Plattformen {title: 'Github', body: 'Die meisten meiner Projekte sind auf Github. Daher bin ich mit den Grundfunktionen von Git sowohl in der Konsole als auch als Plugin für Eclipse (EGit) vertraut.', avatar: '/images/avatars/github.png', imageUrls: [], imageTexts: []}) 
 CREATE (facebook:Kenntnisse_Plattformen {title: 'Facebook', body: 'Ich habe schon Anwendungen entwickelt bei denen es möglich war sich via Facebook zu registrieren, einzuloggen bzw. mit der Einwilligung des Users bestimmte Aktionen auf dessen Profil auszuführen.', avatar: '/images/avatars/facebook.png', imageUrls: [], imageTexts: []})
-CREATE (heroku:Kenntnisse_Plattformen {title: 'Heroku', body: 'Auf Heroku bin ich aufmerksam geworden, weil es das Deploying bzw. Hosting von Anwendungen wesentlich schneller gestaltet und vereinfacht. <br><br> Verwendet in Projekt: <ul><li>Diese App wird auf Heroku gehostet</li><li><a href="http://goo.gl/mIP1VY" target="_blank">NewsApp</a> (funktioniert nur mit Google Chrome, kann beim 1. Mal öffnen etwas dauern)</li></ul>', avatar: '/images/avatars/heroku.png', imageUrls: [], imageTexts: []}) 
-CREATE (amazon:Kenntnisse_Plattformen {title: 'Amazon Webservices', body: 'Erfahrungen habe ich mit Amazon Elastic Compute Cloud (EC2) und mit dem Simple Storage Service (S3). <br><br> Verwendet in Projekt: <ul><li><a href="http://goo.gl/Z965Jg" target="_blank">Realtime Demo</a></li><li><a href="http://goo.gl/mIP1VY" target="_blank">NewsApp</a> (funktioniert nur mit Google Chrome, kann beim 1. Mal öffnen etwas dauern)</li></ul>', avatar: '/images/avatars/amazon.png', imageUrls: [], imageTexts: []}) 
+CREATE (heroku:Kenntnisse_Plattformen {title: 'Heroku', body: 'Auf Heroku bin ich aufmerksam geworden, weil es das Deploying bzw. Hosting von Anwendungen wesentlich schneller gestaltet und vereinfacht. <br><br> Verwendet in Projekt: <ul><li>Diese App wird auf Heroku gehostet</li><li><a href="http://goo.gl/EBxn7G" target="_blank">NewsApp</a> (funktioniert nur mit Google Chrome, kann beim 1. Mal öffnen etwas dauern (sollte nichts kommen, Seite neu laden))</li><li><a href="http://goo.gl/g5lKex" target="_blank">Spring Integration Demo</a></li><li><a href="http://goo.gl/N2kXwK" target="_blank">Realtime Demo</a></li></ul>', avatar: '/images/avatars/heroku.png', imageUrls: [], imageTexts: []}) 
+CREATE (amazon:Kenntnisse_Plattformen {title: 'Amazon Webservices', body: 'Erfahrungen habe ich mit Amazon Elastic Compute Cloud (EC2) und mit dem Simple Storage Service (S3). <br><br> Verwendet in Projekt: <ul><li><a href="http://goo.gl/EBxn7G" target="_blank">NewsApp</a> (funktioniert nur mit Google Chrome, kann beim 1. Mal öffnen etwas dauern (sollte nichts kommen, Seite neu laden))</li></ul>', avatar: '/images/avatars/amazon.png', imageUrls: [], imageTexts: []}) 
 CREATE (googleappengine:Kenntnisse_Plattformen {title: 'Google App Engine', body: 'Meine frühere Bewerbung habe ich mithilfe des Google Web Toolkits entwickelt und auf der Google App Engine gehostet. <br><br> Verwendet in Projekt: <ul><li><a href="http://goo.gl/8tc7FK" target="_blank">Bewerbung</a></li></ul>', avatar: '/images/avatars/googleappengine.png', imageUrls: [], imageTexts: []}) 
-CREATE (android:Kenntnisse_Plattformen {title: 'Android', body: 'Für Android habe ich schon einfache native als auch hybride (HTML5 + CSS3 + JS + Cordova) Apps entwickelt. <br><br> Verwendet in Projekt: <ul><li><a href="http://goo.gl/mIP1VY" target="_blank">NewsApp</a> (funktioniert nur mit Google Chrome, kann beim 1. Mal öffnen etwas dauern)</li></ul>', avatar: '/images/avatars/android.png', imageUrls: [], imageTexts: []})  
+CREATE (android:Kenntnisse_Plattformen {title: 'Android', body: 'Für Android habe ich schon einfache native als auch hybride (HTML5 + CSS3 + JS + Cordova) Apps entwickelt. <br><br> Verwendet in Projekt: <ul><li><a href="http://goo.gl/EBxn7G" target="_blank">NewsApp</a> (funktioniert nur mit Google Chrome, kann beim 1. Mal öffnen etwas dauern (sollte nichts kommen, Seite neu laden))</li></ul>', avatar: '/images/avatars/android.png', imageUrls: [], imageTexts: []})  
 CREATE 
 	(plattformen)-[:Github]->(github),
 	(plattformen)-[:Heroku]->(heroku),
@@ -93,7 +93,7 @@ CREATE
 	(plattformen)-[:Google]->(googleappengine),
 	(plattformen)-[:Android]->(android)
 
-//Kenntnisse - Datenbanken
+
 
 CREATE (mysql:Kenntnisse_Datenbanken {title: 'MySQL', body: 'Meine ersten Eindrücke eines Datenbanksystems habe ich mit MySQL gewonnen. <br><br>Erfahrungen mit: <ul><li>SQL (CREATE, SELECT, JOIN, etc.)</li><li>Relationships (1/n, n/1, n/n)</li><li>SpringFramework + Hibernate ORM</li><li>verwendet in Projekten mit Java und PHP</li></ul>', avatar: '/images/avatars/mysql.png', imageUrls: [], imageTexts: []}) 
 CREATE (postgresql:Kenntnisse_Datenbanken {title: 'PostgreSQL', body: 'ist wie MySQL auch eine relationale Datenbank. Zu PostgreSQL bin ich gewechselt, da es die Volltextsuche zu dem Zeitpunkt besser unterstützt hat. <br> <br>Erfahrungen mit: <ul><li>SQL (CREATE, SELECT, JOIN, etc.)</li><li>Relationships (1/n, n/1, n/n)</li><li>SpringFramework + Hibernate ORM + HQL</li><li>verwendet in Projekten mit Java</li></ul>', avatar: '/images/avatars/postgresql.png', imageUrls: [], imageTexts: []}) 
@@ -107,7 +107,7 @@ CREATE
 	(datenbanken)-[:Neo4j]->(neo4j),
 	(datenbanken)-[:MongoDB]->(mongodb)
 
-//Kenntnisse - Programmieren 
+
 CREATE (java:Kenntnisse_Programmieren {title: 'Java', body: 'Eine genaue Aufschlüsselung meiner Erfahrungen mit Java finden sie <a href="/#/info/graph/MATCH%20(n1%3APhillip)-%5Br1%3AKenntnisse%5D-%3E(n2)-%5Br2%3AProgrammieren%5D-%3E(n3)-%5Br3%3AJava%5D-%3E(n4)-%5Br4*%5D-%3E(n5)%20RETURN%20n1%2Cn2%2Cn3%2Cn4%2Cn5%2Cr1%2Cr2%2Cr3%2Cr4" class="query">hier</a>.', avatar: '/images/avatars/java.png', imageUrls: [], imageTexts: []}) 
 CREATE (javascript:Kenntnisse_Programmieren {title: 'JavaScript', body: 'Eine genaue Aufschlüsselung meiner Erfahrungen mit JavaScript finden sie <a href="/#/info/graph/MATCH%20(n1%3APhillip)-%5Br1%3AKenntnisse%5D-%3E(n2)-%5Br2%3AProgrammieren%5D-%3E(n3)-%5Br3%3AJavaScript%5D-%3E(n4)-%5Br4*%5D-%3E(n5)%20RETURN%20n1%2Cn2%2Cn3%2Cn4%2Cn5%2Cr1%2Cr2%2Cr3%2Cr4" class="query">hier</a>.', avatar: '/images/avatars/javascript.png', imageUrls: [], imageTexts: []}) 
 CREATE (php:Kenntnisse_Programmieren {title: 'PHP', body: 'Eine genaue Aufschlüsselung meiner Erfahrungen mit PHP finden sie <a href="/#/info/graph/MATCH%20(n1%3APhillip)-%5Br1%3AKenntnisse%5D-%3E(n2)-%5Br2%3AProgrammieren%5D-%3E(n3)-%5Br3%3APHP%5D-%3E(n4)-%5Br4*%5D-%3E(n5)%20RETURN%20n1%2Cn2%2Cn3%2Cn4%2Cn5%2Cr1%2Cr2%2Cr3%2Cr4" class="query">hier</a>.', avatar: '/images/avatars/php.png', imageUrls: [], imageTexts: []}) 
@@ -126,7 +126,7 @@ CREATE
 	(programmieren)-[:HTML5]->(html5),
 	(programmieren)-[:Assembler]->(asm)
 
-//Kenntnisse - Programmieren - Java
+
 CREATE (libraries_java:Kenntnisse_Programmieren_Java_Libraries {title: 'Libraries', body: 'Mit diesen Java Frameworks/Bibliothenken habe ich schon gearbeitet.', avatar: '/images/avatars/libraries.png', imageUrls: [], imageTexts: []}) 
 CREATE (plattformen_java:Kenntnisse_Plattformen {title: 'Plattformen', body: 'Diese Plattformen habe ich schon für meine Java Anwendungen verwendet.', avatar: '/images/avatars/plattform.png', imageUrls: [], imageTexts: []}) 
 CREATE (tools_java:Kenntnisse_Programmieren_Java_Tools {title: 'Tools', body: 'Folgende Programme helfen mir bei der Entwicklung.', avatar: '/images/avatars/tools.png', imageUrls: [], imageTexts: []}) 
@@ -136,13 +136,16 @@ CREATE (eclipse:Kenntnisse_Programmieren_Java_Tools {title: 'Eclipse', body: 'Zu
 CREATE (eclipse_android:Kenntnisse_Programmieren_Java_Tools {title: 'Eclipse ADT Plugin', body: 'Android Apps entwickle ich mit Eclipse + Android Development Tools Plugin', avatar: '/images/avatars/android.png', imageUrls: [], imageTexts: []})
 CREATE (androidsdk:Kenntnisse_Programmieren_Java_Libraries {title: 'Android SDK', body: 'beinhaltet wichtige Bibliotheken und APIs die für die Entwicklung von Android Apps nötig sind.', avatar: '/images/avatars/android.png', imageUrls: [], imageTexts: []})
 CREATE (gwt:Kenntnisse_Programmieren_Java_Libraries {title: 'Google Web Toolkit', body: 'ist ein Toolkit zur Entwicklung von Webanwendungen. <br><br> Verwendet in Projekt: <ul><li><a href="http://goo.gl/8tc7FK" target="_blank">alte Bewerbung</a></li></ul>', avatar: '/images/avatars/gwt.png', imageUrls: [], imageTexts: []}) 
-CREATE (cordova:Kenntnisse_Programmieren_Java_Libraries {title: 'Cordova', body: 'ist eine Sammlung von APIs, die es einem Entwickler von mobilen Webapps erlaubt native Gerätefunktionen zu verwenden. <br><br> Verwendet in Projekt: <ul><li><a href="http://goo.gl/mIP1VY" target="_blank">NewsApp</a> (funktioniert nur mit Google Chrome, kann beim 1. Mal öffnen etwas dauern)</li></ul>', avatar: '/images/avatars/cordova.png', imageUrls: [], imageTexts: []}) 
+CREATE (cordova:Kenntnisse_Programmieren_Java_Libraries {title: 'Cordova', body: 'ist eine Sammlung von APIs, die es einem Entwickler von mobilen Webapps erlaubt native Gerätefunktionen zu verwenden. <br><br> Verwendet in Projekt: <ul><li><a href="http://goo.gl/EBxn7G" target="_blank">NewsApp</a> (funktioniert nur mit Google Chrome, kann beim 1. Mal öffnen etwas dauern (sollte nichts kommen, Seite neu laden))</li></ul>', avatar: '/images/avatars/cordova.png', imageUrls: [], imageTexts: []}) 
 CREATE (junit:Kenntnisse_Programmieren_Java_Libraries {title: 'Junit', body: 'ist ein Framework zum automatisierten Testen von Java Programmen.', avatar: '/images/avatars/junit.png', imageUrls: [], imageTexts: []}) 
 CREATE (jstl:Kenntnisse_Programmieren_Java_Libraries {title: 'JSTL', body: 'steht für Java Server Pages Standard Tag Library und ist eine Sammlung von Bibliotheken, die für die Erstellung von JSP Seiten hilfreich sind. ', avatar: '/images/avatars/jstl.png', imageUrls: [], imageTexts: []}) 
 CREATE (thymeleaf:Kenntnisse_Programmieren_Java_Libraries {title: 'Thymeleaf', body: 'ist eine HTML5 template engine als Alternative zu JSP/JSTL.', avatar: '/images/avatars/thymeleaf.png', imageUrls: [], imageTexts: []})
 
-CREATE (springframework:Kenntnisse_Programmieren_Java_Libraries {title: 'Spring', body: 'ist ein Java Framework mit dem Ziel die Entwicklung mit Java/Java EE zu vereinfachen und gute Programmierpraktiken zu fördern. <br><br> Erfahrungen mit: <ul><li>Spring Core</li><li>Spring MVC</li><li>Spring Social</li><li>Spring Security</li><li>Spring Data, Spring Data für Neo4j</li><li>Restful Services</li><li>JSP, Thymeleaf</li><li>...</li></ul> <br> Verwendet in Projekt: <ul><li><a href="http://goo.gl/mIP1VY" target="_blank">NewsApp</a> (funktioniert nur mit Google Chrome, kann beim 1. Mal öffnen etwas dauern)</li></ul>', avatar: '/images/avatars/springframework.png', imageUrls: [], imageTexts: []}) 
-CREATE (hibernate:Kenntnisse_Programmieren_Java_Libraries {title: 'Hibernate', body: 'ist ein Persistenz und ORM Framework. <br><br> Erfahrungen mit: <ul><li>Hibernate ORM</li><li>Hibernate Validator</li></ul>', avatar: '/images/avatars/hibernate.png', imageUrls: [], imageTexts: []}) 
+CREATE (springframework:Kenntnisse_Programmieren_Java_Libraries {title: 'Spring', body: 'ist ein Java Framework mit dem Ziel die Entwicklung mit Java/Java EE zu vereinfachen und gute Programmierpraktiken zu fördern. <br><br> Erfahrungen mit: <ul><li>Spring Core</li><li>Spring MVC</li><li>Spring Boot</li><li>Spring Social</li><li>Spring Security</li><li>Spring Integration</li><li>Spring Data, Spring Data für Neo4j</li><li>Restful Services</li><li>JSP, Thymeleaf</li><li>...</li></ul> <br> Verwendet in Projekt: <ul><li><a href="http://goo.gl/EBxn7G" target="_blank">NewsApp</a> (funktioniert nur mit Google Chrome, kann beim 1. Mal öffnen etwas dauern (sollte nichts kommen, Seite neu laden))</li><li><a href="http://goo.gl/g5lKex" target="_blank">Spring Integration Demo</a></li></ul>', avatar: '/images/avatars/springframework.png', imageUrls: [], imageTexts: []}) 
+CREATE (hibernate:Kenntnisse_Programmieren_Java_Libraries {title: 'Hibernate', body: 'ist ein Persistenz und ORM Framework. <br><br> Erfahrungen mit: <ul><li>Hibernate ORM</li><li>Hibernate Validator</li></ul>', avatar: '/images/avatars/hibernate.png', imageUrls: [], imageTexts: []})
+ 
+CREATE (rabbitmq_java:Kenntnisse_Programmieren_Java_Libraries {title: 'RabbitMQ', body: 'ist ein Message Broker, der die Kommunikation zwischen Applikationen vereinfacht.', avatar: '/images/avatars/rabbitmq.png', imageUrls: [], imageTexts: []})
+
 CREATE
 	(java)-[:Libraries]->(libraries_java),
 	(java)-[:Plattformen]->(plattformen_java),
@@ -157,6 +160,7 @@ CREATE
 	(libraries_java)-[:JSTL]->(jstl),
 	(libraries_java)-[:Thymeleaf]->(thymeleaf),
 	(libraries_java)-[:JUnit]->(junit),
+	(libraries_java)-[:RabbitMQ]->(rabbitmq_java),
 
 	(tools_java)-[:Eclipse]->(eclipse),
 	(tools_java)-[:EclipseADT]->(eclipse_android),
@@ -172,27 +176,29 @@ CREATE
 	(plattformen_java)-[:Android]->(android)
 
 
-//Kenntnisse - Programmieren - Javascript
+
 CREATE (libraries_javascript:Kenntnisse_Programmieren_Javascript_Libraries {title: 'Libraries', body: 'Mit diesen JavaScript Frameworks/Bibliothenken habe ich schon gearbeitet.', avatar: '/images/avatars/libraries.png', imageUrls: [], imageTexts: []}) 
 CREATE (plattformen_javascript:Kenntnisse_Plattformen {title: 'Plattformen', body: 'Diese Plattformen habe ich schon für meine JavaScript Anwendungen verwendet.', avatar: '/images/avatars/plattform.png', imageUrls: [], imageTexts: []}) 
 CREATE (tools_javascript:Kenntnisse_Programmieren_Javascript_Tools {title: 'Tools', body: 'Folgende Programme helfen mir bei der Entwicklung.', avatar: '/images/avatars/tools.png', imageUrls: [], imageTexts: []}) 
 CREATE (datenbanken_javascript:Kenntnisse_Datenbanken {title: 'Datenbanken', body: 'Mit diesen Datenbanken habe ich schon in Kombination mit JavaScript Erfahrung.', avatar: '/images/avatars/datenbank.png', imageUrls: [], imageTexts: []})
 
 CREATE (jquery:Kenntnisse_Programmieren_Javascript_Libraries {title: 'jQuery', body: 'ist eine JavaScript Bibliothek, die Funktionen zur DOM Navigation und Manipulation zur Verfügung stellt. <br><br> Erfahrungen mit: <ul><li>DOM Navigation und Manipulation (in unterschiedlichster Form)</li><li>Ajax</li></ul>', avatar: '/images/avatars/jquery.png', imageUrls: [], imageTexts: []}) 
-CREATE (angularjs:Kenntnisse_Programmieren_Javascript_Libraries {title: 'AngularJs', body: 'ist ein Framework, welches die Erstellung von komplexen Web Anwendungen erleichtert. <br><br> Erfahrungen mit: <ul><li>Single Page Anwendungen</li><li>Services, Controller, Direktiven, Filter</li><li>Two way data binding</li><li>Ajax - Requests</li><li>...</li></ul> <br> Verwendet in Projekt: <ul><li>Diese Webapp wurde mit AngularJs realisiert</li><li><a href="http://goo.gl/mIP1VY" target="_blank">NewsApp</a> (funktioniert nur mit Google Chrome, kann beim 1. Mal öffnen etwas dauern)</li></ul>', avatar: '/images/avatars/angularjs.png', imageUrls: [], imageTexts: []}) 
+CREATE (angularjs:Kenntnisse_Programmieren_Javascript_Libraries {title: 'AngularJs', body: 'ist ein Framework, welches die Erstellung von komplexen Web Anwendungen erleichtert. <br><br> Erfahrungen mit: <ul><li>Single Page Anwendungen</li><li>Services, Controller, Direktiven, Filter</li><li>Two way data binding</li><li>Ajax - Requests</li><li>...</li></ul> <br> Verwendet in Projekt: <ul><li>Diese Webapp wurde mit AngularJs realisiert</li><li><a href="http://goo.gl/EBxn7G" target="_blank">NewsApp</a> (funktioniert nur mit Google Chrome, kann beim 1. Mal öffnen etwas dauern (sollte nichts kommen, Seite neu laden))</li></ul>', avatar: '/images/avatars/angularjs.png', imageUrls: [], imageTexts: []}) 
 CREATE (nodejs:Kenntnisse_Programmieren_Javascript_Libraries {title: 'node.js', body: 'baut auf Chromes JavaScript runtime auf, mit dem Ziel JavaScript auch am Server einsetzen zu können. Diese Webapp verwendet im Backend node.js.<br><br> Erfahrungen mit: <ul><li>diverse Middleware (authentication, authorization, validation, session)</li><li>Restful Services</li></ul>', avatar: '/images/avatars/nodejs.png', imageUrls: [], imageTexts: []})
 CREATE (expressframework:Kenntnisse_Programmieren_Javascript_Libraries {title: 'express', body: 'ist ein minimalistisches, flexibles Node.js Webframework, das ein robustes Set von Features bietet. <br><br> Erfahrungen mit: <ul><li>diverse Middleware (authentication, authorization, validation, session)</li><li>Restful Services</li></ul>', avatar: '/images/avatars/express.png', imageUrls: [], imageTexts: []}) 
 
 
-CREATE (ionicframework:Kenntnisse_Programmieren_Javascript_Libraries {title: 'Ionic', body: 'ist ein Projekt, das auf AngularJS aufbaut und sich zum Ziel gesetzt hat das Entwickeln von hybrid Apps (HTML5 + CSS3 + JS) zu erleichtern. Ionic versucht dabei eine ähnlich gute User Experience wie von einer nativen App zu erreichen. <br><br> Verwendet in Projekt: <ul><li><a href="http://goo.gl/mIP1VY" target="_blank">NewsApp</a> (funktioniert nur mit Google Chrome, kann beim 1. Mal öffnen etwas dauern)</li></ul>', avatar: '/images/avatars/ionicframework.png', imageUrls: [], imageTexts: []}) 
+CREATE (ionicframework:Kenntnisse_Programmieren_Javascript_Libraries {title: 'Ionic', body: 'ist ein Projekt, das auf AngularJS aufbaut und sich zum Ziel gesetzt hat das Entwickeln von hybrid Apps (HTML5 + CSS3 + JS) zu erleichtern. Ionic versucht dabei eine ähnlich gute User Experience wie von einer nativen App zu erreichen. <br><br> Verwendet in Projekt: <ul><li><a href="http://goo.gl/EBxn7G" target="_blank">NewsApp</a> (funktioniert nur mit Google Chrome, kann beim 1. Mal öffnen etwas dauern (sollte nichts kommen, Seite neu laden))</li></ul>', avatar: '/images/avatars/ionicframework.png', imageUrls: [], imageTexts: []}) 
 CREATE (yeoman:Kenntnisse_Programmieren_Javascript_Tools {title: 'Yeoman', body: 'ist ein Tool welches es ermöglicht Grundgerüste von verschiedensten Projekten zu generieren.', avatar: '/images/avatars/yeoman.png', imageUrls: [], imageTexts: []}) 
 CREATE (bower:Kenntnisse_Programmieren_Javascript_Tools {title: 'Bower', body: 'ist ein weit verbreiteter Paketmanager für den Webbereich.', avatar: '/images/avatars/bower.png', imageUrls: [], imageTexts: []}) 
 CREATE (grunt:Kenntnisse_Programmieren_Javascript_Tools {title: 'Grunt', body: 'ist ein JavaScript Task Runner, der es schafft viele Dinge, die sonst viel Zeit in Anspruch nehmen würden, zu automatisieren (minifying, uglifying, building, running tests etc.)', avatar: '/images/avatars/grunt.png', imageUrls: [], imageTexts: []}) 
 CREATE (d3:Kenntnisse_Programmieren_Javascript_Libraries {title: 'd3.js', body: 'ist eine JavaScript Bibliothek zur interaktiven Visualisierung von Daten zum Beispiel wie in dieser Webapp.', avatar: '/images/avatars/d3.png', imageUrls: [], imageTexts: []}) 
 CREATE (jasmine:Kenntnisse_Programmieren_Javascript_Libraries {title: 'Jasmine', body: 'ist ein Framework zum Testen von JavaScript Programmen.', avatar: '/images/avatars/jasmine.png', imageUrls: [], imageTexts: []}) 
-CREATE (socketio:Kenntnisse_Programmieren_Javascript_Libraries {title: 'socket.io', body: 'ist eine Bibliothek, die die Verwendung von Websockets erleichtern soll. Es wird automatisch festgestellt, ob der Browser Websockets unterstützt und im Zweifelsfall wird automatisch auf andere Verbindungsarten zurückgegriffen (zB: long-polling). <br> <br> Verwendet in Projekt: <ul><li><a href="http://goo.gl/Z965Jg" target="_blank">Realtime Demo</a></li></ul>', avatar: '/images/avatars/socketio.png', imageUrls: [], imageTexts: []}) 
+CREATE (socketio:Kenntnisse_Programmieren_Javascript_Libraries {title: 'socket.io', body: 'ist eine Bibliothek, die die Verwendung von Websockets erleichtern soll. Es wird automatisch festgestellt, ob der Browser Websockets unterstützt und im Zweifelsfall wird automatisch auf andere Verbindungsarten zurückgegriffen (zB: long-polling). <br> <br> Verwendet in Projekt: <ul><li><a href="http://goo.gl/N2kXwK" target="_blank">Realtime Demo</a></li></ul>', avatar: '/images/avatars/socketio.png', imageUrls: [], imageTexts: []}) 
 CREATE (bluebird:Kenntnisse_Programmieren_Javascript_Libraries {title: 'bluebird', body: 'ist eine "promise" Bibliothek (ähnlich wie "q"), deren Fokus auf innovativen Features und Performance liegt.', avatar: '/images/avatars/bluebird.png', imageUrls: [], imageTexts: []}) 
 CREATE (npm:Kenntnisse_Programmieren_Javascript_Tools {title: 'Node Packaged Modules', body: 'ist, wie der Name vielleicht schon vermuten lässt, der Paketmanager für Node.js.', avatar: '/images/avatars/npm.png', imageUrls: [], imageTexts: []}) 
+
+CREATE (rabbitmq_javascript:Kenntnisse_Programmieren_Javascript_Libraries {title: 'RabbitMQ', body: 'ist ein Message Broker, der die Kommunikation zwischen Applikationen vereinfacht.', avatar: '/images/avatars/rabbitmq.png', imageUrls: [], imageTexts: []})
 
 CREATE
 	(javascript)-[:Libraries]->(libraries_javascript),
@@ -209,6 +215,7 @@ CREATE
 	(libraries_javascript)-[:express]->(expressframework),
 	(libraries_javascript)-[:socketIO]->(socketio),
 	(libraries_javascript)-[:bluebird]->(bluebird),
+	(libraries_javascript)-[:RabbitMQ]->(rabbitmq_javascript),
 
 	(tools_javascript)-[:Yeoman]->(yeoman),
 	(tools_javascript)-[:Bower]->(bower),
@@ -223,7 +230,7 @@ CREATE
 	(plattformen_javascript)-[:Google]->(googleappengine),
 	(plattformen_javascript)-[:Facebook]->(facebook)
 
-//Kenntnisse - Programmieren - Php
+
 CREATE (libraries_php:Kenntnisse_Programmieren_Php_Libraries {title: 'Libraries', body: 'Mit diesen PHP Frameworks/Bibliothenken habe ich schon gearbeitet.', avatar: '/images/avatars/libraries.png', imageUrls: [], imageTexts: []}) 
 CREATE (datenbanken_php:Kenntnisse_Datenbanken {title: 'Datenbanken', body: 'Folgende Datenbanken habe ich schon in PHP Projekten verwendet.', avatar: '/images/avatars/datenbank.png', imageUrls: [], imageTexts: []})
 
@@ -241,7 +248,7 @@ CREATE
 
 	(datenbanken_php)-[:MySQL]->(mysql)
 
-//Kenntnisse - Sonstige
+
 
 CREATE (office:Kenntnisse_Sonstige {title: 'Office', body: 'Bis ins letzte Detail bin ich mit Officeanwendungen nich vertraut, aber die wichtigen Funktionen wie Textformatierung, Formeln, Charts etc. sind kein Problem.', avatar: '/images/avatars/office.png', imageUrls: [], imageTexts: []}) 
 CREATE (windows:Kenntnisse_Sonstige {title: 'Windows', body: 'Mit Windows (Windows 2000 - Windows 8) habe ich, wie wohl die meisten Leute, jahrelange Erfahrung.', avatar: '/images/avatars/windows.png', imageUrls: [], imageTexts: []})
@@ -255,7 +262,7 @@ CREATE
 	(sonstige)-[:AutoCAD]->(autocad),
 	(sonstige)-[:Gimp]->(gimp)
 
-//Kontakt
+
 
 CREATE (kontakt:Kontakt {title: 'Kontakt', body: 'So k&ouml;nnen Sie mich erreichen.', avatar: '/images/avatars/kontakt.png', imageUrls: [], imageTexts: []})
 CREATE (email:Kontakt {title: 'E-Mail', body: '<a href="mailto:friedrich.phillip@gmail.com">friedrich.phillip@gmail.com</a>', avatar: '/images/avatars/email.png', imageUrls: [], imageTexts: []})
@@ -267,7 +274,7 @@ CREATE
 	(kontakt)-[:Telefon]->(telefon),
 	(kontakt)-[:Adresse]->(adresse)
 
-//Stärken
+
 
 CREATE (staerken:Stärken {title: 'Stärken', body: 'Diese Charaktereigenschaften zähle ich zu meinen persönlichen Stärken.', avatar: '/images/avatars/staerken.png', imageUrls: [], imageTexts: []})
 CREATE (lernfähig:Stärken {title: 'Lernfähigkeit', body: 'Während meiner Schulzeit (zumindest in der HTL) war ich immer einer der besten und habe auch stets gute Noten bekommen. Daher denke ich, dass ich mir das Prädikat "lernfähig" verdient habe.', avatar: '/images/avatars/lernfähigkeit.png', imageUrls: [], imageTexts: []})
@@ -283,7 +290,7 @@ CREATE
 	(staerken)-[:interessiert]->(interessiert),
 	(staerken)-[:humorvoll]->(humorvoll)
 
-//Schwächen
+
 
 CREATE (schwaechen:Schwächen {title: 'Schwächen', body: 'Wie jeder Mensch habe natürlich auch ich meine Schwächen, aber wie heißt es so schön: <i>"Stärke deine Stärken, Schwäche deine Schwächen"</i>.', avatar: '/images/avatars/schwächen.png', imageUrls: [], imageTexts: []})
 CREATE (unerfahren:Schwächen {title: 'Erfahrung', body: 'In der Vergangenheit habe ich noch nicht wirklich an einem Projekt gearbeitet, an dem mehrere Leute beteiligt waren. Wie ich in der Vergangenheit feststellen musste, habe ich im Bereich Projektmanagement noch einiges zu lernen.', avatar: '/images/avatars/erfahrung.png', imageUrls: [], imageTexts: []})
@@ -293,17 +300,19 @@ CREATE
 	(schwaechen)-[:introvertiert]->(introvertiert),
 	(schwaechen)-[:unerfahren]->(unerfahren)
 
-//Dokumente
+
 
 CREATE (dokumente:Dokumente {title: 'Dokumente', body: 'diverse Dokumente', avatar: '/images/avatars/dokumente.png', imageUrls: [], imageTexts: []})
 CREATE (maturazeugnis:Dokumente {title: 'Maturazeugnis', body: '', avatar: '/images/avatars/maturazeugnis.png', imageUrls: ['/images/slides/dokumente/maturazeugnis.jpg'], imageTexts: ['']})
 CREATE (abschlusszeugnis:Dokumente {title: 'Abschlusszeugnis', body: '', avatar: '/images/avatars/abschlusszeugnis.png', imageUrls: ['/images/slides/dokumente/abschlusszeugnis.jpg'], imageTexts: ['']})
 CREATE (foto:Dokumente {title: 'Foto', body: '', avatar: '/images/avatars/foto.png', imageUrls: ['/images/slides/dokumente/foto.jpg'], imageTexts: ['']})
+CREATE (lebenslauf:Dokumente {title: 'Lebenslauf', body: 'Details zu meinem Lebenlauf würde ich Ihnen gerne in einem persönlichen Bewerbungsgespräch erläutern.', avatar: '/images/avatars/lebenslauf.png', imageUrls: ['/images/slides/dokumente/lebenslauf.png'], imageTexts: ['']})
 CREATE
 	(phillip)-[:Dokumente]->(dokumente),
 	(dokumente)-[:Matura]->(maturazeugnis),
 	(dokumente)-[:Zeugnis]->(abschlusszeugnis),
-	(dokumente)-[:Foto]->(foto)
+	(dokumente)-[:Foto]->(foto),
+	(dokumente)-[:Lebenslauf]->(lebenslauf)
 
 
 

@@ -1,9 +1,12 @@
 <div class="fp" style="position: relative">
+
 	<div style="position: absolute; top: 0; left: 0; width: calc(100% - 451px); height: 100%">
 		<loader></loader>
 		<div class="fp" style="position: relative" ui-view=""></div>
 	</div>
 	<div style="position: absolute; top: 0; right: 0; width: 440px; height: 100%; overflow-y: auto; border-left: 1px solid #ddd; margin-left: 10px">
+		<div feedback=""></div>
 		<div info="" ng-repeat="info in infos" index="{{$index}}"></div>
+
 	</div>
 </div>

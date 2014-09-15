@@ -8,7 +8,7 @@ angular
 			title: 'Willkommen,',
 			imageUrls: [],
 			imageTexts: [],
-			body: 'zu meinem etwas anderen Bewerbungsschreiben. Hier haben Sie die Möglichkeit einiges Wissenswerte über mich zu erfahren. Dazu müssen Sie nur auf einen der <a href="#" class="query">Links</a> klicken und Sie werden weitere Informationen zu diesem Thema erhalten.'
+			body: 'zu meinem etwas anderen Bewerbungsschreiben. Hier haben Sie die Möglichkeit einiges Wissenswerte über mich zu erfahren. Dazu müssen Sie nur auf einen der <a href="#" class="query">Links</a> klicken und Sie werden weitere Informationen zu diesem Thema erhalten. <br> Zum Schluss wäre ich Ihnen sehr dankbar, wenn Sie mir <a href="https://docs.google.com/forms/d/1Ec2c8jM2jtJiYphPuJZWGFWCFzdP2B0pL7iLg0fUGk4/viewform" class="query">Feedback</a> zu mir bzw. meiner Bewerbung geben würden.'
 		}];
 
 		$scope.clicked = function() {
