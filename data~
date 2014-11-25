@@ -266,7 +266,7 @@ CREATE
 
 CREATE (kontakt:Kontakt {title: 'Kontakt', body: 'So k&ouml;nnen Sie mich erreichen.', avatar: '/images/avatars/kontakt.png', imageUrls: [], imageTexts: []})
 CREATE (email:Kontakt {title: 'E-Mail', body: '<a href="mailto:friedrich.phillip@gmail.com">friedrich.phillip@gmail.com</a>', avatar: '/images/avatars/email.png', imageUrls: [], imageTexts: []})
-CREATE (telefon:Kontakt {title: 'Telefon', body: '<a href="tel:+436801452328">+43 680 145 23 28</a>', avatar: '/images/avatars/telefon.png', imageUrls: [], imageTexts: []})
+CREATE (telefon:Kontakt {title: 'Telefon', body: '<a href="tel:+436802373129">+43 680 237 31 29</a>', avatar: '/images/avatars/telefon.png', imageUrls: [], imageTexts: []})
 CREATE (adresse:Kontakt {title: 'Adresse', body: 'Marichtalerweg 18<br>2020 Hollabrunn<br>Niederösterreich', avatar: '/images/avatars/adresse.png', imageUrls: ['/images/slides/kontakt/haus.jpg'], imageTexts: ['']})
 CREATE 
 	(phillip)-[:Kontakt]->(kontakt),
