@@ -79,7 +79,7 @@ CREATE
 
 
 
-CREATE (github:Kenntnisse_Plattformen {title: 'Github', body: 'Die meisten meiner Projekte sind auf Github. Daher bin ich mit den Grundfunktionen von Git sowohl in der Konsole als auch als Plugin für Eclipse (EGit) vertraut.', avatar: '/images/avatars/github.png', imageUrls: [], imageTexts: []}) 
+CREATE (github:Kenntnisse_Plattformen {title: 'Github', body: 'Einige meiner Projekte sind auf <a href="https://github.com/johndoe90">Github</a>. Daher bin ich mit den Grundfunktionen von Git sowohl in der Konsole als auch als Plugin für Eclipse vertraut.', avatar: '/images/avatars/github.png', imageUrls: [], imageTexts: []}) 
 CREATE (facebook:Kenntnisse_Plattformen {title: 'Facebook', body: 'Ich habe schon Anwendungen entwickelt bei denen es möglich war sich via Facebook zu registrieren, einzuloggen bzw. mit der Einwilligung des Users bestimmte Aktionen auf dessen Profil auszuführen.', avatar: '/images/avatars/facebook.png', imageUrls: [], imageTexts: []})
 CREATE (heroku:Kenntnisse_Plattformen {title: 'Heroku', body: 'Auf Heroku bin ich aufmerksam geworden, weil es das Deploying bzw. Hosting von Anwendungen wesentlich schneller gestaltet und vereinfacht. <br><br> Verwendet in Projekt: <ul><li>Diese App wird auf Heroku gehostet</li><li><a href="http://goo.gl/EBxn7G" target="_blank">NewsApp</a> (funktioniert nur mit Google Chrome, kann beim 1. Mal öffnen etwas dauern (sollte nichts kommen, Seite neu laden))</li><li><a href="http://goo.gl/g5lKex" target="_blank">Spring Integration Demo</a></li><li><a href="http://goo.gl/N2kXwK" target="_blank">Realtime Demo</a></li></ul>', avatar: '/images/avatars/heroku.png', imageUrls: [], imageTexts: []}) 
 CREATE (amazon:Kenntnisse_Plattformen {title: 'Amazon Webservices', body: 'Erfahrungen habe ich mit Amazon Elastic Compute Cloud (EC2) und mit dem Simple Storage Service (S3). <br><br> Verwendet in Projekt: <ul><li><a href="http://goo.gl/EBxn7G" target="_blank">NewsApp</a> (funktioniert nur mit Google Chrome, kann beim 1. Mal öffnen etwas dauern (sollte nichts kommen, Seite neu laden))</li></ul>', avatar: '/images/avatars/amazon.png', imageUrls: [], imageTexts: []}) 
@@ -268,11 +268,13 @@ CREATE (kontakt:Kontakt {title: 'Kontakt', body: 'So k&ouml;nnen Sie mich erreic
 CREATE (email:Kontakt {title: 'E-Mail', body: '<a href="mailto:friedrich.phillip@gmail.com">friedrich.phillip@gmail.com</a>', avatar: '/images/avatars/email.png', imageUrls: [], imageTexts: []})
 CREATE (telefon:Kontakt {title: 'Telefon', body: '<a href="tel:+436802373129">+43 680 237 31 29</a>', avatar: '/images/avatars/telefon.png', imageUrls: [], imageTexts: []})
 CREATE (adresse:Kontakt {title: 'Adresse', body: 'Marichtalerweg 18<br>2020 Hollabrunn<br>Niederösterreich', avatar: '/images/avatars/adresse.png', imageUrls: ['/images/slides/kontakt/haus.jpg'], imageTexts: ['']})
+CREATE (www:Kontakt {title: 'www', body: 'Hier bin ich aktiv: <br> <a href="https://github.com/johndoe90">github.com</a>,  <a href="http://stackoverflow.com/users/1869231/johndoe90">stackoverflow.com</a>, <a href="https://projecteuler.net/profile/PhillipF.png">projecteuler.net</a>, <a href="https://www.hackerrank.com/J0hnDoe">hackerrank.com</a>,', avatar: '/images/avatars/www.png', imageUrls: [], imageTexts: []})
 CREATE 
 	(phillip)-[:Kontakt]->(kontakt),
 	(kontakt)-[:Email]->(email),
 	(kontakt)-[:Telefon]->(telefon),
-	(kontakt)-[:Adresse]->(adresse)
+	(kontakt)-[:Adresse]->(adresse),
+	(kontakt)-[:www]->(www)
 
 
 
