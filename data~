@@ -79,7 +79,7 @@ CREATE
 
 
 
-CREATE (github:Kenntnisse_Plattformen {title: 'Github', body: 'Einige meiner Projekte sind auf <a href="https://github.com/johndoe90">Github</a>. Daher bin ich mit den Grundfunktionen von Git sowohl in der Konsole als auch als Plugin für Eclipse vertraut.', avatar: '/images/avatars/github.png', imageUrls: [], imageTexts: []}) 
+CREATE (github:Kenntnisse_Plattformen {title: 'Github', body: 'Einige meiner Projekte sind auf <a href="https://github.com/johndoe90" target="_blank">Github</a>. Daher bin ich mit den Grundfunktionen von Git sowohl in der Konsole als auch als Plugin für Eclipse vertraut.', avatar: '/images/avatars/github.png', imageUrls: [], imageTexts: []}) 
 CREATE (facebook:Kenntnisse_Plattformen {title: 'Facebook', body: 'Ich habe schon Anwendungen entwickelt bei denen es möglich war sich via Facebook zu registrieren, einzuloggen bzw. mit der Einwilligung des Users bestimmte Aktionen auf dessen Profil auszuführen.', avatar: '/images/avatars/facebook.png', imageUrls: [], imageTexts: []})
 CREATE (heroku:Kenntnisse_Plattformen {title: 'Heroku', body: 'Auf Heroku bin ich aufmerksam geworden, weil es das Deploying bzw. Hosting von Anwendungen wesentlich schneller gestaltet und vereinfacht. <br><br> Verwendet in Projekt: <ul><li>Diese App wird auf Heroku gehostet</li><li><a href="http://goo.gl/EBxn7G" target="_blank">NewsApp</a> (funktioniert nur mit Google Chrome, kann beim 1. Mal öffnen etwas dauern (sollte nichts kommen, Seite neu laden))</li><li><a href="http://goo.gl/g5lKex" target="_blank">Spring Integration Demo</a></li><li><a href="http://goo.gl/N2kXwK" target="_blank">Realtime Demo</a></li></ul>', avatar: '/images/avatars/heroku.png', imageUrls: [], imageTexts: []}) 
 CREATE (amazon:Kenntnisse_Plattformen {title: 'Amazon Webservices', body: 'Erfahrungen habe ich mit Amazon Elastic Compute Cloud (EC2) und mit dem Simple Storage Service (S3). <br><br> Verwendet in Projekt: <ul><li><a href="http://goo.gl/EBxn7G" target="_blank">NewsApp</a> (funktioniert nur mit Google Chrome, kann beim 1. Mal öffnen etwas dauern (sollte nichts kommen, Seite neu laden))</li></ul>', avatar: '/images/avatars/amazon.png', imageUrls: [], imageTexts: []}) 
@@ -115,7 +115,8 @@ CREATE (c:Kenntnisse_Programmieren {title: 'C', body: 'Mit C hat während der Sc
 CREATE (css3:Kenntnisse_Programmieren {title: 'CSS3', body: 'CSS würde ich als mein schwächstes Glied im Webstack einstufen, da meine Interessen anderswo liegen und ich mich noch nie von Grund auf damit beschäftgt habe. <br> <br> Erfahrungen mit: <ul><li>CSS3 Selektoren</li><li>Responsive Design (Media Queries)</li><li>sonstige CSS Eigenschaften</li></ul>', avatar: '/images/avatars/css3.png', imageUrls: [], imageTexts: []}) 
 CREATE (cpp:Kenntnisse_Programmieren {title: 'C++', body: 'Mit C++ wurde uns in der Schule das Konzept der objektorientierten Programmierung beigebracht. <br> <br> Erfahrungen mit: <ul><li>objektorientiertes Programmieren</li><li>Visual C++ (simple Anwendungen)</li></ul>', avatar: '/images/avatars/cpp.png', imageUrls: [], imageTexts: []}) 
 CREATE (html5:Kenntnisse_Programmieren {title: 'HTML5', body: 'Erfahrungen mit: <ul><li>HTML5 Elemente (article, header, etc.)</li><li>Drag & Drop (JS)</li><li>Fullscreen API (JS)</li><li>Audio und Video (JS)</li></ul>', avatar: '/images/avatars/html5.png', imageUrls: [], imageTexts: []}) 
-CREATE (asm:Kenntnisse_Programmieren {title: 'Assembler', body: 'Erfahrungen mit: <ul><li>Programmierung vom Zilog Z80 Mikrocontroller</li></ul>', avatar: '/images/avatars/asm.png', imageUrls: [], imageTexts: []}) 
+CREATE (asm:Kenntnisse_Programmieren {title: 'Assembler', body: 'Erfahrungen mit: <ul><li>Programmierung vom Zilog Z80 Mikrocontroller</li></ul>', avatar: '/images/avatars/asm.png', imageUrls: [], imageTexts: []})
+CREATE (python:Kenntnisse_Programmieren {title: 'Python', body: 'Grundkenntnisse in der Programmierung mit Python.', avatar: '/images/avatars/python.png', imageUrls: [], imageTexts: []}) 
 CREATE
 	(programmieren)-[:Java]->(java),
 	(programmieren)-[:JavaScript]->(javascript),
@@ -124,7 +125,8 @@ CREATE
 	(programmieren)-[:CSS3]->(css3),
 	(programmieren)-[:Cpp]->(cpp),
 	(programmieren)-[:HTML5]->(html5),
-	(programmieren)-[:Assembler]->(asm)
+	(programmieren)-[:Assembler]->(asm),
+	(programmieren)-[:Python]->(python)
 
 
 CREATE (libraries_java:Kenntnisse_Programmieren_Java_Libraries {title: 'Libraries', body: 'Mit diesen Java Frameworks/Bibliothenken habe ich schon gearbeitet.', avatar: '/images/avatars/libraries.png', imageUrls: [], imageTexts: []}) 
@@ -268,13 +270,13 @@ CREATE (kontakt:Kontakt {title: 'Kontakt', body: 'So k&ouml;nnen Sie mich erreic
 CREATE (email:Kontakt {title: 'E-Mail', body: '<a href="mailto:friedrich.phillip@gmail.com">friedrich.phillip@gmail.com</a>', avatar: '/images/avatars/email.png', imageUrls: [], imageTexts: []})
 CREATE (telefon:Kontakt {title: 'Telefon', body: '<a href="tel:+436802373129">+43 680 237 31 29</a>', avatar: '/images/avatars/telefon.png', imageUrls: [], imageTexts: []})
 CREATE (adresse:Kontakt {title: 'Adresse', body: 'Marichtalerweg 18<br>2020 Hollabrunn<br>Niederösterreich', avatar: '/images/avatars/adresse.png', imageUrls: ['/images/slides/kontakt/haus.jpg'], imageTexts: ['']})
-CREATE (www:Kontakt {title: 'WWW', body: 'Hier bin ich aktiv: <br> <a href="https://github.com/johndoe90">github.com</a>,  <a href="http://stackoverflow.com/users/1869231/johndoe90">stackoverflow.com</a>, <a href="https://projecteuler.net/profile/PhillipF.png">projecteuler.net</a>, <a href="https://www.hackerrank.com/J0hnDoe">hackerrank.com</a>,', avatar: '/images/avatars/www.png', imageUrls: [], imageTexts: []})
+CREATE (www:Kontakt {title: 'World Wide Web', body: 'Hier bin ich aktiv: <br> <a href="https://github.com/johndoe90" target="_blank">github.com</a>,  <a href="http://stackoverflow.com/users/1869231/johndoe90" target="_blank">stackoverflow.com</a>, <a href="https://projecteuler.net/profile/PhillipF.png" target="_blank">projecteuler.net</a>, <a href="https://www.hackerrank.com/J0hnDoe" target="_blank">hackerrank.com</a>', avatar: '/images/avatars/www.png', imageUrls: [], imageTexts: []})
 CREATE 
 	(phillip)-[:Kontakt]->(kontakt),
 	(kontakt)-[:Email]->(email),
 	(kontakt)-[:Telefon]->(telefon),
 	(kontakt)-[:Adresse]->(adresse),
-	(kontakt)-[:WWW]->(www)
+	(kontakt)-[:www]->(www)
 
 
 
@@ -308,7 +310,7 @@ CREATE (dokumente:Dokumente {title: 'Dokumente', body: 'diverse Dokumente', avat
 CREATE (maturazeugnis:Dokumente {title: 'Maturazeugnis', body: '', avatar: '/images/avatars/maturazeugnis.png', imageUrls: ['/images/slides/dokumente/maturazeugnis.jpg'], imageTexts: ['']})
 CREATE (abschlusszeugnis:Dokumente {title: 'Abschlusszeugnis', body: '', avatar: '/images/avatars/abschlusszeugnis.png', imageUrls: ['/images/slides/dokumente/abschlusszeugnis.jpg'], imageTexts: ['']})
 CREATE (foto:Dokumente {title: 'Foto', body: '', avatar: '/images/avatars/foto.png', imageUrls: ['/images/slides/dokumente/foto.jpg'], imageTexts: ['']})
-CREATE (lebenslauf:Dokumente {title: 'Lebenslauf', body: 'Details zu meinem Lebenlauf würde ich Ihnen gerne in einem persönlichen Bewerbungsgespräch erläutern.', avatar: '/images/avatars/lebenslauf.png', imageUrls: ['/images/slides/dokumente/lebenslauf2.png'], imageTexts: ['']})
+CREATE (lebenslauf:Dokumente {title: 'Lebenslauf', body: 'Details zu meinem Lebenlauf würde ich Ihnen gerne in einem persönlichen Bewerbungsgespräch erläutern.', avatar: '/images/avatars/lebenslauf.png', imageUrls: ['/images/slides/dokumente/lebenslauf.png'], imageTexts: ['']})
 CREATE
 	(phillip)-[:Dokumente]->(dokumente),
 	(dokumente)-[:Matura]->(maturazeugnis),
