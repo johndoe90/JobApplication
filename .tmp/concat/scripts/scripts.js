@@ -32,10 +32,10 @@ angular.module('jobApplication.controllers').controller('InfoController', [
   function ($scope) {
     var wasClicked = false;
     $scope.infos = [{
-        title: 'Willkommen,',
+        title: 'Sehr geehrte Damen und Herren,',
         imageUrls: [],
         imageTexts: [],
-        body: 'zu meinem etwas anderen Bewerbungsschreiben. Hier haben Sie die M\xf6glichkeit einiges Wissenswerte \xfcber mich zu erfahren. Dazu m\xfcssen Sie nur auf einen der <a href="#" class="query">Links</a> klicken und Sie werden weitere Informationen zu diesem Thema erhalten. <br> Zum Schluss w\xe4re ich Ihnen sehr dankbar, wenn Sie mir <a href="https://docs.google.com/forms/d/1Ec2c8jM2jtJiYphPuJZWGFWCFzdP2B0pL7iLg0fUGk4/viewform" class="query">Feedback</a> zu mir bzw. meiner Bewerbung geben w\xfcrden.'
+        body: 'herzlich willkommen zu meinem etwas anderen Bewerbungsschreiben. Hier haben Sie die M\xf6glichkeit einiges Wissenswerte \xfcber mich zu erfahren. Dazu m\xfcssen Sie nur auf einen der <a href="#" class="query">Links</a> klicken und Sie werden weitere Informationen zu diesem Thema erhalten.'
       }];
     $scope.clicked = function () {
       if (!wasClicked) {

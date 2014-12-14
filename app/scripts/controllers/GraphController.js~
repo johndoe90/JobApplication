@@ -3,6 +3,8 @@
 angular
 	.module('jobApplication.controllers')
 	.controller('GraphController', ['$scope', '$rootScope',  '$stateParams', '$window', '$timeout', 'DataService', function($scope, $rootScope, $stateParams, $window, $timeout, DataService){
+		
+		console.log('GraphCtrl: ' + $stateParams.q);
 		$scope.query = $stateParams.q || 'MATCH (n1:Phillip) RETURN n1';
 
 		$rootScope.$broadcast('start-loading');
