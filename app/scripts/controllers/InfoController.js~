@@ -2,7 +2,7 @@
 
 angular
 	.module('jobApplication.controllers')
-	.controller('InfoController', ['$scope', '$stateParams', function($scope, $stateParams){
+	.controller('InfoController', ['$scope', function($scope){
 		var wasClicked = false;
 		$scope.infos = [{
 			title: 'Sehr geehrte Damen und Herren,',

@@ -18,7 +18,7 @@ angular
 					title: '',
 					imageUrls: [],
 					imageTexts: [],
-					body: 'Jedes der runden Elemente ist mit einem oder mehreren Elementen durch eine Linie verbunden. Die Beziehung zwischen zwei Elementen wird durch ein Wort beschrieben. Zur besseren Leserlichkeit, kann jedes Element beliebig verschoben werden (linke Maustaste gedrückt halten). Außerdem ist es möglich jedes Element anzuklicken um zusätzliche Informationen darüber zu erhalten.'
+					body: 'Alle meine Daten sind in einem Graphen gespeichert, wobei jedes Bild einen Knoten symbolisiert. Die Art der Beziehung zwischen zwei Knoten ist mit einem Wort beschrieben. Zur besseren Leserlichkeit, kann jedes Element beliebig verschoben werden (linke Maustaste gedrückt halten). Außerdem haben Sie die Möglichkeit jeden Knoten anzuklicken um zusätzliche Informationen darüber zu erhalten.'
 				});
 			}
 		};

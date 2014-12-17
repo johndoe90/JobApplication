@@ -44,7 +44,7 @@ angular.module('jobApplication.controllers').controller('InfoController', [
           title: '',
           imageUrls: [],
           imageTexts: [],
-          body: 'Jedes der runden Elemente ist mit einem oder mehreren Elementen durch eine Linie verbunden. Die Beziehung zwischen zwei Elementen wird durch ein Wort beschrieben. Zur besseren Leserlichkeit, kann jedes Element beliebig verschoben werden (linke Maustaste gedr\xfcckt halten). Au\xdferdem ist es m\xf6glich jedes Element anzuklicken um zus\xe4tzliche Informationen dar\xfcber zu erhalten.'
+          body: 'Alle meine Daten sind in einem Graphen gespeichert, wobei jedes Bild einen Knoten symbolisiert. Die Art der Beziehung zwischen zwei Knoten ist mit einem Wort beschrieben. Zur besseren Leserlichkeit, kann jedes Element beliebig verschoben werden (linke Maustaste gedr\xfcckt halten). Au\xdferdem haben Sie die M\xf6glichkeit jeden Knoten anzuklicken um zus\xe4tzliche Informationen dar\xfcber zu erhalten.'
         });
       }
     };
