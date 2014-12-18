@@ -270,7 +270,7 @@ CREATE (kontakt:Kontakt {title: 'Kontakt', body: 'So k&ouml;nnen Sie mich erreic
 CREATE (email:Kontakt {title: 'E-Mail', body: '<a href="mailto:friedrich.phillip@gmail.com">friedrich.phillip@gmail.com</a>', avatar: '/images/avatars/email.png', imageUrls: [], imageTexts: []})
 CREATE (telefon:Kontakt {title: 'Telefon', body: '<a href="tel:+436802373129">+43 680 237 31 29</a>', avatar: '/images/avatars/telefon.png', imageUrls: [], imageTexts: []})
 CREATE (adresse:Kontakt {title: 'Adresse', body: 'Marichtalerweg 18<br>2020 Hollabrunn<br>Niederösterreich', avatar: '/images/avatars/adresse.png', imageUrls: ['/images/slides/kontakt/haus.jpg'], imageTexts: ['']})
-CREATE (www:Kontakt {title: 'World Wide Web', body: 'Hier bin ich aktiv: <br> <a href="https://github.com/johndoe90" target="_blank">github.com</a>,  <a href="http://stackoverflow.com/users/1869231/johndoe90" target="_blank">stackoverflow.com</a>, <a href="https://projecteuler.net/profile/PhillipF.png" target="_blank">projecteuler.net</a>, <a href="https://www.hackerrank.com/J0hnDoe" target="_blank">hackerrank.com</a>', avatar: '/images/avatars/www.png', imageUrls: [], imageTexts: []})
+CREATE (www:Kontakt {title: 'World Wide Web', body: 'Hier bin ich aktiv: <br> <a href="https://github.com/johndoe90" target="_blank">github.com</a>,  <a href="https://www.hackerrank.com/J0hnDoe" target="_blank">hackerrank.com</a>,  <a href="https://projecteuler.net/profile/PhillipF.png" target="_blank">projecteuler.net</a>, <a href="http://stackoverflow.com/users/1869231/johndoe90" target="_blank">stackoverflow.com</a>', avatar: '/images/avatars/www.png', imageUrls: [], imageTexts: []})
 CREATE 
 	(phillip)-[:Kontakt]->(kontakt),
 	(kontakt)-[:Email]->(email),
@@ -297,7 +297,7 @@ CREATE
 
 
 CREATE (schwaechen:Schwächen {title: 'Schwächen', body: 'Wie jeder Mensch habe natürlich auch ich meine Schwächen, aber wie heißt es so schön: <i>"Stärke deine Stärken, Schwäche deine Schwächen"</i>.', avatar: '/images/avatars/schwächen.png', imageUrls: [], imageTexts: []})
-CREATE (unerfahren:Schwächen {title: 'Erfahrung', body: 'In der Vergangenheit habe ich noch nicht wirklich an einem Projekt gearbeitet, an dem mehrere Leute beteiligt waren. Wie ich in der Vergangenheit feststellen musste, habe ich im Bereich Projektmanagement noch einiges zu lernen.', avatar: '/images/avatars/erfahrung.png', imageUrls: [], imageTexts: []})
+CREATE (unerfahren:Schwächen {title: 'Erfahrung', body: 'Da ich Berufseinsteiger bin, habe ich noch relativ wenig Erfahrung in der Softwareentwicklung. Ich freue mich aber schon darauf das zu ändern.', avatar: '/images/avatars/erfahrung.png', imageUrls: [], imageTexts: []})
 CREATE (introvertiert:Schwächen {title: 'Introvertierte Persönlichkeit', body: 'Ich bin eher der introvertierte Typ und versuche viele Probleme selbst zu lösen, auch wenn es manchmal einfach besser wäre sich Hilfe zu suchen.', avatar: '/images/avatars/introvertiert.png', imageUrls: [], imageTexts: []})
 CREATE
 	(phillip)-[:Schwächen]->(schwaechen),

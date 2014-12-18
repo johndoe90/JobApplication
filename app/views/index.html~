@@ -21,7 +21,7 @@
   </head>
   <body ng-app="jobApplication">
 	<!--[if lt IE 9]> 
-		<div style="width: 100%; position: absolute; left: 0; top: 45%; color: red; font-weight: bold; z-index: 1000; text-align: center;">
+		<div class="old">
 			Sie verwenden einen stark veralteten Browser.<br>
 			Bitte verwenden Sie Chrome, Firefox, Opera oder IE9+.
 		</div>

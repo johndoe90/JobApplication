@@ -297,7 +297,7 @@ CREATE
 
 
 CREATE (schwaechen:Schwächen {title: 'Schwächen', body: 'Wie jeder Mensch habe natürlich auch ich meine Schwächen, aber wie heißt es so schön: <i>"Stärke deine Stärken, Schwäche deine Schwächen"</i>.', avatar: '/images/avatars/schwächen.png', imageUrls: [], imageTexts: []})
-CREATE (unerfahren:Schwächen {title: 'Erfahrung', body: 'In der Vergangenheit habe ich noch nicht wirklich an einem Projekt gearbeitet, an dem mehrere Leute beteiligt waren. Wie ich in der Vergangenheit feststellen musste, habe ich im Bereich Projektmanagement noch einiges zu lernen.', avatar: '/images/avatars/erfahrung.png', imageUrls: [], imageTexts: []})
+CREATE (unerfahren:Schwächen {title: 'Erfahrung', body: 'Da ich Berufseinsteiger bin, habe ich noch relativ wenig Erfahrung in der Softwareentwicklung. Ich freue mich aber schon darauf das zu ändern.', avatar: '/images/avatars/erfahrung.png', imageUrls: [], imageTexts: []})
 CREATE (introvertiert:Schwächen {title: 'Introvertierte Persönlichkeit', body: 'Ich bin eher der introvertierte Typ und versuche viele Probleme selbst zu lösen, auch wenn es manchmal einfach besser wäre sich Hilfe zu suchen.', avatar: '/images/avatars/introvertiert.png', imageUrls: [], imageTexts: []})
 CREATE
 	(phillip)-[:Schwächen]->(schwaechen),
