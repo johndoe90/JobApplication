@@ -310,7 +310,7 @@ CREATE (dokumente:Dokumente {title: 'Dokumente', body: 'diverse Dokumente', avat
 CREATE (maturazeugnis:Dokumente {title: 'Maturazeugnis', body: '', avatar: '/images/avatars/maturazeugnis.png', imageUrls: ['/images/slides/dokumente/maturazeugnis.jpg'], imageTexts: ['']})
 CREATE (abschlusszeugnis:Dokumente {title: 'Abschlusszeugnis', body: '', avatar: '/images/avatars/abschlusszeugnis.png', imageUrls: ['/images/slides/dokumente/abschlusszeugnis.jpg'], imageTexts: ['']})
 CREATE (foto:Dokumente {title: 'Foto', body: '', avatar: '/images/avatars/foto.png', imageUrls: ['/images/slides/dokumente/foto.jpg'], imageTexts: ['']})
-CREATE (lebenslauf:Dokumente {title: 'Lebenslauf', body: '<a href="/assets/Phillip_Friedrich_Lebenslauf.png">Download</a>', avatar: '/images/avatars/lebenslauf.png', imageUrls: ['/images/slides/dokumente/lebenslauf.jpg'], imageTexts: ['']})
+CREATE (lebenslauf:Dokumente {title: 'Lebenslauf', body: '<a href="/assets/Phillip_Friedrich_Lebenslauf.pdf">Download</a>', avatar: '/images/avatars/lebenslauf.png', imageUrls: ['/images/slides/dokumente/lebenslauf.jpg'], imageTexts: ['']})
 CREATE
 	(phillip)-[:Dokumente]->(dokumente),
 	(dokumente)-[:Matura]->(maturazeugnis),
